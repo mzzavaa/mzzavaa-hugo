@@ -17,8 +17,8 @@ In early 2025, I started sewing — not just casually, but ambitiously. I wanted
 
 I still remember the excitement of that first delivery day. A hot pink **Singer 3223** sewing machine arrived, along with a tower of Amazon packages full of colorful thread, rotary cutters, scissors, chalk, needles, pins, and everything a total beginner might need.
 
-![Unboxing the tools of the trade](/images/IMG_2147.png)
-![My first sewing machine and setup](/images/IMG_2160.png)
+![Unboxing the tools of the trade](images/IMG_2147.png)
+![My first sewing machine and setup](images/IMG_2160.png)
 
 This was how I started most of my hobbies: get the tools, make space, and jump in. Sewing was no different — just another creative frontier I wanted to explore.
 
@@ -26,8 +26,8 @@ This was how I started most of my hobbies: get the tools, make space, and jump i
 
 I chose a shiny teal satin and cut the first pieces of what would become the **corset-style bodice**. Using a commercial pattern as a base, I made adjustments intuitively — shaping it to fit more snugly around the waist and support the bust without straps. I inserted **boning** into each seam channel to create structure and support.
 
-![Building the corset base with boning channels](/images/IMG_4678.png)
-![Outer view: my first structured corset layer](/images/IMG_4679.png)
+![Building the corset base with boning channels](images/IMG_4678.png)
+![Outer view: my first structured corset layer](images/IMG_4679.png)
 
 Each panel was sewn, pressed, and aligned meticulously. I didn’t rush — this wasn’t about finishing fast. This was about **feeling the craft**. I hand-stitched where it needed precision. I ironed every seam. I tried, adjusted, and re-tried — using clips, pins, and sometimes, just instinct.
 
@@ -35,13 +35,13 @@ Each panel was sewn, pressed, and aligned meticulously. I didn’t rush — this
 
 This moment — sitting on the floor, hand-finishing the lining with delicate flower-shaped pins and a toy hedgehog watching over the process — was one of my favorites. It reminded me why I love learning through doing. It’s **not** just the result. It’s the intimacy with the material, the feel of thread in your fingers, the calm concentration.
 
-![Hand-sewing the lining with butterfly pins and my helper hedgehog](/images/IMG_4697.png)
+![Hand-sewing the lining with butterfly pins and my helper hedgehog](images/IMG_4697.png)
 
 ## 👑 The Final Piece: A Dream Dress
 
 I completed the skirt in satin panels, layered a translucent **organza overskirt**, and cinched the waist with a ruched ribbon center detail. The fit was magical. The silhouette came together like a real gown — a piece I would’ve worn to a ball if one existed.
 
-![The final princess dress – proudly completed](/images/IMG_4739.png)
+![The final princess dress – proudly completed](images/IMG_4739.png)
 
 It was my **first real project**, and yet it already felt like something professional — because I treated it that way. I didn’t aim for “just good enough.” I aimed for *what I imagined*. I aimed for something that felt beautiful and real.
 
