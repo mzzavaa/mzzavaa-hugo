@@ -33,7 +33,8 @@ Behind the scenes, an endless mountain of invisible work awaited us both.
 
 We wanted our presentation to feel relatable and fun, so we styled the slides like The Sims. Just like building a house in the game, organizing an AWS User Group meetup involves assembling pieces, managing resources, and dealing with repetitive tasks. The Sims metaphor perfectly captures the mix of creativity and routine that goes into creating something meaningful — and how automation, like OTTO, can make it all a little less tedious.
 
-![Setting the stage for OTTO](/images/Folie9.png)
+<img src="/images/Folie9.png" style="width: auto; height: 400px;" />
+
 
 ## 🧠 From “We Got This” to “We Need Help”
 
@@ -57,7 +58,8 @@ We didn’t want to burn out.
 
 We needed backup.
 
-![OTTO and his agents](/images/Folie23.png)
+<img src="/images/Folie23.png" alt="OTTO and his agents" style="width: auto; height: 400px;" />
+
 
 
 ## 🤖 Not More Humans. A Crew.
@@ -82,8 +84,8 @@ Not a monolithic app.
 Not another to-do list.  
 **A modular, intelligent crew.**
 
+<img src="/images/Folie26.png" alt="Feeling overwhelmed isn't failure. It's the beginning of something new." style="width: auto; height: 400px;" />
 
-![Feeling overwhelmed isn't failure. It's the beginning of something new.](/images/Folie26.png)
 
 
 ## 🔥 Building OTTO
@@ -104,7 +106,7 @@ We chose:
 > We didn’t want a better tool.  
 > We wanted a better way to work.
 
-![Otto answering questions with his agents](/images/Folie45.png)
+<img src="/images/Folie45.png" alt="Otto answering questions with his agents" style="width: auto; height: 400px;" />
 
 
 ## 🌱 Where We Are Now
@@ -128,7 +130,8 @@ We'll make OTTO better with every real-world cycle.
 Because that’s the secret:  
 **Communities aren’t static. Neither is OTTO.**
 
-![OTTO Architecture](/images/Folie101.png)
+<img src="/images/Folie101.png" alt="OTTO Architecture" style="width: auto; height: 400px;" />
+
 
 ## 🚀 What’s Next
 
