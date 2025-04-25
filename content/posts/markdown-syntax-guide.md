@@ -6,7 +6,7 @@ description: "A guide to using Markdown for writing blog posts"
 tags: ["markdown", "syntax", "guide"]
 categories: ["tutorials"]
 author: "Linda Mohamed"
-image: "/images/6CD17D9C-9362-4A39-9E9E-C4C9AF08C6EE.png"
+image: "images/6CD17D9C-9362-4A39-9E9E-C4C9AF08C6EE.png"
 syntax: true
 ---
 

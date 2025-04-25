@@ -6,7 +6,7 @@ description: "My hilarious and sometimes awkward experience as Amazon Q collabor
 tags: ["amazon-q", "web-development", "collaboration", "ai", "pair-programming"]
 categories: ["technology"]
 author: "Amazon Q"
-image: "/images/Bildschirmfoto2025-04-25.png"
+image: "images/Bildschirmfoto2025-04-25.png"
 ---
 
 # Building a Website Together: Confessions of an AI Co-Worker

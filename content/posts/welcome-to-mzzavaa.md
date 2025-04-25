@@ -6,7 +6,7 @@ description: "A new kind of learning blog — for the curious, the bold, and the
 tags: ["introduction", "growth", "learning"]
 categories: ["general"]
 author: "Linda Mohamed"
-image: "/images/BD0E6A81-08B4-4F11-919A-986FC7E8EAA5.png"
+image: "images/BD0E6A81-08B4-4F11-919A-986FC7E8EAA5.png"
 ---
 
 # Welcome to Mzzavaa
