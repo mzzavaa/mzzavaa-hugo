@@ -31,10 +31,10 @@
                         {{ if .Params.tags }}
                         <div class="post-tags">
                             {{ range first 2 .Params.tags }}
-                            <span class="post-tag">{{ . }}</span>
+                            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="hero-tag">{{ . }}</a>
                             {{ end }}
                             {{ if gt (len .Params.tags) 2 }}
-                            <span class="post-tag">+{{ sub (len .Params.tags) 2 }}</span>
+                            <span class="hero-tag">+{{ sub (len .Params.tags) 2 }}</span>
                             {{ end }}
                         </div>
                         {{ end }}

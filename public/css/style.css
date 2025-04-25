@@ -226,33 +226,16 @@ body.light-theme .hero p {
   padding: var(--spacing-sm) var(--spacing-lg);
   border-radius: var(--border-radius-md);
   font-weight: 500;
-  transition: background var(--transition-fast);
+  transition: filter var(--transition-fast);
   border: none;
   cursor: pointer;
   text-align: center;
   position: relative;
   z-index: 1;
-  overflow: hidden;
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, var(--gradient-middle), var(--gradient-end));
-  z-index: -1;
-  opacity: 0;
-  transition: opacity var(--transition-normal);
-}
-
-.btn:hover::before {
-  opacity: 1;
 }
 
 .btn:hover {
+  filter: brightness(0.85);
   color: white;
 }
 
@@ -262,29 +245,13 @@ body.light-theme .hero p {
   color: var(--primary);
   position: relative;
   z-index: 1;
-  overflow: hidden;
-}
-
-.btn-outline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-middle));
-  z-index: -1;
-  opacity: 0;
-  transition: opacity var(--transition-normal);
-}
-
-.btn-outline:hover::before {
-  opacity: 1;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .btn-outline:hover {
-  border-color: transparent;
-  color: white;
+  background-color: rgba(98, 0, 234, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 /* Featured posts section */
@@ -383,7 +350,6 @@ body.light-theme .hero p {
 .post-title:hover {
   color: var(--primary);
 }
-}
 
 .post-excerpt {
   color: var(--text-secondary);
@@ -430,10 +396,11 @@ body.light-theme .hero p {
   border-radius: var(--border-radius-sm);
   font-size: 0.7rem;
   opacity: 0.8;
-  transition: opacity var(--transition-fast);
+  transition: filter var(--transition-fast);
 }
 
 .post-tag:hover {
+  filter: brightness(0.85);
   opacity: 1;
 }
 
@@ -834,7 +801,7 @@ body.light-theme .theme-indicator .light-label {
   font-size: 0.9rem;
   font-weight: 500;
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: filter var(--transition-fast);
   margin-top: auto;
   padding: var(--spacing-xs) 0;
   position: relative;
@@ -853,7 +820,7 @@ body.light-theme .theme-indicator .light-label {
 }
 
 .read-more-btn:hover {
-  color: var(--link-hover);
+  filter: brightness(0.85);
 }
 
 .read-more-btn:hover::after {
@@ -1324,11 +1291,11 @@ body.light-theme .post-card .post-title a {
   padding: var(--spacing-xs) var(--spacing-sm);
   border: 1px solid rgba(255, 255, 255, 0.5);
   margin-left: var(--spacing-xs);
-  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  transition: filter var(--transition-fast), border-color var(--transition-fast);
 }
 
 .hero-tag:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  filter: brightness(0.85);
   border-color: white;
   color: white;
 }

@@ -61,23 +61,5 @@
   </url><url>
     <loc>http://localhost:1313/categories/tutorials/</loc>
     <lastmod>2025-04-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/aws/</loc>
-    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/cloud/</loc>
-    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/migration/</loc>
-    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/serverless/</loc>
-    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/step-functions/</loc>
-    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/step-functions-migration/</loc>
-    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
   </url>
 </urlset>

@@ -350,7 +350,6 @@ body.light-theme .hero p {
 .post-title:hover {
   color: var(--primary);
 }
-}
 
 .post-excerpt {
   color: var(--text-secondary);
@@ -397,10 +396,11 @@ body.light-theme .hero p {
   border-radius: var(--border-radius-sm);
   font-size: 0.7rem;
   opacity: 0.8;
-  transition: opacity var(--transition-fast);
+  transition: filter var(--transition-fast);
 }
 
 .post-tag:hover {
+  filter: brightness(0.85);
   opacity: 1;
 }
 
@@ -800,7 +800,7 @@ body.light-theme .theme-indicator .light-label {
   font-size: 0.9rem;
   font-weight: 500;
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: filter var(--transition-fast);
   margin-top: auto;
   padding: var(--spacing-xs) 0;
   position: relative;
@@ -819,7 +819,7 @@ body.light-theme .theme-indicator .light-label {
 }
 
 .read-more-btn:hover {
-  color: var(--link-hover);
+  filter: brightness(0.85);
 }
 
 .read-more-btn:hover::after {
@@ -1290,11 +1290,11 @@ body.light-theme .post-card .post-title a {
   padding: var(--spacing-xs) var(--spacing-sm);
   border: 1px solid rgba(255, 255, 255, 0.5);
   margin-left: var(--spacing-xs);
-  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  transition: filter var(--transition-fast), border-color var(--transition-fast);
 }
 
 .hero-tag:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  filter: brightness(0.85);
   border-color: white;
   color: white;
 }

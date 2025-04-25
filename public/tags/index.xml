@@ -71,33 +71,5 @@
       <guid>http://localhost:1313/tags/syntax/</guid>
       <description></description>
     </item>
-    <item>
-      <title>Aws</title>
-      <link>http://localhost:1313/tags/aws/</link>
-      <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/aws/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Migration</title>
-      <link>http://localhost:1313/tags/migration/</link>
-      <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/migration/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Serverless</title>
-      <link>http://localhost:1313/tags/serverless/</link>
-      <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/serverless/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Step Functions</title>
-      <link>http://localhost:1313/tags/step-functions/</link>
-      <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/step-functions/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
