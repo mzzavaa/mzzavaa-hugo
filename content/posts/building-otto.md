@@ -59,7 +59,6 @@ We needed backup.
 
 ![OTTO and his agents](/images/Folie23.png)
 
----
 
 ## 🤖 Not More Humans. A Crew.
 
@@ -131,7 +130,6 @@ Because that’s the secret:
 
 ![OTTO Architecture](/images/Folie101.png)
 
-
 ## 🚀 What’s Next
 
 This is just the first part of OTTO’s story.
@@ -142,7 +140,6 @@ and why starting small and modular made all the difference.
 
 ➡️ _Stay tuned for Part 2: "Turning Chaos into Crew: Designing OTTO's Architecture"_
 
----
 
 📬 Curious? Inspired? Want to build your own Crew?
 
@@ -151,4 +148,3 @@ Drop me a message anytime:
 
 ✨ [Or check out more about my talks here](https://sessionize.com/linda-mohamed)
 
----
