@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Mzzavaa</title>
+    <link>http://localhost:1313/tags/hugo/</link>
+    <description>Recent content in Hugo on Mzzavaa</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Mzzavaa</title>
+      <link>http://localhost:1313/posts/welcome-to-mzzavaa/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/welcome-to-mzzavaa/</guid>
+      <description>&lt;h1 id=&#34;welcome-to-mzzavaa&#34;&gt;Welcome to Mzzavaa&lt;/h1&gt;&#xA;&lt;p&gt;Hello and welcome to Mzzavaa, a minimalist blog with an Apple-inspired design aesthetic. This blog is designed to be clean, readable, and focused on content.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-mzzavaa&#34;&gt;What is Mzzavaa?&lt;/h2&gt;&#xA;&lt;p&gt;Mzzavaa is a blog template built with Hugo, a fast and flexible static site generator. It&amp;rsquo;s designed to be:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Clean and minimal&lt;/strong&gt;: Focusing on content and readability&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fast and responsive&lt;/strong&gt;: Works great on all devices&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Easy to use&lt;/strong&gt;: Just add markdown files and they appear automatically&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub Pages ready&lt;/strong&gt;: Easy to deploy and maintain&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;h3 id=&#34;markdown-support&#34;&gt;Markdown Support&lt;/h3&gt;&#xA;&lt;p&gt;All content is written in Markdown, making it easy to format and maintain. Here&amp;rsquo;s an example of some Markdown formatting:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

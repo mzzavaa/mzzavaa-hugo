@@ -1,0 +1,23 @@
+<header class="site-header">
+    <div class="container">
+        <a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }}</a>
+        
+        <nav class="main-nav">
+            <ul>
+                {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}" class="{{ if $.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a></li>
+                {{ end }}
+            </ul>
+        </nav>
+        
+        <div class="header-controls">
+            <div class="theme-indicator">
+                <span class="dark-label">Dark</span>
+                <span class="light-label">Light</span>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,88 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "MzZavaa"
+theme = "mzzavaa-theme"
+
+[pagination]
+  pagerSize = 6
+
+# Enable syntax highlighting
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+pygmentsCodefencesGuessSyntax = true
+
+# Ignore certain warnings
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[params]
+  # Site description
+  description = "A minimalist blog with an Apple-inspired design"
+  
+  # Author information
+  [params.author]
+    name = "Linda Mohamed"
+    bio = "Writer, developer, and creative thinker"
+    avatar = "images/profile.jpg"
+  
+  # Social media links
+  [params.social]
+    github = "https://github.com/yourusername"
+    twitter = "https://twitter.com/yourusername"
+    linkedin = "https://linkedin.com/in/yourusername"
+  
+  # Theme colors (Apple-inspired)
+  [params.colors]
+    primary = "#0066CC"       # Apple blue
+    secondary = "#34C759"     # Apple green
+    background = "#121212"    # Dark background
+    surface = "#1E1E1E"       # Dark surface
+    text = "#FFFFFF"          # White text
+    textSecondary = "#8A8A8A" # Gray text
+    border = "#333333"        # Border color
+
+# Main menu
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 4
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Privacy settings
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.x]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,19 @@
+{{ define "main" }}
+<!-- Hero banner for blog image -->
+{{ if .Params.image }}
+{{ partial "post/hero-banner.html" . }}
+{{ end }}
+
+<article class="single-post">
+    <div class="container">
+        <!-- Top post navigation -->
+        {{ partial "post/navigation.html" (dict "Context" . "Class" "top-navigation") }}
+
+        <!-- Post content -->
+        {{ partial "post/content.html" . }}
+        
+        <!-- Bottom post navigation -->
+        {{ partial "post/navigation.html" (dict "Context" . "Class" "bottom-navigation") }}
+    </div>
+</article>
+{{ end }}

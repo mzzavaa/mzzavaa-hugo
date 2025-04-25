@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MzZavaa</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on MzZavaa</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;about-mzzavaa&#34;&gt;About MzZavaa&lt;/h1&gt;&#xA;&lt;p&gt;Welcome to &lt;strong&gt;MzZavaa&lt;/strong&gt;, a personal space dedicated to curiosity, creativity, and conscious reflection. I created this blog not only to document what I build, draw, sew, code, and juggle—but to revisit the winding, non-linear journey that got me here.&lt;/p&gt;&#xA;&lt;p&gt;MzZavaa is more than just a blog. It’s a mirror held up to my growth, a journal disguised as a digital garden, and a way to reconnect with the person I used to be—especially when I forget how far I’ve come.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sewing My First Princess Dress</title>
+      <link>http://localhost:1313/posts/sewing-my-first-princess-dress/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/sewing-my-first-princess-dress/</guid>
+      <description>&lt;h1 id=&#34;sewing-my-first-princess-dress&#34;&gt;Sewing My First Princess Dress&lt;/h1&gt;&#xA;&lt;p&gt;In early 2025, I started sewing — not just casually, but ambitiously. I wanted to create something magical: a princess dress with a structured corset bodice and flowy skirt. I didn’t know how to sew. I had no idea how boning worked. But I had one thing I always rely on: the confidence that I can &lt;strong&gt;learn anything&lt;/strong&gt; by breaking it down, watching videos, and iterating.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Welcome to Mzzavaa</title>
+      <link>http://localhost:1313/posts/welcome-to-mzzavaa/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/welcome-to-mzzavaa/</guid>
+      <description>&lt;h1 id=&#34;welcome-to-mzzavaa&#34;&gt;Welcome to Mzzavaa&lt;/h1&gt;&#xA;&lt;p&gt;Welcome to &lt;strong&gt;Mzzavaa&lt;/strong&gt; – my little corner of the internet dedicated to personal growth through creative exploration. This blog isn’t about perfection. It’s about process. It’s about learning in public, failing with flair, and following curiosity wherever it goes – whether that’s code, cloud, corsets, or clubs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-youll-find-here&#34;&gt;What You&amp;rsquo;ll Find Here&lt;/h2&gt;&#xA;&lt;p&gt;I’ve spent the last 12 years in tech – as a software developer, product owner, cloud architect, AI explorer, community leader, and keynote speaker. But what people rarely see is the &lt;strong&gt;parallel life&lt;/strong&gt; I’ve been living outside of job titles: learning juggling through muscle memory, sewing my first princess dress from scratch, tattooing binary onto my skin, building digital agents to assist with meetups, and sketching hyperrealistic portraits while listening to cloud podcasts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>http://localhost:1313/posts/markdown-syntax-guide/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/markdown-syntax-guide/</guid>
+      <description>&lt;h1 id=&#34;markdown-syntax-guide&#34;&gt;Markdown Syntax Guide&lt;/h1&gt;&#xA;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files. It also shows how basic HTML elements are decorated with CSS in this theme.&lt;/p&gt;&#xA;&lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;&#xA;&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;&#xA;&lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;&#xA;&lt;h2 id=&#34;h2&#34;&gt;H2&lt;/h2&gt;&#xA;&lt;h3 id=&#34;h3&#34;&gt;H3&lt;/h3&gt;&#xA;&lt;h4 id=&#34;h4&#34;&gt;H4&lt;/h4&gt;&#xA;&lt;h5 id=&#34;h5&#34;&gt;H5&lt;/h5&gt;&#xA;&lt;h6 id=&#34;h6&#34;&gt;H6&lt;/h6&gt;&#xA;&lt;h2 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h2&gt;&#xA;&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

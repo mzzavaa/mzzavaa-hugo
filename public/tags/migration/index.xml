@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Migration on MzZavaa</title>
+    <link>http://localhost:1313/tags/migration/</link>
+    <description>Recent content in Migration on MzZavaa</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/migration/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Step Functions State Machine Migration Guide</title>
+      <link>http://localhost:1313/posts/step-functions-migration/</link>
+      <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/step-functions-migration/</guid>
+      <description>&lt;h1 id=&#34;step-functions-state-machine-migration-guide&#34;&gt;Step Functions State Machine Migration Guide&lt;/h1&gt;&#xA;&lt;p&gt;This guide explains how to migrate a Step Functions state machine from one AWS account to another.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/52F86359-09F2-42AB-8372-ACDBCBBB22DD.png&#34; alt=&#34;AWS Architecture Diagram&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;AWS Step Functions is a serverless workflow service that lets you coordinate multiple AWS services into business-critical applications. When migrating between AWS accounts, you need to carefully handle the state machine definition and all associated resources.&lt;/p&gt;&#xA;&lt;h2 id=&#34;migration-steps&#34;&gt;Migration Steps&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-in-the-source-account&#34;&gt;1. In the Source Account&lt;/h3&gt;&#xA;&lt;p&gt;First, you need to extract all the necessary information from your source account:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

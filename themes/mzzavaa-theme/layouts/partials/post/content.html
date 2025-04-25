@@ -1,0 +1,17 @@
+<div class="post-content">
+    <!-- <h1 class="post-title gradient-text">{{ .Title }}</h1> -->
+    
+    {{ partial "post/meta.html" . }}
+    
+    {{ if .Params.image }}
+    <!-- Insert small version of header image at beginning of content with text wrapping -->
+    <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="first-paragraph-image">
+    {{ end }}
+    
+    {{ if .Params.thumbnail }}
+    <!-- Insert thumbnail at beginning of content with text wrapping -->
+    <img src="{{ .Params.thumbnail | relURL }}" alt="Thumbnail for {{ .Title }}" class="post-thumbnail">
+    {{ end }}
+    
+    {{ .Content }}
+</div>

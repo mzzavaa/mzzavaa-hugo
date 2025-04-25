@@ -1,0 +1,61 @@
+{{ define "main" }}
+<section class="post-list">
+    <div class="container">
+        <div class="posts-grid">
+            {{ range .Paginator.Pages }}
+            <article class="post-card">
+                {{ if .Params.image }}
+                <div class="post-image">
+                    <a href="{{ .Permalink }}">
+                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                    </a>
+                </div>
+                {{ else }}
+                <div class="post-image post-image-default">
+                    <a href="{{ .Permalink }}">
+                        <div class="image-placeholder"></div>
+                    </a>
+                </div>
+                {{ end }}
+                
+                <div class="post-content">
+                    <h2 class="post-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h2>
+                    
+                    <div class="post-meta">
+                        <span class="post-date">
+                            <i class="far fa-calendar"></i> {{ .Date.Format "Jan 2, 2006" }}
+                        </span>
+                        
+                        {{ if .Params.tags }}
+                        <div class="post-tags">
+                            {{ range first 2 .Params.tags }}
+                            <span class="post-tag">{{ . }}</span>
+                            {{ end }}
+                            {{ if gt (len .Params.tags) 2 }}
+                            <span class="post-tag">+{{ sub (len .Params.tags) 2 }}</span>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                    </div>
+                    
+                    <p class="post-excerpt">
+                        {{ with .Plain }}
+                            {{ $firstParagraph := index (split . "\n\n") 0 }}
+                            {{ $firstParagraph | truncate 120 }}
+                        {{ else }}
+                            {{ .Summary | truncate 120 }}
+                        {{ end }}
+                    </p>
+                    
+                    <a href="{{ .Permalink }}" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+        
+        {{ template "_internal/pagination.html" . }}
+    </div>
+</section>
+{{ end }}

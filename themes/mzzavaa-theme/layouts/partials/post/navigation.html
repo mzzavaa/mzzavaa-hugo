@@ -1,0 +1,21 @@
+<div class="post-navigation {{ .Class }}">
+    {{ with .Context.PrevInSection }}
+    <div class="prev-post">
+        <a href="{{ .Permalink }}">
+            <i class="fas fa-arrow-left"></i>
+            <span>Newer Post</span>
+            <h3>{{ .Title }}</h3>
+        </a>
+    </div>
+    {{ end }}
+    
+    {{ with .Context.NextInSection }}
+    <div class="next-post">
+        <a href="{{ .Permalink }}">
+            <span>Older Post</span>
+            <h3>{{ .Title }}</h3>
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    {{ end }}
+</div>

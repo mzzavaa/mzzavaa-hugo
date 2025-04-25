@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Growth on MzZavaa</title>
+    <link>http://localhost:1313/tags/growth/</link>
+    <description>Recent content in Growth on MzZavaa</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/growth/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Mzzavaa</title>
+      <link>http://localhost:1313/posts/welcome-to-mzzavaa/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/welcome-to-mzzavaa/</guid>
+      <description>&lt;h1 id=&#34;welcome-to-mzzavaa&#34;&gt;Welcome to Mzzavaa&lt;/h1&gt;&#xA;&lt;p&gt;Welcome to &lt;strong&gt;Mzzavaa&lt;/strong&gt; – my little corner of the internet dedicated to personal growth through creative exploration. This blog isn’t about perfection. It’s about process. It’s about learning in public, failing with flair, and following curiosity wherever it goes – whether that’s code, cloud, corsets, or clubs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-youll-find-here&#34;&gt;What You&amp;rsquo;ll Find Here&lt;/h2&gt;&#xA;&lt;p&gt;I’ve spent the last 12 years in tech – as a software developer, product owner, cloud architect, AI explorer, community leader, and keynote speaker. But what people rarely see is the &lt;strong&gt;parallel life&lt;/strong&gt; I’ve been living outside of job titles: learning juggling through muscle memory, sewing my first princess dress from scratch, tattooing binary onto my skin, building digital agents to assist with meetups, and sketching hyperrealistic portraits while listening to cloud podcasts.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
