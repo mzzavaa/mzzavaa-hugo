@@ -19,17 +19,21 @@ A few pizzas.
 
 But if you’re lucky — if you care deeply, show up often, and invite others to lead too — it grows into something much bigger.
 
-Today, our AWS User Group Austria has over **2000 members**.  
-We have **five incredible organizers** across Vienna, Linz, and beyond.  
+Today, our AWS User Group Vienna in Austria has over **2000 members**.  
+We have **five incredible organizers** and User Groups in Vienna, Linz, and just founded an additional Women's User Group in Vienna.  
 And the movement is still growing.
 
 But before all of that — before the scale and the team —  
-there were just two of us: **Philipp** and **me**.  
-And a mountain of invisible work.
+there were just two of us: **Philipp** and **me**, but not always at the same time.  
+Philipp had led the user group alone for a while, and when I took over, I carried the responsibility solo for several years.  
+Eventually, Philipp rejoined, and together we began sharing the weight of the growing community.  
+Behind the scenes, an endless mountain of invisible work awaited us both.
 
+## 🎮 Why the Slides Look Like The Sims
+
+We wanted our presentation to feel relatable and fun, so we styled the slides like The Sims. Just like building a house in the game, organizing an AWS User Group meetup involves assembling pieces, managing resources, and dealing with repetitive tasks. The Sims metaphor perfectly captures the mix of creativity and routine that goes into creating something meaningful — and how automation, like OTTO, can make it all a little less tedious.
 
 ![Setting the stage for OTTO](/images/Folie9.png)
-
 
 ## 🧠 From “We Got This” to “We Need Help”
 
@@ -52,6 +56,8 @@ We didn’t want to lower our standards.
 We didn’t want to burn out.
 
 We needed backup.
+
+![OTTO and his agents](/images/Folie23.png)
 
 ---
 
@@ -77,11 +83,9 @@ Not a monolithic app.
 Not another to-do list.  
 **A modular, intelligent crew.**
 
----
 
-![Feeling overwhelmed isn't failure. It's the beginning of something new.](/images/Folie2.png)
+![Feeling overwhelmed isn't failure. It's the beginning of something new.](/images/Folie26.png)
 
----
 
 ## 🔥 Building OTTO
 
@@ -101,7 +105,8 @@ We chose:
 > We didn’t want a better tool.  
 > We wanted a better way to work.
 
----
+![Otto answering questions with his agents](/images/Folie45.png)
+
 
 ## 🌱 Where We Are Now
 
@@ -124,7 +129,8 @@ We'll make OTTO better with every real-world cycle.
 Because that’s the secret:  
 **Communities aren’t static. Neither is OTTO.**
 
----
+![OTTO Architecture](/images/Folie101.png)
+
 
 ## 🚀 What’s Next
 
