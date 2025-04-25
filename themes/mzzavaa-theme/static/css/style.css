@@ -574,7 +574,7 @@ body.light-theme .post-content {
 }
 
 .prev-post, .next-post {
-  max-width: 45%;
+  max-width: 55%;
 }
 
 .prev-post a, .next-post a {
@@ -1140,7 +1140,7 @@ body.light-theme .post-content {
 
 /* Make all blog section images half size */
 .post-content img:not(.post-thumbnail) {
-  max-width: 50%;
+  max-width: 60%;
   height: auto;
   margin: var(--spacing-md) auto;
   display: block;
