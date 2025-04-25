@@ -50,3 +50,4 @@ __MACOSX/
 
 # Temporary Hugo files
 .hugo_cache/public/
+public/
