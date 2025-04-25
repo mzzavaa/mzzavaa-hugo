@@ -27,11 +27,9 @@ But before all of that — before the scale and the team —
 there were just two of us: **Philipp** and **me**.  
 And a mountain of invisible work.
 
----
 
-![Setting the stage for OTTO](/images/Folie1.png)
+![Setting the stage for OTTO](/images/Folie9.png)
 
----
 
 ## 🧠 From “We Got This” to “We Need Help”
 
