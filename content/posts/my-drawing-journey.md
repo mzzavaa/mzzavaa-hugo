@@ -59,7 +59,7 @@ These sketches were never about realism or anatomical accuracy. They’re slow s
 And of course... none of them are “finished.” That’s kind of the point.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-  <img src="images/54BB9A25-556C-46E2-9382-157ECF7EB96C.png" style="height: 400px;" />
+  <img src="/images/54BB9A25-556C-46E2-9382-157ECF7EB96C.png" style="height: 400px;" />
   <img src="images/78C47E7F-BD65-450F-9B80-50FC7B6B0299.png" style="height: 400px;" />
   <img src="images/IMG_0427.png" style="height: 400px;" />
 </div>
