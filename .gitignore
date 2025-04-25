@@ -2,19 +2,14 @@
 /public/
 /resources/_gen/
 /assets/jsconfig.json
+.hugo_cache/public/
+hugo_stats.json
+.hugo_build.lock
 
 # Logs and databases
 *.log
 *.sql
 *.sqlite
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-Thumbs.db
 
 # Node.js dependencies (if applicable)
 node_modules/
@@ -39,15 +34,19 @@ node_modules/
 *.diff
 *.lock
 
-# macOS specific files
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
 .AppleDouble
 .LSOverride
 Icon?
 __MACOSX/
 
-# Hugo server state files
-.hugo_build.lock
-
-# Temporary Hugo files
-.hugo_cache/public/
-public/
+# Local tooling (optional)
+*.exe
+*.darwin
+*.linux
