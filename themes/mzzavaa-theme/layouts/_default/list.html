@@ -19,10 +19,6 @@
                 {{ end }}
                 
                 <div class="post-content">
-                    <h2 class="post-title">
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
-                    </h2>
-                    
                     <div class="post-meta">
                         <span class="post-date">
                             <i class="far fa-calendar"></i> {{ .Date.Format "Jan 2, 2006" }}
@@ -30,22 +26,23 @@
                         
                         {{ if .Params.tags }}
                         <div class="post-tags">
-                            {{ range first 2 .Params.tags }}
+                            {{ range .Params.tags }}
                             <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="hero-tag">{{ . }}</a>
-                            {{ end }}
-                            {{ if gt (len .Params.tags) 2 }}
-                            <span class="hero-tag">+{{ sub (len .Params.tags) 2 }}</span>
                             {{ end }}
                         </div>
                         {{ end }}
                     </div>
                     
+                    <h2 class="post-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h2>
+                    
                     <p class="post-excerpt">
                         {{ with .Plain }}
                             {{ $firstParagraph := index (split . "\n\n") 0 }}
-                            {{ $firstParagraph | truncate 120 }}
+                            {{ $firstParagraph | truncate 160 }}
                         {{ else }}
-                            {{ .Summary | truncate 120 }}
+                            {{ .Summary | truncate 160 }}
                         {{ end }}
                     </p>
                     

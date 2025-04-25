@@ -1291,12 +1291,30 @@ body.light-theme .post-card .post-title a {
   border: 1px solid rgba(255, 255, 255, 0.5);
   margin-left: var(--spacing-xs);
   transition: filter var(--transition-fast), border-color var(--transition-fast);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .hero-tag:hover {
   filter: brightness(0.85);
   border-color: white;
   color: white;
+}
+
+/* Adjust hero tag in list views */
+.post-card .hero-tag {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  font-size: 0.8rem;
+  padding: 1px 6px;
+  background: transparent;
+  opacity: 0.9;
+}
+
+.post-card .hero-tag:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  opacity: 1;
 }
 
 /* First paragraph image styling */
@@ -1321,4 +1339,81 @@ body.light-theme .post-card .post-title a {
     margin: 0 0 var(--spacing-md) 0;
     display: block;
   }
+}
+/* Improved post card styling */
+.post-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  overflow: hidden;
+}
+
+.post-card .post-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: var(--spacing-md);
+}
+
+.post-card .post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Improved tag alignment */
+.post-card .post-tags {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: var(--spacing-xs);
+  margin-top: 0;
+  padding-bottom: 4px; /* Space for scrollbar */
+  -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
+  scrollbar-width: none;  /* Hide scrollbar in Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.post-card .post-tags::-webkit-scrollbar {
+  display: none;
+}
+
+.post-card .hero-tag {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Ensure preview text is shown */
+.post-card .post-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+body.light-theme .post-card .post-excerpt {
+  color: var(--light-text-secondary);
+}
+
+/* Improved card hover effect */
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure read more button stays at bottom */
+.post-card .read-more-btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+/* Preserve user-added margin-top for post-list */
+.post-list {
+  margin-top: 50px;
 }
