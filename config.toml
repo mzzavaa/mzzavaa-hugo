@@ -16,7 +16,7 @@ ignoreLogs = ['warning-goldmark-raw-html']
 
 [params]
   # Site description
-  description = "A minimalist blog with an Apple-inspired design"
+  description = "A minimalist blog as a personal space dedicated to curiosity, creativity, and conscious reflection"
   
   # Author information
   [params.author]
