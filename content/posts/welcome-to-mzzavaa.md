@@ -6,7 +6,7 @@ description: "A learning blog for curious minds, creative hearts, and tech-savvy
 tags: ["introduction", "growth", "learning", "creativity"]
 categories: ["general"]
 author: "Linda Mohamed"
-image: "images/BD0E6A81-08B4-4F11-919A-986FC7E8EAA5.png"
+image: "images/3BD92617-E5ED-4743-9161-A1337FFB439A.png"
 ---
 
 # Welcome to Mzzavaa
