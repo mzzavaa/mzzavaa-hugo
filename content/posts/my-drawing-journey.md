@@ -37,14 +37,14 @@ There was no clear style, no line I felt destined to follow. I drew **eyes**, **
 
 The lesson? **You don’t have to know what you’re doing to keep doing it.** Growth doesn’t happen in a straight line—it spirals.
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-    <img src="/images/IMG_5033.png" style="width: auto; height: 400px;" />
-    <img src="/images/C1C4011B-A137-4BF1-8168-7CBEF08E979D.png" style="width: auto; height: 400px;" />
-    <img src="/images/IMG_9754.png" style="width: auto; height: 400px;" />
-    <img src="/images/CD5688A7-5956-4A12-B6DF-DA2BBE45F20A.png" style="width: auto; height: 400px;" />
-    <img src="/images/IMG_5080.png" style="width: auto; height: 400px;" />
-    <img src="/images/F1873787-27F7-4A22-BFC9-FC9259EA5630.png" style="width: auto; height: 300px;" />
-    <img src="/images/2CA428AC-D2C7-4C2C-92AC-5D58AEEEF73F.png" style="width: auto; height: 300px;" />
+<div class="flex flex-wrap gap-2 justify-center">
+    <img src="/images/IMG_5033.png"  class="h-96 object-contain" style="width: auto; max-height: 400px;" />
+    <img src="/images/C1C4011B-A137-4BF1-8168-7CBEF08E979D.png" style="width: auto; max-height: 400px;" />
+    <img src="/images/IMG_9754.png" style="width: auto; max-height: 400px;" />
+    <img src="/images/CD5688A7-5956-4A12-B6DF-DA2BBE45F20A.png" style="width: auto; max-height: 400px;" />
+    <img src="/images/IMG_5080.png" style="width: auto; max-height: 400px;" />
+    <img src="/images/F1873787-27F7-4A22-BFC9-FC9259EA5630.png" style="width: auto; max-height: 300px;" />
+    <img src="/images/2CA428AC-D2C7-4C2C-92AC-5D58AEEEF73F.png" style="width: auto; max-height: 300px;" />
 </div>
 
 
@@ -59,39 +59,39 @@ These sketches were never about realism or anatomical accuracy. They’re slow s
 And of course... none of them are “finished.” That’s kind of the point.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-  <img src="/images/54BB9A25-556C-46E2-9382-157ECF7EB96C.png" style="height: 400px;" />
-  <img src="/images/78C47E7F-BD65-450F-9B80-50FC7B6B0299.png" style="height: 400px;" />
-  <img src="/images/IMG_0427.png" style="height: 400px;" />
+  <img src="/images/54BB9A25-556C-46E2-9382-157ECF7EB96C.png" style="max-height: 400px;" />
+  <img src="/images/78C47E7F-BD65-450F-9B80-50FC7B6B0299.png" style="max-height: 400px;" />
+  <img src="/images/IMG_0427.png" style="max-height: 400px;" />
 </div>
 
 ### 📖 Pencil Practice & Half Portraits
 These are the pieces that taught me patience, observation, and letting go of symmetry. I love high contrast and emotional tension—this Joker piece took hours and almost made me throw my pencils across the room. 
 
-<div style="display: flex; justify-content: space-between; gap: 10px;">
-    <img src="/images/IMG_0796.png" style="width: auto; height: 500px;" />
-    <img src="/images/2E9CCF1D-7004-428D-A79F-DB446B792172.png" style="width: auto; height: 500px;" />
+<div class="flex flex-wrap gap-2 justify-center">
+    <img src="/images/IMG_0796.png" style="width: auto; max-height: 500px;" />
+    <img src="/images/2E9CCF1D-7004-428D-A79F-DB446B792172.png" style="width: auto; max-height: 500px;" />
 </div>
 
 I tried many portraits but ended up not really finishing a lot of them — here are some of the ones I started and some that I also finished.
 
-<div style="display: flex; justify-content: space-between; gap: 10px;">
-    <img src="/images/0947D58E-18CA-48D7-BDCA-DDBCF9FEFF9F.png" style="width: auto; height: 500px;" />
-    <img src="/images/IMG_5933.png" style="width: auto; height: 500px;" />
+<div class="flex flex-wrap gap-2 justify-center">
+    <img src="/images/0947D58E-18CA-48D7-BDCA-DDBCF9FEFF9F.png" style="width: auto; max-height: 500px;" />
+    <img src="/images/IMG_5933.png" style="width: auto; max-height: 500px;" />
 </div>
 
-<div style="display: flex; justify-content: space-between; gap: 10px;">
-    <img src="/images/15D7B344-330C-4F8E-839B-60E22D8FEAD7.png" style="width: auto; height: 350px;" />
-    <img src="/images/IMG_7618.png" style="width: auto; height: 350px;" />
-    <img src="/images/F429B1FF-F00F-4967-A093-825E8DEDE064.png" style="width: auto; height: 350px;" />
+<div class="flex flex-wrap gap-2 justify-center">
+    <img src="/images/15D7B344-330C-4F8E-839B-60E22D8FEAD7.png" style="width: auto; max-height: 350px;" />
+    <img src="/images/IMG_7618.png" style="width: auto; max-height: 350px;" />
+    <img src="/images/F429B1FF-F00F-4967-A093-825E8DEDE064.png" style="width: auto; max-height: 350px;" />
 </div>
 
 ### 🐾 Color Studies
 Sometimes I break my own rules and let color in. These were never about precision—just play. I tried capturing animals in pencil, pastel, and colored pencil.
 
-<div style="display: flex; justify-content: space-between; gap: 10px;">
-    <img src="/images/4BCCCB7D-192B-4365-8AAE-5144379B445D.png" style="width: auto; height: 350px;" />
-    <img src="/images/9F33DA04-58CD-4EF8-80C4-34121F45B2AA.png" style="width: auto; height: 350px;" />
-    <img src="/images/52F86359-09F2-42AB-8372-ACDBCBBB22DD.png" style="width: auto; height: 350px;" />
+<div class="flex flex-wrap gap-2 justify-center">
+    <img src="/images/4BCCCB7D-192B-4365-8AAE-5144379B445D.png" style="width: auto; max-height: 350px;" />
+    <img src="/images/9F33DA04-58CD-4EF8-80C4-34121F45B2AA.png" style="width: auto; max-height: 350px;" />
+    <img src="/images/52F86359-09F2-42AB-8372-ACDBCBBB22DD.png" style="width: auto; max-height: 350px;" />
 
 </div>
 
@@ -111,10 +111,10 @@ This drawing taught me a lot about patience. I spent hours layering and adjustin
 
 It took several passes and corrections to get it to a point where I was happy. I was scared the whole time that I wouldn’t be able to make the client happy—especially with something so personal. But they loved it. And now I look at it as one of my most finished, emotionally loaded works.
 
-<div style="display: flex; justify-content: space-between; gap: 10px;">
-  <img src="/images/15664E53-0BC8-4C50-9DC0-A8E7432A0A8A.png" style="height: 350px;" />
-  <img src="/images/IMG_1376.png" style="height: 350px;" />
-  <img src="/images/IMG_1292.png" style="height: 350px;" />
+<div class="flex flex-wrap gap-2 justify-center">
+  <img src="/images/15664E53-0BC8-4C50-9DC0-A8E7432A0A8A.png" style="max-height: 350px;" />
+  <img src="/images/IMG_1376.png" style="max-height: 350px;" />
+  <img src="/images/IMG_1292.png" style="max-height: 350px;" />
 </div>
 
 
@@ -126,10 +126,10 @@ Yes, I finished it. But that hair? Took forever. Every strand demanded its own m
 
 But for this one, I committed. And I love how it turned out—even if I’m never doing full hair again anytime soon.
 
-<div style="display: flex; justify-content: space-between; gap: 10px;">
-  <img src="/images/DSCF1232.png" style="height: 350px;" />
-  <img src="/images/IMG_1659.png" style="height: 350px;" />
-  <img src="/images/IMG_2639.png" style="height: 350px;" />
+<div class="flex flex-wrap gap-2 justify-center">
+  <img src="/images/DSCF1232.png" style="max-height: 350px;" />
+  <img src="/images/IMG_1659.png" style="max-height: 350px;" />
+  <img src="/images/IMG_2639.png" style="max-height: 350px;" />
 </div>
 
 
