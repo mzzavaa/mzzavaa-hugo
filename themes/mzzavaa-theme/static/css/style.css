@@ -602,6 +602,58 @@ body.light-theme .post-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+.ecosystem-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+}
+
+.ecosystem-column h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+.ecosystem-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.ecosystem-column a {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.ecosystem-column a:hover {
+  color: var(--primary);
+}
+
+.ecosystem-current {
+  color: var(--text-secondary);
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+.ecosystem-tagline {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  padding-bottom: var(--spacing-md);
 }
 
 .copyright {
@@ -651,8 +703,15 @@ body.light-theme .post-meta,
 body.light-theme .copyright,
 body.light-theme .social-links a,
 body.light-theme .hero p,
-body.light-theme .list-header .description {
+body.light-theme .list-header .description,
+body.light-theme .ecosystem-column a,
+body.light-theme .ecosystem-current,
+body.light-theme .ecosystem-tagline {
   color: var(--light-text-secondary);
+}
+
+body.light-theme .footer-content {
+  border-top-color: var(--light-border-color);
 }
 
 body.light-theme .post-content code {
