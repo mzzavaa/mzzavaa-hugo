@@ -3,7 +3,23 @@
     <div class="container">
         <h1 class="gradient-text">Welcome to {{ .Site.Title }}</h1>
         <p>{{ .Site.Params.description }}</p>
+        <p class="hero-voices-intro">Two voices write here. One builds, one checks whether it worked.</p>
+
+        <div class="voice-intro-grid">
+            {{ range $key := slice "junior" "senior" }}
+            {{ with index site.Data.voices $key }}
+            <a href="{{ printf "/voices/%s/" $key | relURL }}" class="voice-intro voice-{{ $key }}">
+                <img src="{{ .avatar | relURL }}" alt="{{ .name }}">
+                <span class="voice-intro-name"><i class="fas {{ .icon }}"></i> {{ .name }}</span>
+                <span class="voice-intro-role">{{ .role }}</span>
+                <span class="voice-intro-tagline">{{ .tagline }}</span>
+            </a>
+            {{ end }}
+            {{ end }}
+        </div>
+
         <a href="/posts/" class="btn">Read Blog</a>
+        <a href="/posts/meet-the-two-zavaas/" class="btn btn-outline">Meet the two Zavaas</a>
     </div>
 </section>
 
@@ -20,6 +36,10 @@
                         <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
                     </a>
                 </div>
+                {{ else if .Params.voices }}
+                <div class="post-image">
+                    <a href="{{ .Permalink }}">{{ partial "voice/card-art.html" . }}</a>
+                </div>
                 {{ else }}
                 <div class="post-image post-image-default">
                     <a href="{{ .Permalink }}">
@@ -33,6 +53,7 @@
                         <span class="post-date">
                             <i class="far fa-calendar"></i> {{ .Date.Format "Jan 2, 2006" }}
                         </span>
+                        {{ partial "voice/badges.html" . }}
                         
                         {{ if .Params.tags }}
                         <div class="post-tags">
@@ -48,11 +69,15 @@
                     </h2>
                     
                     <p class="post-excerpt">
+                        {{ with .Description }}
+                            {{ . | truncate 160 }}
+                        {{ else }}
                         {{ with .Plain }}
                             {{ $firstParagraph := index (split . "\n\n") 0 }}
                             {{ $firstParagraph | truncate 160 }}
                         {{ else }}
                             {{ .Summary | truncate 160 }}
+                        {{ end }}
                         {{ end }}
                     </p>
                     

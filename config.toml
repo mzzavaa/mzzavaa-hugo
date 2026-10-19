@@ -19,7 +19,7 @@ ignoreLogs = ['warning-goldmark-raw-html']
 
 [params]
   # Site description
-  description = "A minimalist blog as a personal space dedicated to curiosity, creativity, and conscious reflection"
+  description = "A personal space for curiosity, creativity and conscious reflection, written in two voices: Mz Zavaa Junior builds, Mz Zavaa Senior reviews."
   
   # Author information
   [params.author]
@@ -55,20 +55,31 @@ ignoreLogs = ['warning-goldmark-raw-html']
     url = "/posts/"
     weight = 2
   [[menu.main]]
+    identifier = "junior"
+    name = "Junior"
+    url = "/voices/junior/"
+    weight = 3
+  [[menu.main]]
+    identifier = "senior"
+    name = "Senior"
+    url = "/voices/senior/"
+    weight = 4
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 3
+    weight = 5
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 4
+    weight = 6
 
 # Taxonomies
 [taxonomies]
   tag = "tags"
   category = "categories"
+  voice = "voices"
 
 # Privacy settings
 [privacy]

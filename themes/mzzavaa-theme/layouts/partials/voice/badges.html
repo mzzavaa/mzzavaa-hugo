@@ -1,0 +1,9 @@
+{{ with .Params.voices }}
+<span class="voice-badges">
+    {{ range $key := . }}
+    {{ with index site.Data.voices $key }}
+    <a href="{{ printf "/voices/%s/" $key | relURL }}" class="voice-badge voice-{{ $key }}"><i class="fas {{ .icon }}"></i> {{ .short }}</a>
+    {{ end }}
+    {{ end }}
+</span>
+{{ end }}

@@ -1,5 +1,5 @@
 <div class="post-navigation {{ .Class }}">
-    {{ with .Context.PrevInSection }}
+    {{ with .Context.NextInSection }}
     <div class="prev-post">
         <a href="{{ .Permalink }}">
             <i class="fas fa-arrow-left"></i>
@@ -9,7 +9,7 @@
     </div>
     {{ end }}
     
-    {{ with .Context.NextInSection }}
+    {{ with .Context.PrevInSection }}
     <div class="next-post">
         <a href="{{ .Permalink }}">
             <span>Older Post</span>

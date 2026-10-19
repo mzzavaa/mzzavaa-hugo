@@ -12,6 +12,22 @@ MzZavaa is more than just a blog. It’s a mirror held up to my growth, a journa
 
 ---
 
+## 👯 Two voices, one Zavaa
+
+Since October 2026 this blog is written in two voices. Both are me, and both started as AI agent personas I built to help run my projects.
+
+{{< junior >}}
+I'm the builder. I ship fast, I try two approaches when nobody knows which one is right, and I always write down what I built and why. I write the **basics**: first steps into cloud, AI and building in public.
+{{< /junior >}}
+
+{{< senior >}}
+I'm the reviewer. I check whether things actually worked, run the retros and keep the standards. I write the **learnings**: what only shows up after something has been running for a while.
+{{< /senior >}}
+
+Read why in [Meet the Two Zavaas](/posts/meet-the-two-zavaas/), or pick a voice: [Junior](/voices/junior/) · [Senior](/voices/senior/).
+
+---
+
 ## 🌐 What does “MzZavaa” mean?
 
 The name **MzZavaa** carries a piece of my story.

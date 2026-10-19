@@ -10,6 +10,10 @@
                         <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
                     </a>
                 </div>
+                {{ else if .Params.voices }}
+                <div class="post-image">
+                    <a href="{{ .Permalink }}">{{ partial "voice/card-art.html" . }}</a>
+                </div>
                 {{ else }}
                 <div class="post-image post-image-default">
                     <a href="{{ .Permalink }}">
@@ -23,6 +27,7 @@
                         <span class="post-date">
                             <i class="far fa-calendar"></i> {{ .Date.Format "Jan 2, 2006" }}
                         </span>
+                        {{ partial "voice/badges.html" . }}
                         
                         {{ if .Params.tags }}
                         <div class="post-tags">
@@ -38,11 +43,15 @@
                     </h2>
                     
                     <p class="post-excerpt">
+                        {{ with .Description }}
+                            {{ . | truncate 160 }}
+                        {{ else }}
                         {{ with .Plain }}
                             {{ $firstParagraph := index (split . "\n\n") 0 }}
                             {{ $firstParagraph | truncate 160 }}
                         {{ else }}
                             {{ .Summary | truncate 160 }}
+                        {{ end }}
                         {{ end }}
                     </p>
                     
