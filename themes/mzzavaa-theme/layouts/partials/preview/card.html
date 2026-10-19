@@ -1,0 +1,34 @@
+{{/* Draws a 1200x630 preview card for a page that has no image of its own.
+     Junior pages get the dotted page, Senior pages the ruled review pad, shared pages the spread. */}}
+{{ $voices := .Params.voices | default (slice) }}
+{{ $variant := "both" }}
+{{ if eq (len $voices) 1 }}{{ $variant = index $voices 0 }}{{ end }}
+{{ $base := resources.Get (printf "cards/%s.png" $variant) }}
+{{ $serif := resources.Get "fonts/Newsreader_600SemiBold.ttf" }}
+{{ $mono := resources.Get "fonts/IBMPlexMono_500Medium.ttf" }}
+{{ $hand := resources.Get "fonts/Caveat_700Bold.ttf" }}
+
+{{ $kicker := "mzzavaa.com" }}
+{{ if eq .Section "repos" }}{{ $kicker = printf "open source · %s" .Parent.Title }}{{ else if eq $variant "junior" }}{{ $kicker = "junior · build notes" }}{{ else if eq $variant "senior" }}{{ $kicker = "senior · review notes" }}{{ else }}{{ $kicker = "junior + senior" }}{{ end }}
+{{ $ink := "#1d1c1a" }}
+{{ $accent := cond (eq $variant "senior") "#1f7a52" "#b3243a" }}
+
+{{/* Kicker and title go on a paper label so long titles wrap inside it */}}
+{{ $label := resources.Get "cards/label.png" | images.Filter
+  (images.Text (lower $kicker) (dict "font" $mono "size" 22 "color" $accent "x" 44 "y" 52))
+  (images.Text .Title (dict "font" $serif "size" 48 "color" $ink "x" 44 "y" 92 "linespacing" 8))
+}}
+{{ $filters := slice
+  (images.Overlay $label 70 96)
+  (images.Text "mzzavaa.com" (dict "font" $mono "size" 24 "color" "#57534c" "x" 110 "y" 560))
+}}
+{{ with .Params.status }}
+  {{ $filters = $filters | append (images.Text . (dict "font" $hand "size" 52 "color" $accent "x" 110 "y" 470)) }}
+{{ end }}
+{{ if eq $variant "both" }}
+  {{ $filters = $filters | append (images.Overlay (resources.Get "cards/avatar-junior.png") 870 420) (images.Overlay (resources.Get "cards/avatar-senior.png") 1020 420) }}
+{{ else }}
+  {{ $filters = $filters | append (images.Overlay (resources.Get (printf "cards/avatar-%s.png" $variant)) 1010 420) }}
+{{ end }}
+{{ $card := $base | images.Filter $filters }}
+{{ return $card }}

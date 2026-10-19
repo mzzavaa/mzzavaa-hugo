@@ -1,6 +1,6 @@
 ---
 title: ".github"
-date: 2026-10-19T18:13:00+02:00
+date: 2026-04-04T12:00:00+02:00
 draft: false
 description: "The profile README for the linda-mhmd GitHub account, introducing the GameDay Europe stream repos."
 repo: "linda-mhmd/.github"

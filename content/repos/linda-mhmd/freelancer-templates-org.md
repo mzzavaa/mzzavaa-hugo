@@ -1,6 +1,6 @@
 ---
 title: "freelancer-templates.org"
-date: 2026-10-19T18:10:00+02:00
+date: 2026-05-06T12:00:00+02:00
 draft: false
 description: "A library of Remotion video templates for freelancers, with a Hugo showcase site and an embeddable player."
 repo: "linda-mhmd/freelancer-templates.org"

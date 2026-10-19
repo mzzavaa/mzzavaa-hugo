@@ -1,6 +1,6 @@
 ---
 title: "garden-hub-wiki"
-date: 2026-10-19T18:12:00+02:00
+date: 2026-08-10T12:00:00+02:00
 draft: false
 description: "A bilingual garden wiki for the Austrian climate: plant profiles, sowing calendar, greenhouse guide and climate regions."
 repo: "linda-mhmd/garden-hub-wiki"

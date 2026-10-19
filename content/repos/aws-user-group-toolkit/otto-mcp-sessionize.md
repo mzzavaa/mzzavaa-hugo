@@ -1,6 +1,6 @@
 ---
 title: "otto-mcp-sessionize"
-date: 2026-10-19T17:02:00+02:00
+date: 2026-02-08T12:00:00+02:00
 draft: false
 description: "A small MCP server that lets AI agents search Sessionize sessions and speakers by month, packaged as a container."
 repo: "aws-user-group-toolkit/otto-mcp-sessionize"
@@ -11,6 +11,7 @@ last_commit: "2026-02-08"
 commits: 8
 built_by: "Philipp Bergsmann, with one AI-assisted pull request by GitHub Copilot"
 tags: ["mcp", "sessionize", "python", "ai-agents"]
+image: "images/Folie22.png"
 ---
 
 A Model Context Protocol server with one tool, `search_sessionize`, which returns sessions and speaker names for a given month. It is a building block for [OTTO](/posts/building-otto/), the event-planning agent idea, so the agent can see which talks are lined up.

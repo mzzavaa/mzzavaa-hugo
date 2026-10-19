@@ -1,0 +1,16 @@
+{{/* A post card. Its frame says who wrote it: Junior's are taped polaroids, Senior's are filed cards. */}}
+{{ $voices := .Params.voices | default (slice) }}
+{{ $kind := "both" }}{{ if eq (len $voices) 1 }}{{ $kind = index $voices 0 }}{{ end }}
+<article class="card card-{{ $kind }}">
+    <a class="card-image" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ partial "preview/url.html" . }}" alt="" loading="lazy">
+    </a>
+    <div class="card-body">
+        <p class="card-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+            {{ partial "voice/badges.html" . }}
+        </p>
+        <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ with .Description }}<p class="card-desc">{{ . | truncate 150 }}</p>{{ end }}
+    </div>
+</article>

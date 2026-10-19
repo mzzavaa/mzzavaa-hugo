@@ -1,6 +1,6 @@
 ---
 title: "aws-community-austria-meetup"
-date: 2026-10-19T16:07:00+02:00
+date: 2026-04-04T12:00:00+02:00
 draft: false
 description: "The first attempt at the meetup tools: per-meetup config that generated slides and a prep guide in GitHub Actions."
 repo: "aws-user-groups-austria/aws-community-austria-meetup"

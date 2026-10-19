@@ -1,6 +1,6 @@
 ---
 title: "content-sync"
-date: 2026-10-19T17:09:00+02:00
+date: 2023-10-22T12:00:00+02:00
 draft: false
 description: "A repository with only an initial commit, a one-line README and an MIT licence."
 repo: "aws-user-group-toolkit/content-sync"

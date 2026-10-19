@@ -1,6 +1,6 @@
 ---
 title: "event-system-backend"
-date: 2026-10-19T18:01:00+02:00
+date: 2024-09-13T12:00:00+02:00
 draft: false
 description: "Serverless AWS CDK backend for AWS Community DACH events: event and participant API, Cognito sign-in, SES emails and check-in."
 repo: "aws-community-dach/event-system-backend"

@@ -1,6 +1,6 @@
 ---
 title: "community-gameday-europe-event"
-date: 2026-10-19T18:15:00+02:00
+date: 2026-04-03T12:00:00+02:00
 draft: false
 description: "Event configuration for AWS Community GameDay Europe 2026: participants, schedule and photos, deployed to GitHub Pages."
 repo: "linda-mhmd/community-gameday-europe-event"

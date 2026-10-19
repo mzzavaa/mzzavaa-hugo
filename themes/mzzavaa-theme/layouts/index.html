@@ -1,53 +1,111 @@
 {{ define "main" }}
-<section class="intro wrap">
-    <p class="kicker">mzzavaa.com · notebook</p>
-    <h1>One person, two voices.</h1>
-    <p class="lede">I'm Linda. I build things in public and I run communities. This notebook is written by the two halves of how I work: the part that ships, and the part that checks whether it was any good.</p>
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ $repoSection := .Site.GetPage "/repos" }}
+{{ $repos := slice }}{{ with $repoSection }}{{ $repos = .RegularPagesRecursive }}{{ end }}
+{{ $junior := index hugo.Data.voices "junior" }}
+{{ $senior := index hugo.Data.voices "senior" }}
+{{ $lastBuild := index (sort $repos "Date" "desc") 0 }}
+{{/* Newest post written by one voice alone */}}
+{{ $lastReview := false }}{{ $lastBasics := false }}
+{{ range $posts }}
+  {{ $v := .Params.voices | default (slice) }}
+  {{ if and (not $lastReview) (eq (len $v) 1) (in $v "senior") }}{{ $lastReview = . }}{{ end }}
+  {{ if and (not $lastBasics) (eq (len $v) 1) (in $v "junior") }}{{ $lastBasics = . }}{{ end }}
+{{ end }}
 
-    <div class="split">
-        {{ range $key := slice "junior" "senior" }}
-        {{ with index hugo.Data.voices $key }}
-        <a class="split-half {{ $key }}" href="{{ printf "/voices/%s/" $key | relURL }}">
-            <img src="{{ .avatar | relURL }}" alt="Avatar of {{ .name }}" width="72" height="72">
-            <span class="split-name">{{ .name }}</span>
-            <span class="split-role">{{ .role }}</span>
-            <span class="split-tagline">{{ .tagline }}</span>
-            <span class="split-more">Read {{ .short }} &rarr;</span>
+<section class="wrap home-title">
+    <p class="kicker">Linda Mohamed · mzzavaa.com</p>
+    <h1>A notebook kept by two of me.</h1>
+</section>
+
+<section class="wrap">
+<div class="spread">
+    {{/* Left page: Junior */}}
+    <div class="page page-junior">
+        <p class="scribble">hi! I build the thing first &darr;</p>
+        <div class="page-person">
+            <figure class="polaroid">
+                <img src="{{ $junior.avatar | relURL }}" alt="Mz Zavaa Junior" width="160" height="160">
+            </figure>
+            <div>
+                <h2><a href="{{ "/voices/junior/" | relURL }}">{{ $junior.name }}</a></h2>
+                <p class="page-role">{{ $junior.role }} · basics and build notes</p>
+                <p>{{ $junior.tagline }}</p>
+            </div>
+        </div>
+        {{ with $lastBuild }}
+        <a class="sticky" href="{{ .RelPermalink }}">
+            <span class="hand">last thing I touched</span>
+            <strong>{{ .Params.repo | default .Title }}</strong>
+            <span class="sticky-date">last commit {{ .Date.Format "2 Jan 2006" }}</span>
         </a>
         {{ end }}
+        {{ with $lastBasics }}
+        <p class="page-link">Newest basics: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
         {{ end }}
     </div>
+
+    {{/* Right page: Senior */}}
+    <div class="page page-senior">
+        <div class="page-person">
+            <figure class="portrait">
+                <img src="{{ $senior.avatar | relURL }}" alt="Mz Zavaa Senior" width="150" height="225">
+            </figure>
+            <div>
+                <h2><a href="{{ "/voices/senior/" | relURL }}">{{ $senior.name }}</a></h2>
+                <p class="page-role">{{ $senior.role }} · retros and learnings</p>
+                <p>{{ $senior.tagline }}</p>
+            </div>
+        </div>
+        {{ with $repos }}
+        <div class="review-slip">
+            <p class="typed">review · open source desk</p>
+            <ul>
+                <li><span>{{ len . }}</span> public repos read</li>
+                <li><span>{{ len (where . "Params.status" "active") }}</span> active</li>
+                <li><span>{{ len (where . "Params.status" "quiet") }}</span> quiet, and that's fine</li>
+                <li><span>{{ len (where . "Params.status" "finished") }}</span> finished</li>
+                <li><span>{{ len (where . "Params.status" "empty") }}</span> empty, which is a promise to strangers</li>
+            </ul>
+        </div>
+        {{ end }}
+        {{ with $lastReview }}
+        <p class="page-link">Newest review: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+        {{ end }}
+    </div>
+</div>
 </section>
 
 <section class="wrap block">
     <div class="block-head">
         <h2>Latest writing</h2>
-        <a href="{{ "/posts/" | relURL }}">all posts &rarr;</a>
+        <a href="{{ "/posts/" | relURL }}">everything &rarr;</a>
     </div>
-    <ol class="log">
-        {{ range first 8 (where .Site.RegularPages "Type" "posts") }}{{ partial "list/row.html" . }}{{ end }}
-    </ol>
+    <div class="cards cards-lead">
+        {{ range first 7 $posts }}{{ partial "list/card.html" . }}{{ end }}
+    </div>
 </section>
 
-{{ with .Site.GetPage "/repos" }}
+{{ with $repoSection }}
 <section class="wrap block">
     <div class="block-head">
-        <h2>Open source notebook</h2>
+        <h2>The open source desk</h2>
         <a href="{{ .RelPermalink }}">all organisations &rarr;</a>
     </div>
     <p class="block-note">{{ .Description }}</p>
-    <ul class="org-list">
+    <div class="folders">
         {{ range .Sections }}
-        {{ $active := where .RegularPages "Params.status" "active" }}
-        <li>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <span class="org-count">{{ len .RegularPages }} repos · {{ len $active }} active</span>
-        </li>
+        {{ $p := .RegularPages }}
+        <a class="folder" href="{{ .RelPermalink }}">
+            <span class="folder-tab">{{ .Params.org | default .Title }}</span>
+            <span class="folder-name">{{ .Title }}</span>
+            <span class="folder-count">{{ len $p }} repos · {{ len (where $p "Params.status" "active") }} active</span>
+        </a>
         {{ end }}
-    </ul>
+    </div>
     <h3 class="sub-head">Most recently touched</h3>
     <ol class="log">
-        {{ range first 5 (sort .RegularPagesRecursive "Params.last_commit" "desc") }}{{ partial "list/row.html" . }}{{ end }}
+        {{ range first 6 (sort $repos "Date" "desc") }}{{ partial "list/row.html" . }}{{ end }}
     </ol>
 </section>
 {{ end }}

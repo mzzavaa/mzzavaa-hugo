@@ -1,6 +1,6 @@
 ---
 title: "image-generator"
-date: 2026-10-19T17:04:00+02:00
+date: 2025-04-06T12:00:00+02:00
 draft: false
 description: "A Python and Pillow script, shipped as a container and a PyPI package, that generates header images for Meetup events."
 repo: "aws-user-group-toolkit/image-generator"

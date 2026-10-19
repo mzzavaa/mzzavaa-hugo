@@ -9,22 +9,23 @@
     {{ with .Content }}<div class="prose section-intro">{{ . }}</div>{{ end }}
 
     {{ with .Sections }}
-    <ul class="org-list org-list-large">
+    <div class="folders folders-large">
         {{ range . }}
         {{ $pages := .RegularPages }}
-        <li>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <span class="org-count">{{ len $pages }} repos · {{ len (where $pages "Params.status" "active") }} active · {{ len (where $pages "Params.status" "quiet") }} quiet · {{ len (where $pages "Params.status" "finished") }} finished{{ with where $pages "Params.status" "empty" }} · {{ len . }} empty{{ end }}</span>
-            {{ with .Description }}<p class="log-desc">{{ . }}</p>{{ end }}
-        </li>
+        <a class="folder" href="{{ .RelPermalink }}">
+            <span class="folder-tab">{{ .Params.org | default .Title }}</span>
+            <span class="folder-name">{{ .Title }}</span>
+            <span class="folder-count">{{ len $pages }} repos · {{ len (where $pages "Params.status" "active") }} active · {{ len (where $pages "Params.status" "quiet") }} quiet · {{ len (where $pages "Params.status" "finished") }} finished{{ with where $pages "Params.status" "empty" }} · {{ len . }} empty{{ end }}</span>
+            {{ with .Description }}<span class="folder-desc">{{ . }}</span>{{ end }}
+        </a>
         {{ end }}
-    </ul>
+    </div>
     {{ end }}
 
     {{ with .RegularPages }}
     <h2 class="sub-head">Repositories, most recently touched first</h2>
     <ol class="log">
-        {{ range sort . "Params.last_commit" "desc" }}{{ partial "list/row.html" . }}{{ end }}
+        {{ range . }}{{ partial "list/row.html" . }}{{ end }}
     </ol>
     {{ end }}
 </div>

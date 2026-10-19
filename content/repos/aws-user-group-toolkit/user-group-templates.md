@@ -1,6 +1,6 @@
 ---
 title: "user-group-templates"
-date: 2026-10-19T17:07:00+02:00
+date: 2024-03-08T12:00:00+02:00
 draft: false
 description: "Printable role badges, name tag labels and a Meetup welcome message template for AWS User Group leaders."
 repo: "aws-user-group-toolkit/user-group-templates"

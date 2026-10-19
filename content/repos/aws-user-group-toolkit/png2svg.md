@@ -1,6 +1,6 @@
 ---
 title: "png2svg"
-date: 2026-10-19T17:06:00+02:00
+date: 2024-05-20T12:00:00+02:00
 draft: false
 description: "A containerised script that traces a PNG logo into dark and light SVG versions using ImageMagick and potrace."
 repo: "aws-user-group-toolkit/png2svg"

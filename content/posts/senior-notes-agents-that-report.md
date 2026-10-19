@@ -1,12 +1,13 @@
 ---
 title: "Senior's Notes: Agents That Report Instead of Act"
-date: 2026-10-19T11:00:00+02:00
+date: 2026-10-05T10:00:00+02:00
 draft: false
 description: "A year of running AI agent personas taught me that the most useful thing an unattended agent can do is notice what is missing and say so, and nothing more."
 tags: ["ai-agents", "governance", "automation", "lessons-learned", "personas"]
 categories: ["learning"]
 voices: ["senior"]
 author: "Linda Mohamed"
+image: "images/Folie23.png"
 ---
 
 {{< senior >}}

@@ -1,6 +1,6 @@
 ---
 title: "meetup-deck"
-date: 2026-10-19T16:04:00+02:00
+date: 2026-10-19T12:00:00+02:00
 draft: false
 description: "A Python tool that fills in the group's own slide deck for one meetup from its event.json, as .pptx and PDF."
 repo: "aws-user-groups-austria/meetup-deck"

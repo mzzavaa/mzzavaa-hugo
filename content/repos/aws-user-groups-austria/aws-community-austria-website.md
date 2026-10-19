@@ -1,6 +1,6 @@
 ---
 title: "aws-community-austria-website"
-date: 2026-10-19T16:01:00+02:00
+date: 2026-10-19T12:00:00+02:00
 draft: false
 description: "The source of awscommunity.at: the Austrian AWS user groups, a page per meetup, the speaker prep guide and the room screen."
 repo: "aws-user-groups-austria/aws-community-austria-website"

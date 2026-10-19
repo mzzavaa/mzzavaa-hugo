@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="article wrap">
     <header class="article-head">
-        {{ if eq .Section "repos" }}<p class="kicker"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>{{ end }}
+        {{ if eq .Section "repos" }}<p class="kicker"><a href="{{ .Parent.RelPermalink }}">open source · {{ .Parent.Title }}</a></p>{{ end }}
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
         {{ if not .Date.IsZero }}
@@ -15,7 +15,8 @@
 
     {{ partial "repo/facts.html" . }}
 
-    {{ with .Params.image }}<figure class="lead-image"><img src="{{ . | relURL }}" alt=""></figure>{{ end }}
+    {{ $voices := .Params.voices | default (slice) }}
+    {{ with .Params.image }}<figure class="lead-image {{ if eq (len $voices) 1 }}lead-{{ index $voices 0 }}{{ else }}lead-both{{ end }}"><img src="{{ . | relURL }}" alt=""></figure>{{ end }}
 
     <div class="prose">{{ .Content }}</div>
 

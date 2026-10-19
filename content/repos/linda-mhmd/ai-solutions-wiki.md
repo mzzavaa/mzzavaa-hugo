@@ -1,6 +1,6 @@
 ---
 title: "ai-solutions-wiki"
-date: 2026-10-19T18:11:00+02:00
+date: 2026-10-09T12:00:00+02:00
 draft: false
 description: "Source of ai-solutions.wiki, a knowledge base for building and running production AI systems, organised in five layers."
 repo: "linda-mhmd/ai-solutions-wiki"

@@ -1,6 +1,6 @@
 ---
 title: "meetup-workspace"
-date: 2026-10-19T16:00:00+02:00
+date: 2026-10-19T12:00:00+02:00
 draft: false
 description: "The starting point for the meetup tools: a Makefile, the spec all repos build against, and the guide from a Meetup link to the live site."
 repo: "aws-user-groups-austria/meetup-workspace"

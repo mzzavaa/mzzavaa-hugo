@@ -1,6 +1,6 @@
 ---
 title: "meetup-stream-templates"
-date: 2026-10-19T16:02:00+02:00
+date: 2026-10-19T12:00:00+02:00
 draft: false
 description: "The meetup room screen: Remotion scenes for every part of the evening and a web player that runs them by the clock."
 repo: "aws-user-groups-austria/meetup-stream-templates"

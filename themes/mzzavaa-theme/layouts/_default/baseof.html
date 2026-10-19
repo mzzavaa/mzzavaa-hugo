@@ -14,11 +14,18 @@
 
     <link rel="preload" href="{{ "fonts/newsreader-latin-500-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ "fonts/ibm-plex-sans-latin-400-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ "fonts/caveat-latin-700-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
     {{ if .Params.syntax }}<link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}">{{ end }}
 
     {{ partial "opengraph.html" . }}
     {{ partial "twitter_cards.html" . }}
+    {{ if .IsPage }}
+    {{ $preview := partial "preview/url.html" . | absURL }}
+    <meta property="og:image" content="{{ $preview }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ $preview }}">
+    {{ end }}
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>

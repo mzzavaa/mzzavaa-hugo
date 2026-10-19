@@ -1,6 +1,6 @@
 ---
 title: "aws-community-austria"
-date: 2026-10-19T16:08:00+02:00
+date: 2025-06-23T12:00:00+02:00
 draft: false
 description: "An empty repository with no commits yet."
 repo: "aws-user-groups-austria/aws-community-austria"

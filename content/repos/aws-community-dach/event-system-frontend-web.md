@@ -1,6 +1,6 @@
 ---
 title: "event-system-frontend-web"
-date: 2026-10-19T18:00:00+02:00
+date: 2024-09-15T12:00:00+02:00
 draft: false
 description: "Next.js web app for registering for AWS Community DACH events, showing a participant QR code and checking people in."
 repo: "aws-community-dach/event-system-frontend-web"

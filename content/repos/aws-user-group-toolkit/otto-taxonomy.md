@@ -1,6 +1,6 @@
 ---
 title: "otto-taxonomy"
-date: 2026-10-19T17:03:00+02:00
+date: 2025-05-06T12:00:00+02:00
 draft: false
 description: "An InstructLab taxonomy of Q&A pairs and context documents about AWS User Groups in Austria and how meetups are organised, made for OTTO."
 repo: "aws-user-group-toolkit/otto-taxonomy"
@@ -11,6 +11,7 @@ last_commit: "2025-05-06"
 commits: 62
 built_by: "Linda, with Philipp Bergsmann"
 tags: ["instructlab", "ai-agents", "knowledge-base", "otto"]
+image: "images/Folie70.png"
 ---
 
 The knowledge base behind [OTTO](/posts/building-otto/), the event-planning agent idea. It is an InstructLab taxonomy: markdown documents plus `qna.yaml` seed files about the AWS community programmes, the Vienna, Vienna Women's and Linz user groups, personas like first-timer, speaker and host, meetup formats from Stammtisch to GameDay, and event planning.

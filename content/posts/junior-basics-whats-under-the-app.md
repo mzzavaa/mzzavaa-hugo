@@ -1,12 +1,13 @@
 ---
 title: "Junior's Basics: What Is Actually Under the App?"
-date: 2026-10-19T10:00:00+02:00
+date: 2026-09-15T10:00:00+02:00
 draft: false
 description: "Software, cloud and AI, each explained at the exact moment it shows up, using one real system I built: a pipeline that turns a raw video into something you can publish."
 tags: ["basics", "cloud", "ai", "aws", "video", "beginners"]
 categories: ["learning"]
 voices: ["junior"]
 author: "Linda Mohamed"
+image: "images/IMG_8381.png"
 ---
 
 {{< junior >}}

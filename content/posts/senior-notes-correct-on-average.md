@@ -1,6 +1,6 @@
 ---
 title: "Senior's Notes: Correct on Average, Wrong by Design"
-date: 2026-10-19T13:00:00+02:00
+date: 2026-09-30T10:00:00+02:00
 draft: false
 description: "What preparing my Cloud Native Days Austria keynote taught me about how AI systems quietly turn a skewed past into a default future, and what builders can actually do about it."
 tags: ["ai", "bias", "ethics", "talks", "lessons-learned", "women-in-tech"]

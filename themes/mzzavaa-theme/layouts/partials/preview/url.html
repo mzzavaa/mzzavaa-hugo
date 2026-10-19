@@ -1,0 +1,4 @@
+{{/* The preview image for a page: its own image if it has one, otherwise a drawn card */}}
+{{ $url := "" }}
+{{ with .Params.image }}{{ $url = . | relURL }}{{ else }}{{ $url = (partial "preview/card.html" .).RelPermalink }}{{ end }}
+{{ return $url }}

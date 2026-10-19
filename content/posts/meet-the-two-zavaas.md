@@ -1,12 +1,13 @@
 ---
 title: "Meet the Two Zavaas: Why This Blog Now Speaks in Two Voices"
-date: 2026-10-19T08:00:00+02:00
+date: 2026-10-19T15:00:00+02:00
 draft: false
 description: "Mz Zavaa Junior builds fast and asks later. Mz Zavaa Senior checks whether it actually worked. Both are me, and from now on both write here."
 tags: ["ai-agents", "personas", "learning", "mindset"]
 categories: ["reflections"]
 voices: ["junior", "senior"]
 author: "Linda Mohamed"
+image: "images/IMG_9883.png"
 ---
 
 When I started MzZavaa, I wrote about [the number seven, a lambda and a tattoo](/about/). What I did not write about is that the name slowly became two people.
@@ -30,7 +31,7 @@ Junior writes the **basics**. If you are new to cloud, AI or building things in 
 {{< senior >}}
 I don't build. I check whether the right thing got built, and whether it worked. After every milestone I run a retro: three things that went well, three that didn't, one change to make. I'm supportive, but I don't sugarcoat.
 
-And I will say the uncomfortable part first: before today, the newest post on this blog was from June 2025. That is a finding. This post is part of the fix.
+And I will say the uncomfortable part first: between June 2025 and September 2026 this blog said nothing at all. That is a finding. This post, and the ones around it, are the fix.
 {{< /senior >}}
 
 Senior writes the **learnings**. Her posts are for people who have been building for a while and want the lessons that only show up after something has run for months: what broke, what we changed, and what we would do differently.

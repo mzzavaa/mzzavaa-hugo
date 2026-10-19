@@ -1,24 +1,25 @@
 {{ define "main" }}
 <header class="page-head wrap">
+    {{ if eq .Kind "term" }}{{ with index hugo.Data.voices .Data.Term }}<img class="page-head-avatar {{ $.Data.Term }}" src="{{ .avatar | relURL }}" alt="" width="88" height="88">{{ end }}{{ end }}
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
 </header>
 <div class="wrap">
     {{ with .Content }}<div class="prose section-intro">{{ . }}</div>{{ end }}
     {{ if eq .Kind "term" }}
-    {{/* Voice and tag pages: essays first, repo notes after, so neither drowns the other */}}
+    {{/* Voice and tag pages: essays as cards first, repo notes as a log after */}}
     {{ with where .Pages "Section" "posts" }}
     <h2 class="sub-head">Writing</h2>
-    <ol class="log">{{ range . }}{{ partial "list/row.html" . }}{{ end }}</ol>
+    <div class="cards">{{ range . }}{{ partial "list/card.html" . }}{{ end }}</div>
     {{ end }}
     {{ with where .Pages "Section" "repos" }}
     <h2 class="sub-head">Repo notes</h2>
-    <ol class="log">{{ range sort . "Params.last_commit" "desc" }}{{ partial "list/row.html" . }}{{ end }}</ol>
+    <ol class="log">{{ range . }}{{ partial "list/row.html" . }}{{ end }}</ol>
     {{ end }}
+    {{ else if eq .Kind "taxonomy" }}
+    <ul class="term-cloud">{{ range .Data.Terms.ByCount }}<li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> <span>{{ .Count }}</span></li>{{ end }}</ul>
     {{ else }}
-    <ol class="log">
-        {{ range .Paginator.Pages }}{{ partial "list/row.html" . }}{{ end }}
-    </ol>
+    <div class="cards">{{ range .Paginator.Pages }}{{ partial "list/card.html" . }}{{ end }}</div>
     {{ partial "pagination.html" . }}
     {{ end }}
 </div>

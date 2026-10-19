@@ -1,6 +1,6 @@
 ---
 title: "aws-community-austria-templates"
-date: 2026-10-19T17:01:00+02:00
+date: 2026-04-04T12:00:00+02:00
 draft: false
 description: "Remotion components, slide compositions and a design system for AWS Community Austria meetups, with Sessionize integration."
 repo: "aws-user-group-toolkit/aws-community-austria-templates"

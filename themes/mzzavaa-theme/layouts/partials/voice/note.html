@@ -1,8 +1,8 @@
 {{ $v := index hugo.Data.voices .key }}
 <aside class="voice-note {{ .key }}">
-    <img class="voice-note-avatar" src="{{ $v.avatar | relURL }}" alt="" width="44" height="44" loading="lazy">
-    <div class="voice-note-body">
-        <p class="voice-note-name">{{ $v.name }} <span>{{ $v.role }}</span></p>
-        {{ .content }}
-    </div>
+    <p class="voice-note-name">
+        <img class="voice-note-avatar" src="{{ $v.avatar | relURL }}" alt="" width="40" height="40" loading="lazy">
+        {{ if eq .key "junior" }}<span class="hand">Junior says</span>{{ else }}<span class="typed">Senior · review</span>{{ end }}
+    </p>
+    <div class="voice-note-body">{{ .content }}</div>
 </aside>

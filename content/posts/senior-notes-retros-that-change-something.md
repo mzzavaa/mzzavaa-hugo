@@ -1,12 +1,13 @@
 ---
 title: "Senior's Notes: Retros That Actually Change Something"
-date: 2026-10-19T12:00:00+02:00
+date: 2026-09-17T10:00:00+02:00
 draft: false
 description: "Three that went well, three that didn't, one change. The retro format I use, the quality checks behind it, and the rules for content that I would not give up."
 tags: ["retrospectives", "quality", "process", "lessons-learned", "teaching"]
 categories: ["learning"]
 voices: ["senior"]
 author: "Linda Mohamed"
+image: "images/IMG_1393.png"
 ---
 
 {{< senior >}}

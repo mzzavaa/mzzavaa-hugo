@@ -7,6 +7,7 @@ tags: ["career", "learning", "productivity", "mindset", "community"]
 categories: ["reflections"]
 author: "Linda Mohamed"
 voices: ["senior"]
+image: "images/IMG_7428.png"
 ---
 
 # It's Okay to Forget: Why You Don't Need to Remember Everything in Tech

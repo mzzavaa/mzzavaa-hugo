@@ -1,12 +1,13 @@
 ---
 title: "Junior's Basics: Hybrid AI Architecture Without the Jargon"
-date: 2026-10-19T09:00:00+02:00
+date: 2026-10-01T10:00:00+02:00
 draft: false
 description: "Where does AI actually run, what does it cost, and how do you draw it? The basics I gave students at FH St. Pölten, written down for everyone who was not in the room."
 tags: ["basics", "ai", "architecture", "cloud", "aws", "students"]
 categories: ["learning"]
 voices: ["junior"]
 author: "Linda Mohamed"
+image: "images/IMG_1728.png"
 ---
 
 {{< junior >}}

@@ -1,6 +1,6 @@
 ---
 title: "mettup-organization-template"
-date: 2026-10-19T17:05:00+02:00
+date: 2024-07-27T12:00:00+02:00
 draft: false
 description: "An empty repository in the AWS User Group Toolkit organisation with no commits yet."
 repo: "aws-user-group-toolkit/mettup-organization-template"

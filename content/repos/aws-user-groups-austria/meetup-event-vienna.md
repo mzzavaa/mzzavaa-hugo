@@ -1,6 +1,6 @@
 ---
 title: "meetup-event-vienna"
-date: 2026-10-19T16:03:00+02:00
+date: 2026-10-19T12:00:00+02:00
 draft: false
 description: "One folder per AWS User Group Vienna meetup with its Meetup link, overrides and generated event files, plus shared photos and badges."
 repo: "aws-user-groups-austria/meetup-event-vienna"

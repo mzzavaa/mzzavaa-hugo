@@ -1,16 +1,9 @@
-{{/* One line in the log: date, title, voices, and for repo notes the status */}}
+{{/* One line in a repo log: last commit, name, what it is, status stamp */}}
 <li class="log-row">
-    {{ if eq .Section "repos" }}
     {{ with .Params.last_commit }}<time datetime="{{ . }}" title="last commit">{{ . }}</time>{{ else }}<time>no commits</time>{{ end }}
-    {{ else }}
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-    {{ end }}
     <div class="log-main">
         <a class="log-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ with .Description }}<p class="log-desc">{{ . | truncate 170 }}</p>{{ end }}
+        {{ with .Description }}<p class="log-desc">{{ . | truncate 150 }}</p>{{ end }}
     </div>
-    <div class="log-meta">
-        {{ with .Params.status }}<span class="status status-{{ . }}">{{ . }}</span>{{ end }}
-        {{ partial "voice/badges.html" . }}
-    </div>
+    {{ with .Params.status }}<span class="stamp stamp-{{ . }}">{{ . }}</span>{{ end }}
 </li>

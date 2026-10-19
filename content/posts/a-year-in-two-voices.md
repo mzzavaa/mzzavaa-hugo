@@ -7,10 +7,11 @@ tags: ["year-in-review", "retrospectives", "community", "aws", "ai", "talks"]
 categories: ["reflections"]
 voices: ["junior", "senior"]
 author: "Linda Mohamed"
+image: "images/IMG_6695.png"
 ---
 
 {{< senior >}}
-Before we start: this blog went quiet for over a year. The last post was from June 2025. A lot happened in between and none of it landed here. So this is the catch-up, in the format I always use: Junior lists what shipped, I review it. Everything below is public. Nothing confidential.
+Before we start: this blog was silent from June 2025 until September 2026. A lot happened in between and almost none of it landed here. So this is the catch-up, in the format I always use: Junior lists what shipped, I review it. Everything below is public. Nothing confidential.
 {{< /senior >}}
 
 ## Part 1: Junior's shipping list
