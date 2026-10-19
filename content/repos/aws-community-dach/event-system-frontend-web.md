@@ -24,7 +24,7 @@ What I noticed reading it:
 {{< /junior >}}
 
 {{< senior >}}
-Last commit was 15 September 2024, so the repo has been quiet for about two years. For an event tool that is fine: it runs around events and rests in between. The real risk is dependencies. It pins Next.js 13.5.6 and React 18.2, and anyone reviving it for the next event should plan an upgrade pass before touching features. It has an Apache 2.0 licence, a short README and projen-managed GitHub workflows, including an upgrade workflow that is worth checking still runs.
+Last commit was 15 September 2024, so the repo has been quiet for about two years. For an event tool that is fine: it runs around events and rests in between. Anyone reviving it for the next event should start with an upgrade pass. It has an Apache 2.0 licence, a short README and projen-managed GitHub workflows, including an upgrade workflow that is worth checking still runs.
 {{< /senior >}}
 
 **Learned:** A seasonal tool needs a dependency refresh before each season, not just a bug fix during it.

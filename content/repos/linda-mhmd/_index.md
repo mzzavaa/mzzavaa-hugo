@@ -10,4 +10,4 @@ This is where I publish the things I build in the open. It started with the stre
 
 {{< junior >}}Everything here started as "I need this for next week". The GameDay stream had to work on a fixed date, so it got built fast and then cleaned up so others could fork it. The newer repos lean more on AI coding agents, and I write down which ones did the typing.{{< /junior >}}
 
-{{< senior >}}Six own repos plus one fork. One is active (ai-solutions-wiki), the two GameDay repos and the profile README are finished, and freelancer-templates.org and garden-hub-wiki are quiet. Two repos still carry committed `.playwright-mcp/` console log folders, and two have no licence file. Those are small, fixable things, and they are the first things a stranger notices.{{< /senior >}}
+{{< senior >}}Six own repos plus one fork. One is active (ai-solutions-wiki), the two GameDay repos and the profile README are finished, and freelancer-templates.org and garden-hub-wiki are quiet. Two still need a licence file, which is a small, fixable thing.{{< /senior >}}

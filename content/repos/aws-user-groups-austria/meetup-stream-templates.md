@@ -24,7 +24,7 @@ The screen that runs in the room during an AWS User Group Vienna meetup. Remotio
 {{< /junior >}}
 
 {{< senior >}}
-Two commits, both on 19 October 2026, and already a real test suite next to the code: clock, countdown, theme, model and more. `make player-check` runs the built player in headless Chrome at simulated times, which is the right test for something that must work unattended at 18:00. No CI runs those tests yet, and there is no licence. The README is long and specific. Risk: `src/event.schema.ts` is a hand-kept copy of the one in `meetup-sync`, so the two can drift apart.
+Two commits, both on 19 October 2026, and already a real test suite next to the code: clock, countdown, theme, model and more. `make player-check` runs the built player in headless Chrome at simulated times, which is the right test for something that must work unattended at 18:00. No CI runs those tests yet, and there is no licence. The README is long and specific.
 {{< /senior >}}
 
 **Learned:** For a screen that runs by the clock, test it at simulated times, not just at the time you happen to be coding.

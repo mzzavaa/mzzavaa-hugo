@@ -23,7 +23,7 @@ The website at awscommunity.at, the home of all AWS user groups in Austria. A Vi
 {{< /junior >}}
 
 {{< senior >}}
-226 commits, but 197 of them are the daily "update meetup events" bot. That is the site working, not people working, and it is good to know the difference. Linda's own commits come in three bursts: March, April and 19 October. Three workflows: deploy, a daily event fetch, and a Monday and Friday rebuild of the meetup pages. The README is long and current. There is no licence file, yet the README invites forks. Risk: the room screen is committed as a built bundle in `public/present/`, so it can drift from its source repo without anyone noticing.
+226 commits, but 197 of them are the daily "update meetup events" bot. That is the site working, not people working, and it is good to know the difference. Linda's own commits come in three bursts: March, April and 19 October. Three workflows: deploy, a daily event fetch, and a Monday and Friday rebuild of the meetup pages. The README is long and current. There is no licence file, yet the README invites forks.
 {{< /senior >}}
 
 **Learned:** Count the bot commits separately, or a busy log hides how often humans touch the site.

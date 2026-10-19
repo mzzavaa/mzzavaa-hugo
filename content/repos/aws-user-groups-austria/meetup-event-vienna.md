@@ -24,7 +24,7 @@ The data repo for the AWS User Group Vienna meetups. Each meetup has a folder un
 {{< /junior >}}
 
 {{< senior >}}
-Three commits on 19 October 2026 and a workflow that updates the meetups every Monday and Friday, so this repo will show bot activity even when nobody touches it. The README is clear about what is generated and what to edit. No licence. The README asks that photos and logos are added only with the owner's consent; that rule matters more here than any code. Risk: `legacy/` is a parking spot, and parking spots tend to stay forever. It needs a date to be emptied.
+Three commits on 19 October 2026 and a workflow that updates the meetups every Monday and Friday, so this repo will show bot activity even when nobody touches it. The README is clear about what is generated and what to edit. No licence. The README asks that photos and logos are added only with the owner's consent; that rule matters more here than any code.
 {{< /senior >}}
 
 **Learned:** Write down which files are generated and which are hand-edited, in the README, before the first contributor asks.

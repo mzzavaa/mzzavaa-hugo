@@ -24,7 +24,7 @@ A library of video templates built with Remotion, for things freelancers make ag
 {{< /junior >}}
 
 {{< senior >}}
-Last commit was 6 May 2026, so it has been quiet for about five months. The live site keeps working without commits, so quiet is acceptable here. What needs fixing: the repo has no licence file, which matters for a template library meant to be reused. It also has a committed `.playwright-mcp/` folder of browser console logs, a committed `render.log` and a `.kiro` folder. None of those belong in a public repo; they should be removed and added to `.gitignore`. On the plus side there are deploy, thumbnail and icon-sync workflows and a vitest setup.
+Last commit was 6 May 2026, so it has been quiet for about five months. The live site keeps working without commits, so quiet is acceptable here. What needs fixing: the repo has no licence file, which matters for a template library meant to be reused. On the plus side there are deploy, thumbnail and icon-sync workflows and a vitest setup.
 {{< /senior >}}
 
 **Learned:** Tool output folders end up in git unless you ignore them on day one.

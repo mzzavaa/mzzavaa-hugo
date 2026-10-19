@@ -21,7 +21,7 @@ This one is mostly mine. We started it on one day in June 2024, me writing Q&A f
 {{< /junior >}}
 
 {{< senior >}}
-62 commits, last one May 2025, quiet since. The README explains InstructLab well, but its directory overview lists folders like `personas/` and `logistics/` that do not match the real tree any more. The seed files still say `created_by: your_github_username`. There is no licence, which matters for a dataset people might train on. The bigger risk: several documents contain personal contact details of the organisers. A training dataset is the worst place for those, because they end up in model answers. Remove them and point to a public contact page instead.
+62 commits, last one May 2025, quiet since. The README explains InstructLab well, but its directory overview lists folders like `personas/` and `logistics/` that do not match the real tree any more. The seed files still say `created_by: your_github_username`. There is no licence, which matters for a dataset people might train on.
 {{< /senior >}}
 
-**Learned:** Anything in a training set can come back out of the model, so keep it to facts you would print on a flyer.
+**Learned:** A model only knows what the taxonomy tells it, so the gaps you leave are the gaps it fills in by itself.

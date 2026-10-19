@@ -23,7 +23,7 @@ The stream visuals for AWS Community GameDay Europe 2026, an event across more t
 {{< /junior >}}
 
 {{< senior >}}
-Finished: the event happened, the last commit was 3 April 2026 and it added community health files. That is a good way to end. It has a README with screenshots, a CC BY-NC-SA 4.0 licence, code of conduct, security policy and a Pages deploy workflow. Hygiene finding: a `.playwright-mcp/` folder of browser console logs is committed and should be removed and ignored. `LESSONS_LEARNED.md` also still has placeholder sections waiting for organisers.
+Finished: the event happened, the last commit was 3 April 2026 and it added community health files. That is a good way to end. It has a README with screenshots, a CC BY-NC-SA 4.0 licence, code of conduct, security policy and a Pages deploy workflow. `LESSONS_LEARNED.md` also still has placeholder sections waiting for organisers.
 {{< /senior >}}
 
 **Learned:** Separate the engine from the event data and the second edition gets much cheaper.

@@ -27,7 +27,7 @@ A Copilot agent opened a pull request to move the port to 8080, and a later comm
 {{< /junior >}}
 
 {{< senior >}}
-Two days of work in February 2026, quiet since. The README is clear and has client configs for VS Code, Claude Desktop and Cursor. A stranger would trip on the ports though: the README says 8080 everywhere, the code and Dockerfile now expose 8000. There is no licence file, no tests, and dependencies are unpinned. It fetches the whole session list on every call, which is fine for one meetup and worth knowing for more.
+Two days of work in February 2026, quiet since. The README is clear and has client configs for VS Code, Claude Desktop and Cursor. A stranger would trip on the ports though: the README says 8080 everywhere, the code and Dockerfile now expose 8000. There is no licence file and no tests yet. It fetches the whole session list on every call, which is fine for one meetup and worth knowing for more.
 {{< /senior >}}
 
 **Learned:** A port change needs to land in the README in the same commit.

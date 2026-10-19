@@ -24,7 +24,7 @@ A small Python package that takes the deck the organizers already present from, 
 {{< /junior >}}
 
 {{< senior >}}
-Two commits on 19 October 2026, pytest tests in `tests/`, a `uv.lock`, and a README that explains each slide it touches. Because the template is private, a stranger cannot run this end to end, and the README says so honestly. No licence and no CI. The deck is still made on an organizer's laptop, and the PDF comes from PowerPoint, so this step stays manual by design. Risk: matching slides by their text depends on nobody rewording the slide titles in the template.
+Two commits on 19 October 2026, pytest tests in `tests/`, a `uv.lock`, and a README that explains each slide it touches. Because the template is private, a stranger cannot run this end to end, and the README says so honestly. No licence and no CI. The deck is still made on an organizer's laptop, and the PDF comes from PowerPoint, so this step stays manual by design.
 {{< /senior >}}
 
 **Learned:** Find slides by their content, not their index, when the template belongs to someone else.

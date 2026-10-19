@@ -23,7 +23,7 @@ The source of ai-solutions.wiki, a knowledge base for taking AI systems to produ
 {{< /junior >}}
 
 {{< senior >}}
-This is the active one: last commit 9 October 2026, with weekly news and freshness updates landing through pull requests. It has a README, a dual licence in `LICENSE.md`, a contributing guide and a citation file. CI covers deploy, PR checks, PR previews and the weekly update, and there are gitleaks and zizmor configs, which shows someone thought about secrets and workflow safety. The honest risk is the size of the content: a wiki this broad goes stale page by page, so the freshness sweep has to keep running.
+This is the active one: last commit 9 October 2026, with weekly news and freshness updates landing through pull requests. It has a README, a dual licence in `LICENSE.md`, a contributing guide and a citation file. CI covers deploy, PR checks, PR previews and the weekly update. A wiki this broad needs the weekly freshness sweep to keep running, and it does.
 {{< /senior >}}
 
 **Learned:** An agent that opens a pull request and waits is easier to trust than one that commits.

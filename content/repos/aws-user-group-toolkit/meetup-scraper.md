@@ -20,7 +20,7 @@ Philipp handed me an empty `scrape.py` and a working container pipeline, which i
 {{< /junior >}}
 
 {{< senior >}}
-Three commits on one day in October 2023, nothing since. Quiet, and also unfinished: the README is a single heading, the output goes nowhere, and the commit message has a typo. Scraping a page by CSS selector breaks whenever the site changes its markup, and three years on that selector is unlikely to still match. The base image is Python 3.9 on Debian buster, out of support. Either archive it or make the URL an environment variable and write down what the count was for.
+Three commits on one day in October 2023, nothing since. Quiet, and also unfinished: the README is a single heading, the output goes nowhere, and the commit message has a typo. Scraping a page by CSS selector breaks whenever the site changes its markup, and three years on that selector is unlikely to still match. Either archive it or make the URL an environment variable and write down what the count was for.
 {{< /senior >}}
 
 **Learned:** A scraper with no place to store its result is a demo, not a tool.

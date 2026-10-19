@@ -24,7 +24,7 @@ Philipp built nearly all of this on one day in October 2023, through a string of
 {{< /junior >}}
 
 {{< senior >}}
-It did its job and stopped, with only small fixes to the output directory default in 2024 and 2025. Finished is fair. The README is good, with Docker and Podman examples, though the image paths still point at the old org name. Things a stranger should know: the default photo and logo are hotlinked from third-party websites, so the defaults break if those pages move. The base image is Python 3.9 on Debian buster, which is out of support. The font files are committed into the repo, so check their licence allows that.
+It did its job and stopped, with only small fixes to the output directory default in 2024 and 2025. Finished is fair. The README is good, with Docker and Podman examples, though the image paths still point at the old org name.
 {{< /senior >}}
 
 **Learned:** Defaults that load from someone else's website are a dependency you never chose.

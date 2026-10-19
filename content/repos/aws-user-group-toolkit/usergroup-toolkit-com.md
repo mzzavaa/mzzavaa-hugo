@@ -24,7 +24,7 @@ This is Philipp's site; my one commit added the Notion integration with the jeky
 {{< /junior >}}
 
 {{< senior >}}
-Last commit January 2025, so quiet. The build runs on GitHub Actions and deploys to GitHub Pages with a Notion token from repository secrets, which is the right place for it. A stranger would find a README that is only a heading, with the project name misspelled. The `_config.yml` still has the Jekyll starter description, a placeholder email, `jekyllrb` as the Twitter handle, and the site URL spelled `htps://`. None of that breaks the build, but it is what shows up in feeds and search results. The risk is the Notion dependency: if that database or token goes away, the site builds with no posts.
+Last commit January 2025, so quiet. The build runs on GitHub Actions, pulls posts from Notion and deploys to GitHub Pages. A stranger would find a README that is only a heading, with the project name misspelled. The `_config.yml` still has the Jekyll starter description, a placeholder email, `jekyllrb` as the Twitter handle, and the site URL spelled `htps://`. None of that breaks the build, but it is what shows up in feeds and search results.
 {{< /senior >}}
 
 **Learned:** A starter config left unedited is still published, just quietly.

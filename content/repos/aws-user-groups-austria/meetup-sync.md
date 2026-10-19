@@ -24,7 +24,7 @@ The command line at the start of the meetup tools. Give it a Meetup event link o
 {{< /junior >}}
 
 {{< senior >}}
-One commit on 19 October 2026 with a broad test suite: agenda, archive, merge, people, Sessionize, text and a fixture test against a saved real Meetup page. That fixture is the right call: parsing someone else's HTML breaks when they change it, and a saved page makes the break visible. No CI and no licence. Risk: the whole tool depends on Meetup's page structure, which nobody here controls. When a sync fails before a meetup, that is the first place to look.
+One commit on 19 October 2026 with a broad test suite: agenda, archive, merge, people, Sessionize, text and a fixture test against a saved real Meetup page. That fixture is the right call: parsing someone else's HTML breaks when they change it, and a saved page makes the break visible. No CI and no licence.
 {{< /senior >}}
 
 **Learned:** A scraper is only as good as the saved page it is tested against, so refresh the fixture now and then.

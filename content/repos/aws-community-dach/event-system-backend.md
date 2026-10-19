@@ -24,7 +24,7 @@ What I noticed reading it:
 {{< /junior >}}
 
 {{< senior >}}
-Last commit was 13 September 2024, so the repo has been quiet for about two years. Seasonal is fine for an event backend. Ageing dependencies are not: it pins aws-cdk-lib 2.152.0 and projen 0.86.7, and Lambda runtimes get retired on their own schedule. There is CI with a dev and prod pipeline and an integration test draft, but the unit test is a commented-out snapshot and the README still says "replace this". A stranger could not deploy it from the repo alone. The Apache 2.0 licence is there.
+Last commit was 13 September 2024, so the repo has been quiet for about two years. Seasonal is fine for an event backend. There is CI with a dev and prod pipeline and an integration test draft, but the unit test is a commented-out snapshot and the README still says "replace this". A stranger could not deploy it from the repo alone. The Apache 2.0 licence is there.
 {{< /senior >}}
 
 **Learned:** Generating handlers from an API definition keeps a volunteer codebase consistent even when several people touch it.
