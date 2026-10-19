@@ -5,7 +5,9 @@
         </a>
         <nav class="main-nav" aria-label="Main">
             {{ range .Site.Menus.main }}
-            <a href="{{ .URL | relURL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+            {{/* Current when on the page itself or anywhere below it, e.g. a post under Writing */}}
+            {{ $current := or ($.IsMenuCurrent "main" .) (hasPrefix $.RelPermalink (.URL | relURL)) }}
+            <a href="{{ .URL | relURL }}"{{ if $current }} aria-current="page"{{ end }}>{{ .Name }}</a>
             {{ end }}
         </nav>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch light or dark mode">light / dark</button>
