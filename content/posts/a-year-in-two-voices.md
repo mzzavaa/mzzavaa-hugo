@@ -7,7 +7,6 @@ tags: ["year-in-review", "retrospectives", "community", "aws", "ai", "talks"]
 categories: ["reflections"]
 voices: ["junior", "senior"]
 author: "Linda Mohamed"
-image: "images/streaming-setup.jpg"
 ---
 
 {{< senior >}}
