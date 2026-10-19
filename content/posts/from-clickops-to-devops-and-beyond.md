@@ -162,7 +162,7 @@ I’m also updating my workshop format to include more **platform strategy**, **
 
 Let’s chat. I’m always happy to share what worked, what didn’t, and what we learned along the way.
 
-📬 [linda@lindamohamed.com](mailto:linda@lindamohamed.com)
+📬 [hello@lindamohamed.com](mailto:hello@lindamohamed.com)
 🌐 [lindamohamed.com](https://lindamohamed.com)
 📣 [sessionize.com/linda-mohamed/](https://sessionize.com/linda-mohamed/)
 
