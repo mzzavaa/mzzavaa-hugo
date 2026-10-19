@@ -7,7 +7,7 @@ tags: ["year-in-review", "retrospectives", "community", "aws", "ai", "talks"]
 categories: ["reflections"]
 voices: ["junior", "senior"]
 author: "Linda Mohamed"
-image: "images/IMG_6695.png"
+image: "images/women-of-cloud-podcast-recording.png"
 ---
 
 {{< senior >}}
