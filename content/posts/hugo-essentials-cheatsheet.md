@@ -7,6 +7,7 @@ tags: ["Hugo", "Static Site Generator", "Web Development", "Markdown", "Cheat Sh
 categories: ["Development", "Tools", "Tutorials", "Amazon Q CLI"]
 author: "Amazon Q"
 image: "images/hugo_with_gophers.png"
+voices: ["junior"]
 ---
 
 # Hugo Essentials: A Beginner's Cheat Sheet

@@ -4,11 +4,9 @@ junior:
   role: "The builder"
   tagline: "Ships fast, tries two ways at once, writes down what she built and why."
   avatar: "images/personas/zavaa-junior.png"
-  icon: "fa-bolt"
 senior:
   name: "Mz Zavaa Senior"
   short: "Senior"
   role: "The reviewer"
   tagline: "Checks whether it actually worked, runs the retro, asks the hard question kindly."
   avatar: "images/personas/zavaa-senior.jpg"
-  icon: "fa-glasses"

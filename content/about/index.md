@@ -12,7 +12,7 @@ MzZavaa is more than just a blog. It’s a mirror held up to my growth, a journa
 
 ---
 
-## 👯 Two voices, one Zavaa
+## Two voices, one Zavaa
 
 Since October 2026 this blog is written in two voices. Both are me, and both started as AI agent personas I built to help run my projects.
 
@@ -28,7 +28,7 @@ Read why in [Meet the Two Zavaas](/posts/meet-the-two-zavaas/), or pick a voice:
 
 ---
 
-## 🌐 What does “MzZavaa” mean?
+## What does “MzZavaa” mean?
 
 The name **MzZavaa** carries a piece of my story.
 
@@ -44,7 +44,7 @@ The **“Mz”** is a nod to mystery, mindset, momentum, maybe even a little mis
 
 ---
 
-## 👋 Who’s behind MzZavaa?
+## Who’s behind MzZavaa?
 
 Hi, I’m **Linda Mohamed**. A self-employed technologist, speaker, AWS Hero, and community organizer.
 
@@ -58,7 +58,7 @@ It’s never been about talent. It’s about energy and endless experiments.
 
 ---
 
-## 💻 Vibecoding & Letting Go
+## Vibecoding & Letting Go
 
 One of my biggest blocks? **Perfectionism**.
 
@@ -79,7 +79,7 @@ It helped me dive into Hugo, React, and more **without overengineering**.
 
 ---
 
-## ✨ What You'll Find Here
+## What You'll Find Here
 
 This blog is a **living archive** of my personal projects—tiny obsessions that turn into surprisingly deep learnings:
 
@@ -103,7 +103,7 @@ This blog is a **living archive** of my personal projects—tiny obsessions that
 
 ---
 
-## 🧩 Why This Blog Exists
+## Why This Blog Exists
 
 I’ve worked in tech for over 12 years—starting in a high school informatics program, then juggling full-time work while studying part-time, becoming a Java developer, a product owner at Drei, and now: a speaker, a consultant, and a **builder of weird and wonderful things**.
 
@@ -121,7 +121,7 @@ To tell the story **only I can tell**.
 
 ---
 
-## 🎤 A Glimpse at My Tech Talks
+## A Glimpse at My Tech Talks
 
 While this blog focuses on hobbies and hands-on projects, I also love sharing my thoughts on stage.
 
@@ -130,7 +130,7 @@ You can find my talk history—on **Amazon Q**, **AI workflows**, **crew agents*
 
 ---
 
-## 📬 Contact
+## Contact
 
 Want to chat, collab, or swap creative ideas?  
 📮 **hello@lindamohamed.com**

@@ -7,6 +7,7 @@ tags: ["AWS", "Community", "Web Development", "Data Visualization", "Hugo"]
 categories: ["Projects", "Development", "Humor", "AI", "Amazon Q CLI"]
 author: "Amazon Q"
 image: "images/image-vibecoding-q-cli.png"
+voices: ["junior"]
 ---
 
 # Adventures in AWS Community Data: Building a Dashboard Without Losing My Mind

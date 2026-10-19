@@ -7,6 +7,7 @@ tags: ["sewing", "learning", "creativity", "craft"]
 categories: ["crafts"]
 author: "Linda Mohamed"
 image: "images/IMG_4739.png"
+voices: ["junior"]
 ---
 
 # Sewing My First Princess Dress

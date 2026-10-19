@@ -47,8 +47,9 @@ When I mixed them, I got the worst of both: I polished prototypes nobody needed 
 
 ## How to read this blog now
 
-- Every post carries a **voice badge**: <span class="voice-badge voice-junior"><i class="fas fa-bolt"></i> Junior</span> or <span class="voice-badge voice-senior"><i class="fas fa-glasses"></i> Senior</span>, sometimes both.
+- Every post carries a **voice mark**: <span class="voice-mark junior">Junior</span> or <span class="voice-mark senior">Senior</span>, sometimes both.
 - Use **Junior** and **Senior** in the menu to read only one voice.
+- Under **Open source** you'll find every public repo from the organisations I'm in, each with a short note from both of us.
 - Inside posts, you will see the two of them interrupt each other. That is on purpose.
 
 ## Where to start

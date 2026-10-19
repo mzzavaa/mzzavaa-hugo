@@ -3,59 +3,66 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:          # build only, so a broken branch shows up before it is merged
   workflow_dispatch:
 
-##################################################################
-# Minimal permissions for GitHub Pages v4
-##################################################################
-permissions:
-  contents: read
-  pages: write
-  id-token: write         # OIDC auth
-  actions: read           # needed by upload-pages-artifact@v3
+# Nothing by default; each job asks for what it needs.
+permissions: {}
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: pages-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     env:
-      HUGO_VERSION: 0.121.0   # bump when you upgrade locally
+      HUGO_VERSION: 0.168.0   # bump together with HUGO_SHA256 when you upgrade locally
+      HUGO_SHA256: 787f100057328824f38c6ad7c87ff10d6451ae0a7bc39cedaad0dd2bcde17e53
     steps:
-      - uses: actions/checkout@v4
+      # Actions are pinned to commit SHAs; the comment shows the release it came from.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          submodules: recursive
-          fetch-depth: 0
+          persist-credentials: false
 
-      - name: Install Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: ${{ env.HUGO_VERSION }}
-          extended: true       # enable SCSS/Sass
+      - name: Install Hugo (extended), verified against the release checksum
+        run: |
+          file="hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          curl -sSLo "$file" "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${file}"
+          echo "${HUGO_SHA256}  ${file}" | sha256sum -c -
+          mkdir -p "$HOME/.local/bin"
+          tar -xzf "$file" -C "$HOME/.local/bin" hugo
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Configure Pages
         id: pages
-        uses: actions/configure-pages@v4
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
       - name: Build
-        run: |
-          hugo --gc --minify \
-               --baseURL "${{ steps.pages.outputs.base_url }}/"
+        env:
+          BASE_URL: ${{ steps.pages.outputs.base_url || 'https://mzzavaa.com' }}
+        run: hugo --gc --minify --baseURL "${BASE_URL}/"
 
       - name: Upload site
-        uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: ./public
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - name: Deploy
         id: deploy
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

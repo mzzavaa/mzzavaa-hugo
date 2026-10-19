@@ -7,6 +7,7 @@ tags: ["community", "leadership", "aws", "growth"]
 categories: ["community"]
 author: "Linda Mohamed"
 image: "images/DA709705_DxO.jpg"
+voices: ["senior"]
 ---
 
 # How We Grew AWS User Group Vienna to 2,000+ Members

@@ -7,6 +7,7 @@ tags: ["drawing", "art", "pencil", "self-taught", "creative-process"]
 categories: ["art"]
 author: "Linda Mohamed"
 image: "images/2E9CCF1D-7004-428D-A79F-DB446B792172.png"
+voices: ["junior"]
 ---
 
 # Sketches, Smudges & Scribbles: My Drawing Journey

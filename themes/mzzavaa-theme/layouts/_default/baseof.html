@@ -1,57 +1,32 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.Language.Locale }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
-    
-    <!-- Favicon -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="color-scheme" content="light dark">
     <link rel="icon" href="{{ "favicon.ico" | relURL }}">
-    
-    <!-- CSS -->
+
+    {{/* Set the stored theme before the first paint, so there is no flash */}}
+    <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+
+    <link rel="preload" href="{{ "fonts/newsreader-latin-500-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ "fonts/ibm-plex-sans-latin-400-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Syntax highlighting -->
-    {{ if .Params.syntax }}
-    <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}">
-    {{ end }}
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
-    
-    {{ template "_internal/opengraph.html" . }}
-    {{ template "_internal/twitter_cards.html" . }}
+    {{ if .Params.syntax }}<link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}">{{ end }}
+
+    {{ partial "opengraph.html" . }}
+    {{ partial "twitter_cards.html" . }}
 </head>
 <body>
-    <div class="site-container">
-        {{ partial "header.html" . }}
-        
-        <!-- Hero section for all pages -->
-        {{ if and (not .IsHome) }}
-        <section class="page-hero">
-            <div class="container">
-                <h1 class="gradient-text">{{ .Title }}</h1>
-                {{ if .Description }}
-                <p>{{ .Description }}</p>
-                {{ end }}
-            </div>
-        </section>
-        {{ end }}
-        
-        <main>
-            {{ block "main" . }}{{ end }}
-        </main>
-        
-        {{ partial "footer.html" . }}
-    </div>
-    
-    <!-- JavaScript -->
-    <script src="{{ "js/main.js" | relURL }}"></script>
-    {{ block "scripts" . }}{{ end }}
+    <a class="skip-link" href="#main">Skip to content</a>
+    {{ partial "header.html" . }}
+    <main id="main">
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    <script src="{{ "js/main.js" | relURL }}" defer></script>
 </body>
 </html>

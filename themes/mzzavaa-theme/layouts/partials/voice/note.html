@@ -1,8 +1,8 @@
-{{ $v := index site.Data.voices .key }}
-<aside class="voice-note voice-{{ .key }}">
-    <img class="voice-note-avatar" src="{{ $v.avatar | relURL }}" alt="{{ $v.name }}" loading="lazy">
+{{ $v := index hugo.Data.voices .key }}
+<aside class="voice-note {{ .key }}">
+    <img class="voice-note-avatar" src="{{ $v.avatar | relURL }}" alt="" width="44" height="44" loading="lazy">
     <div class="voice-note-body">
-        <div class="voice-note-name"><i class="fas {{ $v.icon }}"></i> {{ $v.name }} <span>{{ $v.role }}</span></div>
+        <p class="voice-note-name">{{ $v.name }} <span>{{ $v.role }}</span></p>
         {{ .content }}
     </div>
 </aside>

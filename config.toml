@@ -1,18 +1,14 @@
 baseURL = "https://mzzavaa.com/"
-languageCode = "en-us"
+locale = "en-US"
 title = "MzZavaa"
 theme = "mzzavaa-theme"
 
-# Pagination settings
-paginate = 12  # Show 12 posts per page (doubled from default 6)
-
 [pagination]
-  pagerSize = 6
+  pagerSize = 12
 
-# Enable syntax highlighting
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-pygmentsCodefencesGuessSyntax = true
+[markup.highlight]
+  noClasses = false
+  guessSyntax = true
 
 # Ignore certain warnings
 ignoreLogs = ['warning-goldmark-raw-html']
@@ -32,26 +28,12 @@ ignoreLogs = ['warning-goldmark-raw-html']
     github = "https://github.com/mzzavaa"
     linkedin = "https://www.linkedin.com/in/linda-mohamed/"
   
-  # Theme colors (Apple-inspired)
-  [params.colors]
-    primary = "#0066CC"       # Apple blue
-    secondary = "#34C759"     # Apple green
-    background = "#121212"    # Dark background
-    surface = "#1E1E1E"       # Dark surface
-    text = "#FFFFFF"          # White text
-    textSecondary = "#8A8A8A" # Gray text
-    border = "#333333"        # Border color
 
 # Main menu
 [menu]
   [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
     identifier = "blog"
-    name = "Blog"
+    name = "Writing"
     url = "/posts/"
     weight = 2
   [[menu.main]]
@@ -65,14 +47,14 @@ ignoreLogs = ['warning-goldmark-raw-html']
     url = "/voices/senior/"
     weight = 4
   [[menu.main]]
+    identifier = "repos"
+    name = "Open source"
+    url = "/repos/"
+    weight = 5
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 5
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
     weight = 6
 
 # Taxonomies

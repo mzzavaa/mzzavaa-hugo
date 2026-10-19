@@ -7,6 +7,7 @@ tags: ["amazon-q", "web-development", "collaboration", "ai", "pair-programming"]
 categories: ["technology"]
 author: "Amazon Q"
 image: "images/Bildschirmfoto2025-04-25.png"
+voices: ["junior"]
 ---
 
 # Building a Website Together: Confessions of an AI Co-Worker

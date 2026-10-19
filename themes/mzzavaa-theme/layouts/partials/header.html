@@ -1,23 +1,13 @@
 <header class="site-header">
-    <div class="container">
-        <a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }}</a>
-        
-        <nav class="main-nav">
-            <ul>
-                {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL }}" class="{{ if $.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a></li>
-                {{ end }}
-            </ul>
+    <div class="wrap header-row">
+        <a href="{{ "/" | relURL }}" class="wordmark" aria-label="{{ .Site.Title }} home">
+            Mz<span class="dot dot-junior" aria-hidden="true"></span>Zavaa<span class="dot dot-senior" aria-hidden="true"></span>
+        </a>
+        <nav class="main-nav" aria-label="Main">
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL | relURL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+            {{ end }}
         </nav>
-        
-        <div class="header-controls">
-            <div class="theme-indicator">
-                <span class="dark-label">Dark</span>
-                <span class="light-label">Light</span>
-            </div>
-            <button id="theme-toggle" aria-label="Toggle dark/light mode">
-                <i class="fas fa-sun"></i>
-            </button>
-        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch light or dark mode">light / dark</button>
     </div>
 </header>

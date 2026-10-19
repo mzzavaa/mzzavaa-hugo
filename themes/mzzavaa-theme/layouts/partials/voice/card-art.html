@@ -1,8 +1,0 @@
-{{/* Card placeholder for posts without an image: the persona avatars on their colours */}}
-<div class="voice-card-art{{ range .Params.voices }} has-{{ . }}{{ end }}">
-    {{ range .Params.voices }}
-    {{ with index site.Data.voices . }}
-    <img src="{{ .avatar | relURL }}" alt="{{ .name }}" loading="lazy">
-    {{ end }}
-    {{ end }}
-</div>

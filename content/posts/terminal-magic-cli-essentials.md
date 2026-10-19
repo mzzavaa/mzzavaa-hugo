@@ -7,6 +7,7 @@ tags: ["cli", "website", "productivity", "macos", "hugo"]
 categories: ["productivity"]
 author: "Linda Mohamed"
 image: "images/Bildschirmfoto-2025-04-26-2.png"
+voices: ["junior"]
 ---
 
 # Terminal Magic: Essentials for Website Builders (macOS Focus)

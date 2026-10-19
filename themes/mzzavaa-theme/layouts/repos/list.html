@@ -1,0 +1,31 @@
+{{ define "main" }}
+<header class="page-head wrap">
+    {{ if .Parent }}{{ if ne .Parent.Kind "home" }}<p class="kicker"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>{{ end }}{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    {{ with .Params.org_url }}<p class="org-link"><a href="{{ . }}">{{ replace . "https://" "" }}</a>{{ with $.Params.role }} · {{ . }}{{ end }}</p>{{ end }}
+</header>
+<div class="wrap">
+    {{ with .Content }}<div class="prose section-intro">{{ . }}</div>{{ end }}
+
+    {{ with .Sections }}
+    <ul class="org-list org-list-large">
+        {{ range . }}
+        {{ $pages := .RegularPages }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <span class="org-count">{{ len $pages }} repos · {{ len (where $pages "Params.status" "active") }} active · {{ len (where $pages "Params.status" "quiet") }} quiet · {{ len (where $pages "Params.status" "finished") }} finished{{ with where $pages "Params.status" "empty" }} · {{ len . }} empty{{ end }}</span>
+            {{ with .Description }}<p class="log-desc">{{ . }}</p>{{ end }}
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+
+    {{ with .RegularPages }}
+    <h2 class="sub-head">Repositories, most recently touched first</h2>
+    <ol class="log">
+        {{ range sort . "Params.last_commit" "desc" }}{{ partial "list/row.html" . }}{{ end }}
+    </ol>
+    {{ end }}
+</div>
+{{ end }}

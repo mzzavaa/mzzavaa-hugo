@@ -7,6 +7,7 @@ tags: ["learning", "personal-growth", "aws", "community", "technology"]
 categories: ["reflections"]
 author: "Linda Mohamed"
 image: "/images/IMG_5343.png"
+voices: ["senior"]
 ---
 
 # Embracing the Learning Journey: Reflections on Continuous Growth

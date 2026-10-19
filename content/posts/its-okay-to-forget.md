@@ -6,7 +6,7 @@ description: "After more than a decade in tech and being an AWS Hero, I still Go
 tags: ["career", "learning", "productivity", "mindset", "community"]
 categories: ["reflections"]
 author: "Linda Mohamed"
-image: "images/cheat-sheets.png"
+voices: ["senior"]
 ---
 
 # It's Okay to Forget: Why You Don't Need to Remember Everything in Tech

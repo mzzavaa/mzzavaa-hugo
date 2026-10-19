@@ -7,6 +7,7 @@ tags: ["ai", "aws", "video", "creativity", "workflow"]
 categories: ["projects", "tech"]
 author: "Linda Mohamed"
 image: "images/stepfunctions_graph.png"
+voices: ["junior"]
 ---
 
 # Why I Built an AI Video Content Engine

@@ -4,7 +4,7 @@ date: 2025-05-02T16:00:00+02:00
 draft: false
 tags: ["AWS", "DevOps", "IaC", "Backstage", "Platform Engineering"]
 categories: ["Cloud Automation"]
-image: "/images/blog/from-clickops-to-backstage.jpg"
+voices: ["junior", "senior"]
 ----------------------------------------------------
 
 # 🚀 From ClickOps to DevOps — and Beyond: How We Got Tired of Doing the Same Thing Over and Over Again

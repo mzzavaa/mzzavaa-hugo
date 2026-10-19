@@ -1,0 +1,10 @@
+{{ with .Params.repo }}
+<dl class="repo-facts">
+    <div><dt>repo</dt><dd><a href="https://github.com/{{ . }}">github.com/{{ . }}</a></dd></div>
+    {{ with $.Params.status }}<div><dt>status</dt><dd><span class="status status-{{ . }}">{{ . }}</span></dd></div>{{ end }}
+    {{ with $.Params.built_by }}<div><dt>built by</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{ with $.Params.started }}<div><dt>first commit</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{ with $.Params.last_commit }}<div><dt>last commit</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{ with $.Params.commits }}<div><dt>commits</dt><dd>{{ . }}</dd></div>{{ end }}
+</dl>
+{{ end }}

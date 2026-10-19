@@ -7,6 +7,7 @@ tags: ["crewAI", "AWS", "community", "cloud", "ai-agents", "automation"]
 categories: ["projects", "tech"]
 author: "Linda Mohamed"
 image: "images/Folie1.png"
+voices: ["junior"]
 ---
 
 # The Birth of OTTO: How We Built an AI Crew for Our AWS Community

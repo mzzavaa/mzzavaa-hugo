@@ -1,95 +1,54 @@
 {{ define "main" }}
-<section class="hero">
-    <div class="container">
-        <h1 class="gradient-text">Welcome to {{ .Site.Title }}</h1>
-        <p>{{ .Site.Params.description }}</p>
-        <p class="hero-voices-intro">Two voices write here. One builds, one checks whether it worked.</p>
+<section class="intro wrap">
+    <p class="kicker">mzzavaa.com · notebook</p>
+    <h1>One person, two voices.</h1>
+    <p class="lede">I'm Linda. I build things in public and I run communities. This notebook is written by the two halves of how I work: the part that ships, and the part that checks whether it was any good.</p>
 
-        <div class="voice-intro-grid">
-            {{ range $key := slice "junior" "senior" }}
-            {{ with index site.Data.voices $key }}
-            <a href="{{ printf "/voices/%s/" $key | relURL }}" class="voice-intro voice-{{ $key }}">
-                <img src="{{ .avatar | relURL }}" alt="{{ .name }}">
-                <span class="voice-intro-name"><i class="fas {{ .icon }}"></i> {{ .name }}</span>
-                <span class="voice-intro-role">{{ .role }}</span>
-                <span class="voice-intro-tagline">{{ .tagline }}</span>
-            </a>
-            {{ end }}
-            {{ end }}
-        </div>
-
-        <a href="/posts/" class="btn">Read Blog</a>
-        <a href="/posts/meet-the-two-zavaas/" class="btn btn-outline">Meet the two Zavaas</a>
+    <div class="split">
+        {{ range $key := slice "junior" "senior" }}
+        {{ with index hugo.Data.voices $key }}
+        <a class="split-half {{ $key }}" href="{{ printf "/voices/%s/" $key | relURL }}">
+            <img src="{{ .avatar | relURL }}" alt="Avatar of {{ .name }}" width="72" height="72">
+            <span class="split-name">{{ .name }}</span>
+            <span class="split-role">{{ .role }}</span>
+            <span class="split-tagline">{{ .tagline }}</span>
+            <span class="split-more">Read {{ .short }} &rarr;</span>
+        </a>
+        {{ end }}
+        {{ end }}
     </div>
 </section>
 
-<section class="featured-posts">
-    <div class="container">
-        <h2 class="gradient-text">Latest Posts</h2>
-        
-        <div class="posts-grid">
-            {{ range first 6 (where .Site.RegularPages "Type" "posts") }}
-            <article class="post-card">
-                {{ if .Params.image }}
-                <div class="post-image">
-                    <a href="{{ .Permalink }}">
-                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
-                    </a>
-                </div>
-                {{ else if .Params.voices }}
-                <div class="post-image">
-                    <a href="{{ .Permalink }}">{{ partial "voice/card-art.html" . }}</a>
-                </div>
-                {{ else }}
-                <div class="post-image post-image-default">
-                    <a href="{{ .Permalink }}">
-                        <div class="image-placeholder"></div>
-                    </a>
-                </div>
-                {{ end }}
-                
-                <div class="post-content">
-                    <div class="post-meta">
-                        <span class="post-date">
-                            <i class="far fa-calendar"></i> {{ .Date.Format "Jan 2, 2006" }}
-                        </span>
-                        {{ partial "voice/badges.html" . }}
-                        
-                        {{ if .Params.tags }}
-                        <div class="post-tags">
-                            {{ range .Params.tags }}
-                            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="hero-tag">{{ . }}</a>
-                            {{ end }}
-                        </div>
-                        {{ end }}
-                    </div>
-                    
-                    <h2 class="post-title">
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
-                    </h2>
-                    
-                    <p class="post-excerpt">
-                        {{ with .Description }}
-                            {{ . | truncate 160 }}
-                        {{ else }}
-                        {{ with .Plain }}
-                            {{ $firstParagraph := index (split . "\n\n") 0 }}
-                            {{ $firstParagraph | truncate 160 }}
-                        {{ else }}
-                            {{ .Summary | truncate 160 }}
-                        {{ end }}
-                        {{ end }}
-                    </p>
-                    
-                    <a href="{{ .Permalink }}" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-            {{ end }}
-        </div>
-        
-        <div class="view-all">
-            <a href="/posts/" class="btn btn-outline">View All Posts</a>
-        </div>
+<section class="wrap block">
+    <div class="block-head">
+        <h2>Latest writing</h2>
+        <a href="{{ "/posts/" | relURL }}">all posts &rarr;</a>
     </div>
+    <ol class="log">
+        {{ range first 8 (where .Site.RegularPages "Type" "posts") }}{{ partial "list/row.html" . }}{{ end }}
+    </ol>
 </section>
+
+{{ with .Site.GetPage "/repos" }}
+<section class="wrap block">
+    <div class="block-head">
+        <h2>Open source notebook</h2>
+        <a href="{{ .RelPermalink }}">all organisations &rarr;</a>
+    </div>
+    <p class="block-note">{{ .Description }}</p>
+    <ul class="org-list">
+        {{ range .Sections }}
+        {{ $active := where .RegularPages "Params.status" "active" }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <span class="org-count">{{ len .RegularPages }} repos · {{ len $active }} active</span>
+        </li>
+        {{ end }}
+    </ul>
+    <h3 class="sub-head">Most recently touched</h3>
+    <ol class="log">
+        {{ range first 5 (sort .RegularPagesRecursive "Params.last_commit" "desc") }}{{ partial "list/row.html" . }}{{ end }}
+    </ol>
+</section>
+{{ end }}
 {{ end }}

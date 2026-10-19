@@ -7,6 +7,7 @@ tags: ["git", "version-control", "devops", "git-basics", "workflow"]
 categories: ["tutorials", "tech"]
 author: "Linda Mohamed"
 image: "images/git-essentials.png"
+voices: ["junior"]
 ---
 
 <!--
