@@ -15,7 +15,9 @@
     <link rel="preload" href="{{ "fonts/newsreader-latin-500-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ "fonts/ibm-plex-sans-latin-400-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ "fonts/caveat-latin-700-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{/* Fingerprinted, so a changed stylesheet gets a new URL and phones never keep an old copy */}}
+    {{ $css := resources.Get "css/style.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
     {{ if .Params.syntax }}<link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}">{{ end }}
 
     {{ partial "opengraph.html" . }}
@@ -34,6 +36,7 @@
         {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
-    <script src="{{ "js/main.js" | relURL }}" defer></script>
+    {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 </body>
 </html>
