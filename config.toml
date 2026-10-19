@@ -4,7 +4,7 @@ title = "MzZavaa"
 theme = "mzzavaa-theme"
 
 [pagination]
-  pagerSize = 12
+  pagerSize = 100
 
 [markup.highlight]
   noClasses = false
