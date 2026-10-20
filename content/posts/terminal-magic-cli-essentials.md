@@ -12,13 +12,13 @@ voices: ["junior"]
 
 # Terminal Magic: Essentials for Website Builders (macOS Focus)
 
-When you start building your own website — especially something lightweight like **MzZavaa** — you realize quickly:
+When you start building your own website - especially something lightweight like **MzZavaa** - you realize quickly:
 
 **The Terminal is your silent co-pilot.**
 
 It’s not about being a Linux wizard. It’s about small, repeatable tricks that save your focus and your sanity.
 
-Here’s my personal, battle-tested CLI starter kit — clean, simple, and macOS-friendly.
+Here’s my personal, battle-tested CLI starter kit - clean, simple, and macOS-friendly.
 
 ---
 
@@ -35,7 +35,7 @@ Here’s my personal, battle-tested CLI starter kit — clean, simple, and macOS
 
 ---
 
-# 🗾 Image Optimization: Shrink Images Fast
+# Image Optimization: Shrink Images Fast
 
 Large images kill website speed. Resize them before upload.
 
@@ -45,7 +45,7 @@ Large images kill website speed. Resize them before upload.
 mogrify -resize 800x *.png
 ```
 
-📌 This resizes every `.png` in the current directory to a max width of 800px, maintaining aspect ratio.
+This resizes every `.png` in the current directory to a max width of 800px, maintaining aspect ratio.
 
 ### Convert images to optimized JPEGs:
 
@@ -53,7 +53,7 @@ mogrify -resize 800x *.png
 mogrify -format jpg -quality 85 *.png
 ```
 
-📌 Good if you want to shrink file size even further for static blogs.
+Good if you want to shrink file size even further for static blogs.
 
 **Note:** Install ImageMagick if you don't have `mogrify` yet:
 
@@ -107,13 +107,13 @@ python3 -m http.server 8000
 
 Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
-📌 Great for quickly previewing your Hugo `public/` folder.
+Great for quickly previewing your Hugo `public/` folder.
 
 ---
 
 # Deployment Essentials
 
-Upload your static site easily with `rsync` — faster and safer than FTP.
+Upload your static site easily with `rsync` - faster and safer than FTP.
 
 ### Sync your build folder to a remote server:
 
@@ -130,7 +130,7 @@ rsync -avz --delete public/ user@yourserver:/var/www/html/
 
 # Searching Through Code and Projects
 
-Find broken links, missed TODOs, old API calls — quickly.
+Find broken links, missed TODOs, old API calls - quickly.
 
 ### Search recursively for a string in all files:
 
@@ -154,7 +154,7 @@ Back up your project folders before big updates!
 tar -czvf mybackup.tar.gz myproject-folder/
 ```
 
-📌 Good habit before deploying changes you might regret.
+Good habit before deploying changes you might regret.
 
 ---
 
@@ -196,8 +196,8 @@ This list evolved while building:
 
 And all the little experiments in between.
 
-Use the terminal like a paintbrush — not a punishment.
+Use the terminal like a paintbrush - not a punishment.
 
 ---
 
-If you want a "Terminal Essentials Vol. 2" covering more git tricks, AWS CLI shortcuts, or advanced workflows, let me know! 🚀
+If you want a "Terminal Essentials Vol. 2" covering more git tricks, AWS CLI shortcuts, or advanced workflows, let me know!

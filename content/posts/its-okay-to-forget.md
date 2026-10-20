@@ -22,7 +22,7 @@ Remember those computer science exams where you had to write code with pen and p
 
 **That's not how the real world works.**
 
-In school, we were taught that memorization equals competence. That a "good" programmer should know every command, every syntax rule, every API method by heart. But this mindset is not just outdated—it's counterproductive.
+In school, we were taught that memorization equals competence. That a "good" programmer should know every command, every syntax rule, every API method by heart. But this mindset is not just outdated - it's counterproductive.
 
 When I started my career as a Java developer in Austria, I carried this academic baggage with me. I felt like I had to prove my worth by never looking anything up. I would spend precious mental energy trying to remember obscure method signatures instead of focusing on solving actual problems.
 
@@ -44,18 +44,18 @@ When I'm working on community projects - whether it's updating the AWS Heroes da
 
 ## What Actually Matters
 
-Here's what I've learned separates good developers from great ones—it's not memory, it's:
+Here's what I've learned separates good developers from great ones - it's not memory, it's:
 
 ### 1. Knowing What's Possible
 Understanding that a solution exists is more valuable than remembering its exact implementation. When I know that git can rewrite history, I can look up `git rebase`. When I know AWS has a service for everything, I can research the right one for my community dashboard needs.
 
 ### 2. Knowing Where to Look
-The skill isn't memorizing documentation—it's knowing which documentation to trust. Stack Overflow, official docs, GitHub repos, cheat sheets. Building a reliable toolkit of resources is infinitely more valuable than trying to memorize everything.
+The skill isn't memorizing documentation - it's knowing which documentation to trust. Stack Overflow, official docs, GitHub repos, cheat sheets. Building a reliable toolkit of resources is infinitely more valuable than trying to memorize everything.
 
-I have bookmarks organized by technology, a collection of trusted blogs, and yes, a folder full of cheat sheets. This isn't cheating—it's being professional.
+I have bookmarks organized by technology, a collection of trusted blogs, and yes, a folder full of cheat sheets. This isn't cheating - it's being professional.
 
 ### 3. Understanding Concepts Over Syntax
-Grasping the underlying principles—how version control works, what cloud computing enables, why certain patterns exist—these concepts transfer across tools and technologies. Syntax is just the surface layer.
+Grasping the underlying principles - how version control works, what cloud computing enables, why certain patterns exist - these concepts transfer across tools and technologies. Syntax is just the surface layer.
 
 When I explain AWS to newcomers at our User Group meetings, I focus on concepts: "S3 is object storage," "Lambda runs code without servers," "CloudFormation manages infrastructure as code." The specific CLI commands and API calls? Those can be looked up.
 
@@ -82,7 +82,7 @@ I choose Option B every time. The hours I don't spend memorizing syntax are hour
 
 ## When Memory Actually Helps
 
-Don't get me wrong—there are things worth memorizing:
+Don't get me wrong - there are things worth memorizing:
 
 - **Core concepts** you use daily (basic git workflow, common Linux commands)
 - **Fundamental principles** that apply broadly (SOLID principles, REST concepts, AWS Well-Architected Framework pillars)
@@ -117,7 +117,7 @@ Instead of trying to memorize everything, build a system:
 - Write down lessons learned from debugging sessions
 - Maintain a personal wiki or note-taking system
 
-For my community work, I have templates for common tasks: setting up new User Group events, deploying Hugo sites, updating community data. These aren't things I need to memorize—they're processes I can follow.
+For my community work, I have templates for common tasks: setting up new User Group events, deploying Hugo sites, updating community data. These aren't things I need to memorize - they're processes I can follow.
 
 ### 3. Practice the Fundamentals
 - Use common commands regularly until they stick
@@ -133,23 +133,23 @@ Last month, while updating the AWS Community Dashboard, I needed to implement a 
 
 Did I remember the exact JavaScript syntax for array filtering? No. Did I remember the Leaflet.js API for marker management? Absolutely not. But I knew these things were possible, I knew where to find the documentation, and I had examples from previous projects.
 
-The result? A working feature that helps thousands of people explore the AWS community worldwide. The value wasn't in what I had memorized—it was in what I could build.
+The result? A working feature that helps thousands of people explore the AWS community worldwide. The value wasn't in what I had memorized - it was in what I could build.
 
 ## The Bottom Line
 
-Technology moves too fast for anyone to remember everything. New frameworks emerge, APIs change, best practices evolve. The developers who thrive aren't the ones with perfect memory—they're the ones who adapt quickly and know how to find answers.
+Technology moves too fast for anyone to remember everything. New frameworks emerge, APIs change, best practices evolve. The developers who thrive aren't the ones with perfect memory - they're the ones who adapt quickly and know how to find answers.
 
 In the AWS community, we celebrate continuous learning. We share knowledge, we ask questions, we help each other grow. Nobody expects you to know everything, and the moment you pretend you do, you stop learning.
 
 So the next time you reach for that cheat sheet, remember: you're not being lazy or incompetent. You're being efficient. You're focusing on what matters. You're doing exactly what experienced developers do.
 
-**Your value isn't in what you've memorized—it's in what you can build.**
+**Your value isn't in what you've memorized - it's in what you can build.**
 
 ## A Challenge for You
 
 Next time you're in a meeting or code review, pay attention. Notice how often even the most senior people say "let me look that up" or "I need to check the documentation." 
 
-You'll realize that the best developers aren't the ones who never forget—they're the ones who aren't afraid to admit when they need to look something up.
+You'll realize that the best developers aren't the ones who never forget - they're the ones who aren't afraid to admit when they need to look something up.
 
 And that's a skill worth developing.
 
@@ -157,6 +157,6 @@ At our AWS User Group Vienna meetings, some of the best discussions happen when 
 
 ---
 
-*What's in your cheat sheet collection? What do you still Google after years in tech? I'd love to hear your experiences in the comments—I guarantee you're not alone in this journey.*
+*What's in your cheat sheet collection? What do you still Google after years in tech? I'd love to hear your experiences in the comments - I guarantee you're not alone in this journey.*
 
 **Remember: The AWS community is built on sharing knowledge, not hoarding it. Your willingness to admit what you don't know makes you a better community member, not a worse one.**

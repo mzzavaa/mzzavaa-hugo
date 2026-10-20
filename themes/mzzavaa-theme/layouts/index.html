@@ -22,7 +22,7 @@
 <div class="spread">
     {{/* Left page: Junior */}}
     <div class="page page-junior">
-        <p class="scribble">hi! I build the thing first &darr;</p>
+        <p class="scribble">hi! I build the thing first {{ partial "icon.html" "arrow-down" }}</p>
         <div class="page-person">
             <figure class="polaroid">
                 <img src="{{ $junior.avatar | relURL }}" alt="Mz Zavaa Junior" width="160" height="160">
@@ -79,19 +79,19 @@
 <section class="wrap block">
     <div class="block-head">
         <h2>Latest writing</h2>
-        <a href="{{ "/posts/" | relURL }}">everything &rarr;</a>
+        <a href="{{ "/posts/" | relURL }}">everything {{ partial "icon.html" "arrow-right" }}</a>
     </div>
     <div class="cards cards-lead">
         {{ range first 7 $posts }}{{ partial "list/card.html" . }}{{ end }}
     </div>
-    <p class="more"><a class="more-link" href="{{ "/posts/" | relURL }}">View all {{ len $posts }} posts &rarr;</a></p>
+    <p class="more"><a class="more-link" href="{{ "/posts/" | relURL }}">View all {{ len $posts }} posts {{ partial "icon.html" "arrow-right" }}</a></p>
 </section>
 
 {{ with $repoSection }}
 <section class="wrap block">
     <div class="block-head">
         <h2>The open source desk</h2>
-        <a href="{{ .RelPermalink }}">all organisations &rarr;</a>
+        <a href="{{ .RelPermalink }}">all organisations {{ partial "icon.html" "arrow-right" }}</a>
     </div>
     <p class="block-note">{{ .Description }}</p>
     <div class="folders">
@@ -108,7 +108,7 @@
     <ol class="log">
         {{ range first 6 (sort $repos "Date" "desc") }}{{ partial "list/row.html" . }}{{ end }}
     </ol>
-    <p class="more"><a class="more-link" href="{{ .RelPermalink }}">View all {{ len $repos }} repo notes &rarr;</a></p>
+    <p class="more"><a class="more-link" href="{{ .RelPermalink }}">View all {{ len $repos }} repo notes {{ partial "icon.html" "arrow-right" }}</a></p>
 </section>
 {{ end }}
 {{ end }}

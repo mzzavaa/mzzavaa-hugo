@@ -97,6 +97,10 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.15;
 .kicker a { text-decoration: none; }
 .lede { color: var(--ink-2); font-size: 1.15rem; max-width: var(--measure); margin: 0.8rem 0 0; }
 
+/* Inline SVG icons (Lucide) sit on the text baseline and inherit its colour */
+.icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.14em; flex: none; }
+.scribble .icon { stroke-width: 2.6; vertical-align: -0.1em; }
+
 /* Header */
 .site-header { background: var(--paper); border-bottom: 1px solid var(--rule); }
 .header-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.5rem; padding-top: 0.9rem; padding-bottom: 0.9rem; }

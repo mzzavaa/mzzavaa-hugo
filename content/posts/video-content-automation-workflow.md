@@ -2,7 +2,7 @@
 title: "Why I Built an AI Video Content Engine"
 date: 2025-04-25
 draft: false
-description: "Building a content pipeline to turn ideas into outputs — with a little help from AI."
+description: "Building a content pipeline to turn ideas into outputs - with a little help from AI."
 tags: ["ai", "aws", "video", "creativity", "workflow"]
 categories: ["projects", "tech"]
 author: "Linda Mohamed"
@@ -24,7 +24,7 @@ That’s when I realized: **I needed a second brain.**
 
 ---
 
-## 🧠 Not Just Automation — Amplification
+## Not Just Automation - Amplification
 
 I didn’t want to automate creativity away.  
 I wanted to **amplify it**.
@@ -39,7 +39,7 @@ A modular, scalable, AI-powered content engine.
 
 ---
 
-## ⚙️ How It Works (In a Nutshell)
+## How It Works (In a Nutshell)
 
 I designed a system that looks like this:
 
@@ -48,10 +48,10 @@ I designed a system that looks like this:
 - Auto-transcribe the audio
 - Auto-detect key scenes with Rekognition
 - Invoke Bedrock (Claude model) to generate:
-  - ✍️ A blog post
-  - ✨ A LinkedIn-style post
-  - ❓ A short quiz
-  - 📝 A concise summary
+  - A blog post
+  - A LinkedIn-style post
+  - A short quiz
+  - A concise summary
 - Save everything into S3 for easy reuse
 
 Simple on paper.  
@@ -63,7 +63,7 @@ Magical when it works.
 
 ---
 
-## 🚀 Why It Matters
+## Why It Matters
 
 Building this wasn't about automating my job away.  
 It was about giving myself breathing room to **stay creative longer**.
@@ -80,8 +80,8 @@ Even if that crew is made of pixels and prompts.
 
 ---
 
-➡️ In the next post, I'll show you exactly how I designed the architecture — and why choosing modular pieces (like AWS Transcribe, Bedrock, and Rekognition) made all the difference.
+In the next post, I'll show you exactly how I designed the architecture - and why choosing modular pieces (like AWS Transcribe, Bedrock, and Rekognition) made all the difference.
 
-Thanks for being here 💛
+Thanks for being here
 
-📬 Questions? Ideas? Let's talk: hello@lindamohamed.com
+Questions? Ideas? Let's talk: hello@lindamohamed.com

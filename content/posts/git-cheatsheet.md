@@ -57,7 +57,7 @@ git status --short
 
 ## 2. Basic Git Workflow
 
-The three fundamental states—**working tree**, **staging area**, **history**—drive Git’s model:
+The three fundamental states - **working tree**, **staging area**, **history** - drive Git’s model:
 
 ```bash
 # Stage specific files

@@ -51,7 +51,7 @@ The point where the two lines cross is called the **break-even**. Find out your 
 You do not need a fancy diagram tool. The simplest honest architecture drawing is:
 
 ```
-[ where the data comes from ] ──────▶ [ where the AI does its work ]
+[ where the data comes from ] ──────[ where the AI does its work ]
 ```
 
 Two boxes, one line, and a label on the line saying **what travels along it**. Then add only what you need to explain the next question someone asks. If you cannot draw your system as two boxes first, adding more boxes will not help.

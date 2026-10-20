@@ -2,7 +2,7 @@
 title: "The Birth of OTTO: How We Built an AI Crew for Our AWS Community"
 date: 2025-04-25
 draft: false
-description: "When two organizers couldn’t juggle alone anymore, they built OTTO — and grew a movement."
+description: "When two organizers couldn’t juggle alone anymore, they built OTTO - and grew a movement."
 tags: ["crewAI", "AWS", "community", "cloud", "ai-agents", "automation"]
 categories: ["projects", "tech"]
 author: "Linda Mohamed"
@@ -18,26 +18,26 @@ A few passionate people.
 A few meetups.  
 A few pizzas.
 
-But if you’re lucky — if you care deeply, show up often, and invite others to lead too — it grows into something much bigger.
+But if you’re lucky - if you care deeply, show up often, and invite others to lead too - it grows into something much bigger.
 
 Today, our AWS User Group Vienna in Austria has over **2000 members**.  
 We have **five incredible organizers** and User Groups in Vienna, Linz, and just founded an additional Women's User Group in Vienna.  
 And the movement is still growing.
 
-But before all of that — before the scale and the team —  
+But before all of that - before the scale and the team -  
 there were just two of us: **Philipp** and **me**, but not always at the same time.  
 Philipp had led the user group alone for a while, and when I took over, I carried the responsibility solo for several years.  
 Eventually, Philipp rejoined, and together we began sharing the weight of the growing community.  
 Behind the scenes, an endless mountain of invisible work awaited us both.
 
-## 🎮 Why the Slides Look Like The Sims
+## Why the Slides Look Like The Sims
 
-We wanted our presentation to feel relatable and fun, so we styled the slides like The Sims. Just like building a house in the game, organizing an AWS User Group meetup involves assembling pieces, managing resources, and dealing with repetitive tasks. The Sims metaphor perfectly captures the mix of creativity and routine that goes into creating something meaningful — and how automation, like OTTO, can make it all a little less tedious.
+We wanted our presentation to feel relatable and fun, so we styled the slides like The Sims. Just like building a house in the game, organizing an AWS User Group meetup involves assembling pieces, managing resources, and dealing with repetitive tasks. The Sims metaphor perfectly captures the mix of creativity and routine that goes into creating something meaningful - and how automation, like OTTO, can make it all a little less tedious.
 
 <img src="/images/Folie9.png" style="width: auto; max-height: 400px;" />
 
 
-## 🧠 From “We Got This” to “We Need Help”
+## From “We Got This” to “We Need Help”
 
 Both of us had been there:  
 Running meetups **alone**.  
@@ -47,7 +47,7 @@ Writing emails at midnight.
 Publishing events while juggling full-time jobs and side projects.
 
 At first, it felt manageable.  
-But growth — beautiful as it is — **amplifies friction**.  
+But growth - beautiful as it is - **amplifies friction**.  
 And friction, over time, wears you down.
 
 Even when Philipp and I teamed up officially, it became clear:  
@@ -63,7 +63,7 @@ We needed backup.
 
 
 
-## 🤖 Not More Humans. A Crew.
+## Not More Humans. A Crew.
 
 We didn’t dream of another project management board.  
 Or a calendar full of Zoom calls.  
@@ -72,7 +72,7 @@ Or spreadsheets nobody updated.
 We dreamed of something smarter.  
 Something alive.
 
-A **crew** — but made of AI agents.
+A **crew** - but made of AI agents.
 
 Each agent would catch a different ball:
 - A **Speaker Finder** to surface great speakers automatically
@@ -89,9 +89,9 @@ Not another to-do list.
 
 
 
-## 🔥 Building OTTO
+## Building OTTO
 
-We sat down and started sketching it out —  
+We sat down and started sketching it out -  
 sometimes in late-night sessions, sometimes between other projects, sometimes just dreaming aloud.
 
 It felt crazy.  
@@ -110,13 +110,13 @@ We chose:
 <img src="/images/Folie45.png" alt="Otto answering questions with his agents" style="width: auto; max-height: 400px;" />
 
 
-## 🌱 Where We Are Now
+## Where We Are Now
 
 Today, we’re not alone anymore.
 
 The AWS User Group Austria has a full team of passionate leaders.  
 We’ve expanded meetups beyond Vienna into Linz and other cities.  
-And soon — very soon — we’ll deploy **OTTO into our real environment**.
+And soon - very soon - we’ll deploy **OTTO into our real environment**.
 
 Every agent we built will be tested live:  
 - Real event planning  
@@ -134,7 +134,7 @@ Because that’s the secret:
 <img src="/images/Folie101.png" alt="OTTO Architecture" style="width: auto; max-height: 400px;" />
 
 
-## 🚀 What’s Next
+## What’s Next
 
 This is just the first part of OTTO’s story.
 
@@ -142,13 +142,13 @@ Next, we'll dive into **how we designed the architecture**:
 the way the agents interact, how we trained knowledge into them,  
 and why starting small and modular made all the difference.
 
-➡️ _Stay tuned for Part 2: "Turning Chaos into Crew: Designing OTTO's Architecture"_
+_Stay tuned for Part 2: "Turning Chaos into Crew: Designing OTTO's Architecture"_
 
 
-📬 Curious? Inspired? Want to build your own Crew?
+Curious? Inspired? Want to build your own Crew?
 
 Drop me a message anytime:  
 **hello@lindamohamed.com**
 
-✨ [Or check out more about my talks here](https://sessionize.com/linda-mohamed)
+[Or check out more about my talks here](https://sessionize.com/linda-mohamed)
 
