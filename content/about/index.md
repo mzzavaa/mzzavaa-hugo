@@ -1,20 +1,27 @@
 ---
 title: "About"
-date: 2025-04-25
 draft: false
+description: "Linda Mohamed: technologist, speaker, AWS Hero and community organiser in Vienna. This is her notebook, written in two voices."
 ---
 
-# About MzZavaa
+Hi, I'm **Linda Mohamed**: a self-employed technologist, speaker, AWS Hero and community organiser in Vienna. I build things in public, I run communities, and I can't stop learning new crafts on the side.
 
-Welcome to **MzZavaa**, a personal space dedicated to curiosity, creativity, and conscious reflection. I created this blog not only to document what I build, draw, sew, code, and juggle - but to revisit the winding, non-linear journey that got me here.
+This site is my notebook. It is where I write down what I built, what I learned, and what I would do differently next time.
 
-MzZavaa is more than just a blog. It’s a mirror held up to my growth, a journal disguised as a digital garden, and a way to reconnect with the person I used to be - especially when I forget how far I’ve come.
+![Linda at the mic](/images/IMG_8508.png)
 
----
+## One person, a few places
 
-## Two voices, one Zavaa
+I am one person, but I show up in a few places, each with its own job:
 
-Since October 2026 this blog is written in two voices. Both are me, and both started as AI agent personas I built to help run my projects.
+- **[mzzavaa.com](/)**, this notebook. Tech basics, retros, open source notes and cheat sheets, written in two voices.
+- **[mrsleeg.com](https://mrsleeg.com)**, my colourful side as **Mrs Lee G**: juggling, sewing on a hot pink sewing machine, drawing, and videos about tech with three balls in the air.
+- **[thejugglingcompany.com](https://thejugglingcompany.com)**, juggling as a tool for focus, change and teams.
+- **[lindamohamed.com](https://lindamohamed.com)**, my work: talks, workshops and consulting.
+
+## Why this notebook has two voices
+
+I have always worked in two modes: the one that ships at midnight, and the one that reads it back the next morning and asks whether it was any good. I gave both a name, because I built them as AI agent personas that help me run my projects, each with a job description and a list of things they must never do. It turned out to be the most honest description of how I work.
 
 {{< junior >}}
 I'm the builder. I ship fast, I try two approaches when nobody knows which one is right, and I always write down what I built and why. I write the **basics**: first steps into cloud, AI and building in public.
@@ -24,122 +31,29 @@ I'm the builder. I ship fast, I try two approaches when nobody knows which one i
 I'm the reviewer. I check whether things actually worked, run the retros and keep the standards. I write the **learnings**: what only shows up after something has been running for a while.
 {{< /senior >}}
 
-Read why in [Meet the Two Zavaas](/posts/meet-the-two-zavaas/), or pick a voice: [Junior](/voices/junior/) · [Senior](/voices/senior/).
+Read the whole story in [Meet the Two Zavaas](/posts/meet-the-two-zavaas/), or pick a voice: [Junior](/voices/junior/) or [Senior](/voices/senior/).
 
----
+## The path so far
 
-## What does “MzZavaa” mean?
+![Young Linda with a motherboard: full circle](/images/3BD92617-E5ED-4743-9161-A1337FFB439A.png)
 
-The name **MzZavaa** carries a piece of my story.
+- As a teenager I restyled my **Myspace profile** for hours and wanted to be a fashion designer or a graphic artist. I have been balancing structure and spark ever since.
+- I started in a high school informatics programme, worked full-time while studying part-time, became a **Java developer**, then a **product owner at Drei**.
+- In **2019** I gave my first public tech talk. In **2020** I took over the **AWS User Group Vienna**.
+- Today I help run several communities and chair the **AWS Community DACH** nonprofit. My talks on AI workflows, agent crews and developer experience are on [Sessionize](https://sessionize.com/linda-mohamed/).
 
-The second part, **“Zavaa”**, is my twist on the Arabic word for **seven (سبعة / sabaa’)** - a number I’ve always been drawn to. I was born on the **7th**, and I even tattooed the number **7 in binary** alongside a **lambda (λ)** symbol, which I carefully inked myself under professional supervision. The lambda represents transformation, abstraction, and the elegance of simplicity in both life and code.
+People sometimes say I learn fast. The truth is simpler: I try, I watch, I build, I iterate. It has never been about talent. It is about energy and a lot of experiments.
 
-Why binary? Because it merges meaning and code.  
-Why seven? Because odd numbers feel alive to me.  
-Why the tattoo? Because I don’t want to forget what matters.
+## What "MzZavaa" means
 
-![Binary 7 tattoo in progress](/images/96D52BFE-C050-441A-8EB0-8284BB6A6D42.png)
+**Zavaa** is my twist on the Arabic word for **seven** (سبعة, sabaa). I was born on the 7th, and I tattooed the number **7 in binary** next to a **lambda (λ)**, inked by myself under professional supervision. The lambda stands for transformation and the elegance of simplicity, in life and in code.
 
-The **“Mz”** is a nod to mystery, mindset, momentum, maybe even a little mischief. Together, **MzZavaa** is a codeword for me - a blend of identity and intention.
+![Tattooing the binary seven](/images/96D52BFE-C050-441A-8EB0-8284BB6A6D42.png)
 
----
+**Mz** is a nod to mystery, mindset, momentum, and a little mischief. Together, MzZavaa is a codeword for me.
 
-## Who’s behind MzZavaa?
+## Say hi
 
-Hi, I’m **Linda Mohamed**. A self-employed technologist, speaker, AWS Hero, and community organizer.
+Want to chat, collaborate or swap ideas? Write to **[hello@lindamohamed.com](mailto:hello@lindamohamed.com)**.
 
-But long before that, I was a teenager restyling her **Myspace profile**, dreaming of becoming a **fashion designer** or **graphic artist**. I’ve always been drawn to both tech and creativity - my entire life has been a balancing act between structure and spark.
-
-![Linda at the mic](/images/IMG_8508.png)
-
-People tell me they’re **jealous of how fast I learn**. That I just "get things" - tech, tools, crafts, systems. The truth? I just try. I watch. I build. I iterate.
-
-It’s never been about talent. It’s about energy and endless experiments.
-
----
-
-## Vibecoding & Letting Go
-
-One of my biggest blocks? **Perfectionism**.
-
-When I start something, I often want it to be *just right*. That can slow me down - especially in code. So I started **vibecoding**.
-
-> Vibecoding = letting an AI like **Amazon Q CLI** scaffold the code, then **fixing only what feels good**.
-
-I used this approach to build:
-- [**MzZavaa.com**](https://mzzavaa.com) - this blog  
-- [**TheJugglingCompany.com**](https://thejugglingcompany.com) - where juggling meets AI and change  
-- [**Meet-the-AWS-Community.com**](https://www.youtube.com/@meet-the-aws-community) - spotlighting voices from the cloud community
-
-Amazon Q wasn’t perfect. That’s the point.  
-It left messy code and strange quirks.  
-Which meant I didn’t *have* to perfect it - just **tune it to my vibe**.
-
-It helped me dive into Hugo, React, and more **without overengineering**.
-
----
-
-## What You'll Find Here
-
-This blog is a **living archive** of my personal projects - tiny obsessions that turn into surprisingly deep learnings:
-
-- **Drawing & painting** - From hyperrealistic pencil portraits to acrylic tigers on rooftops.
-  - ![Eye detail sketch](/images/F429B1FF-F00F-4967-A093-825E8DEDE064.png)
-  - ![Painting of a tiger on a rooftop](/images/96D52BFE-C050-441A-8EB0-8284BB6A6D42.png)
-  - ![Dog portrait with colored pencils](/images/52F86359-09F2-42AB-8372-ACDBCBBB22DD.png)
-
-- **Sewing & costuming** - I taught myself to sew through YouTube tutorials and stitched a **princess corset dress** from scratch.
-  - ![Corset sewing journey](/images/3BD92617-E5ED-4743-9161-A1337FFB439A.png)
-
-- **Juggling** - A metaphor for cognitive load and context-switching. I code while juggling, literally.
-  - ![Laptop with glowing juggling balls](/images/B3D4EA71-7C70-473E-B164-6438D25CADBD.png)
-  - ![AI tagging juggling balls](/images/9F33DA04-58CD-4EF8-80C4-34121F45B2AA.png)
-
-- **Creative coding** - Generative art, music experiments, OTTO (my event-planning CrewAI), and merging AI with real-world rituals.
-  - ![Tablet sketching + code](/images/ACCC095F-7A21-452B-A7A4-D1778D19D570.png)
-
-- **Personal symbols** - Tattoos, art, and binary code - everything I imprint to remember who I am.
-  - ![Self-tattooing in binary](/images/F429B1FF-F00F-4967-A093-825E8DEDE064.png)
-
----
-
-## Why This Blog Exists
-
-I’ve worked in tech for over 12 years - starting in a high school informatics program, then juggling full-time work while studying part-time, becoming a Java developer, a product owner at Drei, and now: a speaker, a consultant, and a **builder of weird and wonderful things**.
-
-In 2019, I gave my first public tech talk.  
-In 2020, I took over the **AWS User Group Vienna**.  
-Today, I help run multiple communities and serve as chairwoman of the AWS Community DACH nonprofit.
-
-But the truth is - I still don’t always feel like it’s enough.
-
-So I made this space to **look back before I rush forward**.  
-To give myself credit.  
-To tell the story **only I can tell**.
-
-![Young Linda with a motherboard - full circle moment](/images/16B8E61F-E908-4D39-90AE-A3A617470A2A.png)
-
----
-
-## A Glimpse at My Tech Talks
-
-While this blog focuses on hobbies and hands-on projects, I also love sharing my thoughts on stage.
-
-You can find my talk history - on **Amazon Q**, **AI workflows**, **crew agents**, and **developer experience** - right here:  
-[Sessionize Profile](https://sessionize.com/linda-mohamed/)
-
----
-
-## Contact
-
-Want to chat, collab, or swap creative ideas?  
-**hello@lindamohamed.com**
-
----
-
-This blog is powered by **Hugo**, hosted on **GitHub Pages**, and runs on a minimalist theme I tweaked to fit my own rhythm.
-
-All posts are written in Markdown. Most projects are **self-taught and self-started**.  
-Everything here was built with vibe-first tech, patched perfectionism, and a strong refusal to stop learning.
-
-_Start with curiosity. Continue with care. Reflect with joy._
+This notebook is built with Hugo and hosted on GitHub Pages. _Start with curiosity. Continue with care. Reflect with joy._
