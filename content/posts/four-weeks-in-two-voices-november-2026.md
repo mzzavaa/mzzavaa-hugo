@@ -21,7 +21,7 @@ Okay! Four weeks, a lot of small things that add up. Here's what landed.
 
 ### ai-solutions.wiki
 
-- **Two weekly news passes** (weeks 43 and 44) and a same-day entry on 12 November, each as a pull request I reviewed before it went live. Pull requests #13 to #17.
+- **Two weekly news passes** (weeks 43 and 44) and a same-day entry on 12 November, each as a pull request I reviewed before it went live. Pull requests #13, #14, #15 and #17.
 - **New tool pages** for Amazon CloudFront, Auth0, Azure Front Door and Cloudflare, with five new identity icons.
 - **An agent security roundup** with new CVEs, plus glossary terms and verification passes on recent model launches.
 - 222 commits now. [The repo note](/repos/linda-mhmd/ai-solutions-wiki/) has the details.

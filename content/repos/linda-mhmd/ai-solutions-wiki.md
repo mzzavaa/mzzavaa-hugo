@@ -25,7 +25,7 @@ The source of ai-solutions.wiki, a knowledge base for taking AI systems to produ
 {{< /junior >}}
 
 {{< senior >}}
-Still the most active one: 222 commits, the latest on 13 November 2026, and every news change since October arrived as a reviewed pull request (#13 to #17). What I like most is the direction of the corrections. Week 44 removed a claim that could not be verified and put the original source in its place, and the verification passes now run in the same pull request as the news. That is what a knowledge base needs: it gets more correct as it gets bigger. It has a README, a dual licence in `LICENSE.md`, a contributing guide and a citation file, and CI covers deploy, PR checks, previews and the weekly update.
+Still the most active one: 222 commits, the latest on 13 November 2026, and every news change since late October arrived as a reviewed pull request (#13, #14, #15 and #17). What I like most is the direction of the corrections. Week 44 removed a claim that could not be verified and put the original source in its place, and the verification passes now run in the same pull request as the news. That is what a knowledge base needs: it gets more correct as it gets bigger. It has a README, a dual licence in `LICENSE.md`, a contributing guide and a citation file, and CI covers deploy, PR checks, previews and the weekly update.
 {{< /senior >}}
 
 **Learned:** When a number cannot be traced, replace it with the source you can trace, and say so in the commit.
