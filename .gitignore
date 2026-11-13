@@ -61,3 +61,6 @@ __pycache__/
 !.env.example
 !.env.sample
 !.env.template
+
+# Dev server started by make dev
+.hugo-dev.pid
