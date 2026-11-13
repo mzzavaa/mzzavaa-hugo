@@ -15,11 +15,15 @@
  * and measures, per project: shoot day (the day most raw clips were recorded)
  * to first cut, and first cut to latest cut. When three or more folders share
  * one "shoot day", that is the day the clips were copied, and she does not
- * time anything from it.
+ * time anything from it. Where a film's analysis file records the event's
+ * real date, she uses that: event to first cut is how long the footage waited.
+ * PIPELINE is the repository of the video pipeline; she counts its commits
+ * per month, to set next to the waiting times.
  * Talks: every folder in TALKS is one talk. She counts deck versions, old
  * builds, changelog entries and demos.
  */
 import fs from "node:fs";
+import { execFileSync } from "node:child_process";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -27,6 +31,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const VIDEOS = process.env.VIDEOS || path.join(os.homedir(), "Videos");
 const TALKS = process.env.TALKS || path.join(os.homedir(), "code", "talks");
+const PIPELINE = process.env.PIPELINE || path.join(os.homedir(), "code", "video-flow");
 const FINISHED = ["Event Aftermovies", "GRWM", "Interviews"];
 const NOT_FOOTAGE = ["_Publishing Plan", "Upwork Portfolio"];
 const VIDEO = /\.(mp4|mov|m4v|mkv|avi|mts)$/i;
@@ -103,6 +108,16 @@ if (fs.existsSync(VIDEOS)) {
           if (film.youtube?.video_id) { published++; if (film.youtube.uploaded) uploaded.push(film.youtube.uploaded.slice(0, 10)); }
         }
       } catch { /* no publishing record */ }
+      // The analysis file of each film records the event's real date and the film's length
+      let eventDate = null; const lengths = new Map();
+      for (const f of walk(path.join(dir, ".videoflow", "films"), { hidden: true }).filter((f) => path.basename(f) === "film.json")) {
+        try {
+          const film = JSON.parse(fs.readFileSync(f, "utf8"));
+          const d = film.event?.dates?.value?.[0];
+          if (d && (!eventDate || d < eventDate)) eventDate = d;
+          if (film.length?.total_s) lengths.set(film.film, { v: parseFloat(film.version) || 0, s: film.length.total_s, ...(lengths.get(film.film)?.v > (parseFloat(film.version) || 0) ? lengths.get(film.film) : {}) });
+        } catch { /* unreadable analysis file */ }
+      }
       const changelogs = walk(dir, { hidden: true }).filter((f) => /^CHANGELOG/i.test(path.basename(f)));
       const entries = changelogs.reduce((n, f) => n + (fs.readFileSync(f, "utf8").match(/^#{1,3} .*\bv\d+\.\d+/gm) || []).length, 0);
       if (!films.size && !published) continue;
@@ -116,6 +131,8 @@ if (fs.existsSync(VIDEOS)) {
         on_youtube: published,
         first_upload: uploaded.sort()[0] || null,
         changelog_entries: entries,
+        event_date: eventDate,
+        film_seconds: Math.round([...lengths.values()].reduce((n, l) => n + l.s, 0)),
       });
     }
   }
@@ -133,6 +150,33 @@ if (fs.existsSync(VIDEOS)) {
       f.shoot_to_first_cut = days(best.shot, f.first_cut);
     }
     if (f.first_cut) f.first_to_latest_cut = days(f.first_cut, f.latest_cut);
+    // How long the footage waited: from the event (its recorded date, or a real shoot day) to the first cut
+    const start = f.event_date || f.shot;
+    if (start && f.first_cut && start <= f.first_cut) { f.event_date = start; f.waited_days = days(start, f.first_cut); }
+  }
+  // The pipeline's own history: commits per month in its repository
+  let pipeline = [];
+  try {
+    const log = execFileSync("git", ["-C", PIPELINE, "log", "--format=%ad", "--date=format:%Y-%m"], { encoding: "utf8" });
+    const per = new Map();
+    for (const m of log.split("\n").filter(Boolean)) per.set(m, (per.get(m) || 0) + 1);
+    pipeline = [...per.entries()].sort().map(([month, commits]) => ({ month, commits }));
+  } catch { /* no pipeline repository here */ }
+  // The chart: one row per project that has a wait, oldest event first, on one time axis
+  const waited = finished.filter((f) => f.waited_days != null && f.kind !== "grwm").sort((a, b) => a.event_date.localeCompare(b.event_date));
+  let chart = null;
+  if (waited.length) {
+    const t0 = new Date(waited[0].event_date.slice(0, 7) + "-01").getTime();
+    const t1 = Date.now();
+    const x = (d) => Math.round(((new Date(d).getTime() - t0) / (t1 - t0)) * 10000) / 10000;
+    const ticks = [];
+    for (let d = new Date(t0); d.getTime() < t1; d.setMonth(d.getMonth() + 3)) ticks.push({ label: d.toISOString().slice(0, 7), x: x(d) });
+    chart = {
+      from: waited[0].event_date.slice(0, 7), to: new Date(t1).toISOString().slice(0, 10), ticks,
+      rows: waited.map((f) => ({ name: f.name, kind: f.kind, event: f.event_date, first_cut: f.first_cut, days: f.waited_days, x0: x(f.event_date), x1: x(f.first_cut) })),
+      pipeline: pipeline.filter((p) => new Date(p.month + "-01").getTime() >= t0).map((p) => ({ ...p, x0: x(p.month + "-01"), x1: Math.min(1, x(new Date(new Date(p.month + "-01").setMonth(new Date(p.month + "-01").getMonth() + 1)))) })),
+      pipeline_max: Math.max(1, ...pipeline.map((p) => p.commits)),
+    };
   }
   const timed = finished.filter((f) => f.shoot_to_first_cut != null);
   const iter = finished.filter((f) => f.first_to_latest_cut != null);
@@ -142,6 +186,16 @@ if (fs.existsSync(VIDEOS)) {
     raws: { folders: raws.length, clips: sum(raws, "clips"), event_folders: raws.filter((r) => r.kind === "event").length, grwm_shoots: raws.filter((r) => r.kind === "grwm").length, biggest: [...raws].sort((a, b) => b.clips - a.clips).slice(0, 5).map(({ name, clips }) => ({ name, clips })) },
     finished: Object.fromEntries(["aftermovie", "grwm", "interview"].map((k) => [k, { projects: byKind(k).length, films: sum(byKind(k), "films"), versions: sum(byKind(k), "versions"), on_youtube: sum(byKind(k), "on_youtube") }])),
     totals: { projects: finished.length, films: sum(finished, "films"), versions: sum(finished, "versions"), on_youtube: sum(finished, "on_youtube"), changelog_entries: sum(finished, "changelog_entries") },
+    film_minutes: Math.round(sum(finished, "film_seconds") / 60),
+    pipeline: { commits: pipeline.reduce((n, p) => n + p.commits, 0), first_month: pipeline[0]?.month || null, months: pipeline },
+    waiting: waited.length ? {
+      measured: waited.length,
+      longest: [...waited].sort((a, b) => b.waited_days - a.waited_days).slice(0, 1).map(({ name, waited_days, event_date }) => ({ name, days: waited_days, event: event_date }))[0],
+      shortest: [...waited].sort((a, b) => a.waited_days - b.waited_days).slice(0, 1).map(({ name, waited_days, event_date }) => ({ name, days: waited_days, event: event_date }))[0],
+      median_days: median(waited.map((f) => f.waited_days)),
+      by_year: Object.entries(waited.reduce((m, f) => { const y = f.event_date.slice(0, 4); (m[y] = m[y] || []).push(f.waited_days); return m; }, {})).sort().map(([year, ds]) => ({ year, events: ds.length, median_days: median(ds) })),
+    } : null,
+    chart,
     timing: {
       folders_with_copy_date: copied,
       first_cuts_per_day: Object.entries(finished.reduce((m, f) => { if (f.first_cut) m[f.first_cut] = (m[f.first_cut] || 0) + 1; return m; }, {})).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([date, projects]) => ({ date, projects })),

@@ -1,11 +1,11 @@
 {{ define "main" }}
-{{/* Lee Za's desk. The numbers come from data/leeza.json, written by tools/leeza-scan.mjs on
-     Linda's own machine (footage and talk folders are not online), and from data/talks.json. */}}
+{{/* Lee Za's desk: the video pipeline built in public, in numbers. Everything comes from
+     data/leeza.json, written by tools/leeza-scan.mjs on Linda's own machine (the footage and the
+     talk folders are not online), and from data/talks.json. Counts, dates and event names only. */}}
 {{ $d := hugo.Data.leeza }}
 {{ $v := $d.videos }}
 {{ $talks := hugo.Data.talks }}
 {{ $lee := index hugo.Data.voices "leeza" }}
-{{ $n := "%d" }}
 <header class="page-head wrap">
     <img class="page-head-avatar leeza" src="{{ $lee.avatar | relURL }}" alt="" width="88" height="88">
     <h1>{{ .Title }}</h1>
@@ -13,17 +13,110 @@
 </header>
 <div class="wrap desk">
     {{ with .Content }}<div class="prose section-intro">{{ . }}</div>{{ end }}
-    <p class="kicker">Counted on {{ time.Format "2 January 2006" $d.generated }}</p>
+    <p class="kicker">Counted on {{ time.Format "2 January 2006" $d.generated }}, on Linda's own machine</p>
 
     {{ with $v }}
+    {{ with .waiting }}
+    {{/* The headline: from the longest wait to the shortest */}}
+    <section class="race">
+        <div class="race-step race-then">
+            <span class="race-num">{{ .longest.days }}</span>
+            <span class="race-unit">days</span>
+            <span class="race-what">{{ .longest.name }} waited this long for its first cut. Filmed in {{ time.Format "January 2006" .longest.event }}.</span>
+        </div>
+        <div class="race-arrow" aria-hidden="true">{{ partial "icon.html" "arrow-right" }}</div>
+        <div class="race-step race-now">
+            <span class="race-num">{{ .shortest.days }}</span>
+            <span class="race-unit">{{ if eq (int .shortest.days) 1 }}day{{ else }}days{{ end }}</span>
+            <span class="race-what">{{ .shortest.name }}. Filmed on {{ time.Format "2 January 2006" .shortest.event }}, first cut the next day.</span>
+        </div>
+    </section>
+    <div class="years">
+        {{ range .by_year }}
+        <div class="year"><span class="year-label">filmed in {{ .year }}</span><span class="year-num">{{ .median_days }}</span><span class="year-sub">days of waiting, the middle of {{ .events }} {{ if eq (int .events) 1 }}event{{ else }}events{{ end }}</span></div>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ with .chart }}
+    {{ $rows := .rows }}
+    {{ $rh := 24 }}{{ $top := 34 }}{{ $left := 318.0 }}{{ $w := 590.0 }}
+    {{ $plotH := mul (len $rows) $rh }}
+    {{ $stripTop := add (add $top $plotH) 46 }}
+    {{ $stripH := 64 }}
+    {{ $height := add (add $stripTop $stripH) 30 }}
+    <h2 class="sub-head">How long the footage waited</h2>
+    <p class="block-note">One line per event, from the day it was filmed to the day of its first cut. Underneath, on the same months: how much work went into the pipeline. The lines all end where the pipeline got good.</p>
+    <div class="chart-scroll">
+    <svg class="wait-chart" viewBox="0 0 1000 {{ $height }}" role="img" aria-label="For each event, the time from filming to the first cut, and below it the commits per month to the video pipeline. Events from 2024 and 2025 waited between 327 and 836 days; events in November 2026 waited one day.">
+        {{ range .ticks }}
+        {{ $x := add $left (mul .x $w) }}
+        <line class="grid" x1="{{ $x }}" x2="{{ $x }}" y1="{{ sub $top 6 }}" y2="{{ add $stripTop $stripH }}"/>
+        <text class="tick" x="{{ $x }}" y="{{ sub $top 14 }}" text-anchor="middle">{{ time.Format "Jan 2006" (printf "%s-01" .label) }}</text>
+        {{ end }}
+        {{ range $i, $r := $rows }}
+        {{ $y := add (add $top (mul $i $rh)) 12 }}
+        {{ $x0 := add $left (mul $r.x0 $w) }}{{ $x1 := add $left (mul $r.x1 $w) }}
+        <g class="wait-row{{ if le (int $r.days) 7 }} is-fast{{ end }}">
+            <title>{{ $r.name }}: filmed {{ time.Format "2 Jan 2006" $r.event }}, first cut {{ time.Format "2 Jan 2006" $r.first_cut }}, {{ $r.days }} {{ if eq (int $r.days) 1 }}day{{ else }}days{{ end }}</title>
+            <rect class="hit" x="0" y="{{ sub $y 12 }}" width="1000" height="{{ $rh }}"/>
+            <text class="row-name" x="{{ sub $left 14 }}" y="{{ add $y 4 }}" text-anchor="end">{{ $r.name | truncate 38 }}</text>
+            <line class="wait" x1="{{ $x0 }}" x2="{{ $x1 }}" y1="{{ $y }}" y2="{{ $y }}"/>
+            <circle class="filmed" cx="{{ $x0 }}" cy="{{ $y }}" r="4"/>
+            <circle class="cut" cx="{{ $x1 }}" cy="{{ $y }}" r="5"/>
+            <text class="row-days" x="{{ add $x1 12 }}" y="{{ add $y 4 }}">{{ $r.days }} {{ if eq (int $r.days) 1 }}day{{ else }}days{{ end }}</text>
+        </g>
+        {{ end }}
+        <text class="strip-label" x="{{ sub $left 14 }}" y="{{ add $stripTop 24 }}" text-anchor="end">Pipeline commits</text>
+        <text class="strip-label strip-sub" x="{{ sub $left 14 }}" y="{{ add $stripTop 42 }}" text-anchor="end">per month</text>
+        <line class="base" x1="{{ $left }}" x2="{{ add $left $w }}" y1="{{ add $stripTop $stripH }}" y2="{{ add $stripTop $stripH }}"/>
+        {{ $max := .pipeline_max }}
+        {{ range .pipeline }}
+        {{ $x0 := add (add $left (mul .x0 $w)) 1 }}{{ $bw := sub (mul (sub .x1 .x0) $w) 2 }}
+        {{ $h := math.Max 2 (mul (div (float .commits) $max) (sub $stripH 16)) }}
+        <g class="commit-bar">
+            <title>{{ time.Format "January 2006" (printf "%s-01" .month) }}: {{ .commits }} commits to the pipeline</title>
+            <rect x="{{ $x0 }}" y="{{ sub (add $stripTop $stripH) $h }}" width="{{ $bw }}" height="{{ $h }}" rx="2"/>
+            <text class="bar-num" x="{{ add $x0 (div $bw 2) }}" y="{{ sub (sub (add $stripTop $stripH) $h) 5 }}" text-anchor="middle">{{ .commits }}</text>
+        </g>
+        {{ end }}
+    </svg>
+    </div>
+    <p class="chart-key"><span class="key-filmed"></span> filmed <span class="key-cut"></span> first cut <span class="key-bar"></span> commits to the pipeline in that month</p>
+    <details class="chart-table">
+        <summary>The same numbers as a table</summary>
+        <table>
+            <thead><tr><th>Event</th><th>Filmed</th><th>First cut</th><th>Waited</th></tr></thead>
+            <tbody>{{ range $rows }}<tr><td>{{ .name }}</td><td>{{ .event }}</td><td>{{ .first_cut }}</td><td>{{ .days }} days</td></tr>{{ end }}</tbody>
+        </table>
+    </details>
+    {{ end }}
+
+    <aside class="voice-note leeza tally">
+        <p class="voice-note-name">
+            <img class="voice-note-avatar" src="{{ $lee.avatar | relURL }}" alt="" width="40" height="40" loading="lazy">
+            <span class="memo">Lee Za · what the chart says</span>
+        </p>
+        <div class="voice-note-body">
+            <ul class="tally-list findings">
+                {{ with .waiting }}<li><strong>{{ .measured }} events, and the footage of {{ sub .measured 2 }} of them sat in a folder for months or years.</strong> Not because she was lazy. Because cutting a film by hand takes days, and she had none.</li>{{ end }}
+                {{ with .pipeline }}<li><strong>{{ .commits }} commits to the pipeline since {{ time.Format "January 2006" (printf "%s-01" .first_month) }}.</strong> Look at October. Then look at where every line ends. I do not believe in coincidence.</li>{{ end }}
+                {{ with .timing }}{{ with index .first_cuts_per_day 0 }}<li><strong>{{ .projects }} first cuts on one single day</strong>, {{ time.Format "2 January 2006" .date }}. The backlog of two years, gone in an afternoon. I checked the dates twice.</li>{{ end }}
+                <li><strong>Now it is one day.</strong> Filmed on a Tuesday, first cut on Wednesday. The pipeline got faster. Linda did not get more hours.</li>
+                <li><strong>{{ .first_to_latest_cut_median_days }} days from the first cut to the latest one</strong>, in the middle of all projects. So the cutting is quick now. The deciding is still Linda.</li>
+                <li><strong>{{ .folders_with_copy_date }} folders I cannot time</strong> from the clips alone: they carry the day they were copied, not the day they were filmed. Where I had no real date, there is no line. I do not do made up.</li>{{ end }}
+            </ul>
+        </div>
+    </aside>
+
     <h2 class="sub-head">Still raw</h2>
-    <p class="block-note">Footage that has been shot and not yet turned into anything. This is what she is working on right now.</p>
+    <p class="block-note">Filmed, in a folder, not a film yet. This is what she is working on right now.</p>
     <div class="stats">
         <div class="stat"><span class="stat-num">{{ lang.FormatNumber 0 .raws.clips }}</span><span class="stat-label">raw clips</span></div>
         <div class="stat"><span class="stat-num">{{ .raws.event_folders }}</span><span class="stat-label">event folders</span></div>
         <div class="stat"><span class="stat-num">{{ .raws.grwm_shoots }}</span><span class="stat-label">GRWM shoots</span></div>
     </div>
-    <p class="desk-line">The biggest piles: {{ range $i, $r := .raws.biggest }}{{ if $i }}, {{ end }}{{ $r.name }} ({{ $r.clips }}){{ end }}.</p>
+    <p class="desk-line">The biggest piles: {{ range $i, $r := .raws.biggest }}{{ if $i }}, {{ end }}{{ $r.name }} ({{ $r.clips }}){{ end }}. Yes, that folder is really called that.</p>
 
     <h2 class="sub-head">Finished</h2>
     <p class="block-note">A film counts when it has a version number. Every re-export counts as a version, because every one of them was a decision.</p>
@@ -33,31 +126,27 @@
         <div class="stat stat-card">
             <span class="stat-title">{{ $label }}</span>
             <span class="stat-num">{{ .films }}</span><span class="stat-label">films in {{ .projects }} projects</span>
-            <span class="stat-sub">{{ .versions }} versions{{ if .on_youtube }} · {{ .on_youtube }} on YouTube{{ end }}</span>
+            <span class="stat-sub">{{ .versions }} versions{{ if .on_youtube }} · {{ .on_youtube }} uploaded to YouTube{{ end }}</span>
         </div>
         {{ end }}
         {{ end }}
     </div>
-    <p class="desk-line">In total: <strong>{{ .totals.films }} films, {{ .totals.versions }} versions</strong>, {{ .totals.on_youtube }} uploaded to YouTube so far.</p>
+    <p class="desk-line">In total: <strong>{{ .totals.films }} films in {{ .totals.versions }} versions</strong>{{ with .film_minutes }}, {{ . }} minutes of finished event film{{ end }}, {{ .totals.on_youtube }} uploaded to YouTube so far.</p>
 
-    <h2 class="sub-head">How long a video takes</h2>
-    <aside class="voice-note leeza tally">
-        <p class="voice-note-name">
-            <img class="voice-note-avatar" src="{{ $lee.avatar | relURL }}" alt="" width="40" height="40" loading="lazy">
-            <span class="memo">Lee Za · read from the file dates and the changelogs</span>
-        </p>
-        <div class="voice-note-body">
-            {{ with .timing }}
-            <ul class="tally-list findings">
-                <li><strong>{{ .shoot_to_first_cut_median_days }} {{ if eq (int .shoot_to_first_cut_median_days) 1 }}day{{ else }}days{{ end }} from the shoot to the first cut</strong>, for the events I can time: {{ range $i, $e := .shoot_to_first_cut_fastest }}{{ if $i }} and {{ end }}{{ $e.name }}{{ end }}. Fast. I checked the dates twice.</li>
-                <li><strong>{{ .first_to_latest_cut_median_days }} days from the first cut to the latest one</strong>, in the middle of all projects. So the cutting is quick and the deciding is not.</li>
-                <li><strong>{{ .versions_per_film_median }} versions per film</strong> is normal. {{ with index .most_versions 0 }}{{ .name }} has {{ .versions }} versions across {{ .films }} films. I am not saying anything. I am only saying the number.{{ end }}</li>
-                {{ with index .first_cuts_per_day 0 }}<li><strong>{{ .projects }} projects got their first cut on one day</strong>, {{ time.Format "2 January 2006" .date }}. That was not a normal day.</li>{{ end }}
-                <li><strong>{{ .folders_with_copy_date }} folders I cannot time.</strong> Their clips carry the day they were copied, not the day they were shot, so any number I gave you would be made up. I do not do made up.</li>
-            </ul>
-            {{ end }}
-        </div>
-    </aside>
+    <h2 class="sub-head">How many tries a film takes</h2>
+    <p class="block-note">Versions per project. Two per film is normal. Some are not normal.</p>
+    {{ $top := first 8 (sort .projects "versions" "desc") }}
+    {{ $maxV := (index $top 0).versions }}
+    <ol class="tries">
+        {{ range $top }}
+        <li class="try" title="{{ .name }}: {{ .versions }} versions across {{ .films }} films">
+            <span class="try-name">{{ .name | truncate 44 }}</span>
+            <span class="try-track"><span class="try-bar" style="width: {{ math.Max 1 (div (mul 100.0 .versions) $maxV) | printf "%.1f" }}%"></span></span>
+            <span class="try-num">{{ .versions }} <span class="try-sub">in {{ .films }} {{ if eq (int .films) 1 }}film{{ else }}films{{ end }}</span></span>
+        </li>
+        {{ end }}
+    </ol>
+    {{ with index $top 0 }}<p class="desk-line">{{ .name }}: {{ .versions }} versions. I am not saying anything. I am only saying the number.</p>{{ end }}
     {{ end }}
 
     {{ with $d.talks }}
@@ -96,7 +185,8 @@
             <ul class="tally-list">
                 <li><span class="tally-num">{{ len $talks.this_year }}</span> talks in {{ $talks.year }}, {{ $slides }} with slides to download. <a href="{{ "/talks/" | relURL }}">The list</a></li>
                 {{ with $v }}<li><span class="tally-num">{{ .totals.films }}</span> finished films, and {{ lang.FormatNumber 0 .raws.clips }} raw clips that want to become more</li>
-                <li><span class="tally-num">{{ .totals.on_youtube }}</span> videos uploaded to YouTube from the pipeline</li>{{ end }}
+                <li><span class="tally-num">{{ .totals.on_youtube }}</span> videos uploaded to YouTube from the pipeline</li>
+                {{ with .pipeline }}<li><span class="tally-num">{{ .commits }}</span> commits to the video pipeline itself</li>{{ end }}{{ end }}
                 {{ with $d.talks }}{{ $demos := 0 }}{{ range .list }}{{ $demos = add $demos .demos }}{{ end }}<li><span class="tally-num">{{ $demos }}</span> demos built for the stage</li>{{ end }}
                 <li><span class="tally-num">{{ len $repos }}</span> public repositories with a note. <a href="{{ "/repos/" | relURL }}">The open source notebook</a></li>
             </ul>

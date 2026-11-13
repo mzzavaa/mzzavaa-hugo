@@ -56,6 +56,373 @@
       "on_youtube": 38,
       "changelog_entries": 105
     },
+    "film_minutes": 43,
+    "pipeline": {
+      "commits": 420,
+      "first_month": "2026-03",
+      "months": [
+        {
+          "month": "2026-03",
+          "commits": 1
+        },
+        {
+          "month": "2026-04",
+          "commits": 110
+        },
+        {
+          "month": "2026-05",
+          "commits": 22
+        },
+        {
+          "month": "2026-06",
+          "commits": 97
+        },
+        {
+          "month": "2026-07",
+          "commits": 36
+        },
+        {
+          "month": "2026-08",
+          "commits": 1
+        },
+        {
+          "month": "2026-09",
+          "commits": 28
+        },
+        {
+          "month": "2026-10",
+          "commits": 125
+        }
+      ]
+    },
+    "waiting": {
+      "measured": 22,
+      "longest": {
+        "name": "AWS Summit New York 2024",
+        "days": 836,
+        "event": "2024-07-10"
+      },
+      "shortest": {
+        "name": "AWS AI & Data Day Vienna 2026",
+        "days": 1,
+        "event": "2026-11-10"
+      },
+      "median_days": 427,
+      "by_year": [
+        {
+          "year": "2024",
+          "events": 3,
+          "median_days": 789
+        },
+        {
+          "year": "2025",
+          "events": 15,
+          "median_days": 432
+        },
+        {
+          "year": "2026",
+          "events": 4,
+          "median_days": 87
+        }
+      ]
+    },
+    "chart": {
+      "from": "2024-07",
+      "to": "2026-11-13",
+      "ticks": [
+        {
+          "label": "2024-07",
+          "x": 0
+        },
+        {
+          "label": "2024-10",
+          "x": 0.1062
+        },
+        {
+          "label": "2025-01",
+          "x": 0.2125
+        },
+        {
+          "label": "2025-04",
+          "x": 0.3164
+        },
+        {
+          "label": "2025-07",
+          "x": 0.4215
+        },
+        {
+          "label": "2025-10",
+          "x": 0.5278
+        },
+        {
+          "label": "2026-01",
+          "x": 0.6341
+        },
+        {
+          "label": "2026-04",
+          "x": 0.7379
+        },
+        {
+          "label": "2026-07",
+          "x": 0.843
+        },
+        {
+          "label": "2026-10",
+          "x": 0.9493
+        }
+      ],
+      "rows": [
+        {
+          "name": "AWS Summit New York 2024",
+          "kind": "aftermovie",
+          "event": "2024-07-10",
+          "first_cut": "2026-10-24",
+          "days": 836,
+          "x0": 0.0104,
+          "x1": 0.9758
+        },
+        {
+          "name": "AWS Community Day New York 2024",
+          "kind": "aftermovie",
+          "event": "2024-08-28",
+          "first_cut": "2026-10-24",
+          "days": 787,
+          "x0": 0.067,
+          "x1": 0.9758
+        },
+        {
+          "name": "New York 2024",
+          "kind": "aftermovie",
+          "event": "2024-08-28",
+          "first_cut": "2026-10-26",
+          "days": 789,
+          "x0": 0.067,
+          "x1": 0.9781
+        },
+        {
+          "name": "AWS Women's User Group Munich 2025",
+          "kind": "aftermovie",
+          "event": "2025-01-22",
+          "first_cut": "2026-10-24",
+          "days": 640,
+          "x0": 0.2367,
+          "x1": 0.9758
+        },
+        {
+          "name": "AWS User Group Vienna 2025",
+          "kind": "aftermovie",
+          "event": "2025-01-29",
+          "first_cut": "2026-10-24",
+          "days": 633,
+          "x0": 0.2448,
+          "x1": 0.9758
+        },
+        {
+          "name": "AWS User Groups Vienna 2025",
+          "kind": "aftermovie",
+          "event": "2025-01-29",
+          "first_cut": "2026-10-26",
+          "days": 635,
+          "x0": 0.2448,
+          "x1": 0.9781
+        },
+        {
+          "name": "AWS Women's User Group Vienna 2025",
+          "kind": "aftermovie",
+          "event": "2025-03-04",
+          "first_cut": "2026-10-24",
+          "days": 599,
+          "x0": 0.2841,
+          "x1": 0.9758
+        },
+        {
+          "name": "AWS Women's User Group Berlin 2025",
+          "kind": "aftermovie",
+          "event": "2025-03-06",
+          "first_cut": "2026-10-24",
+          "days": 597,
+          "x0": 0.2864,
+          "x1": 0.9758
+        },
+        {
+          "name": "AWS Community Day Romania 2025",
+          "kind": "aftermovie",
+          "event": "2025-04-10",
+          "first_cut": "2026-10-24",
+          "days": 562,
+          "x0": 0.3268,
+          "x1": 0.9758
+        },
+        {
+          "name": "AWS Community Day Prague 2025",
+          "kind": "aftermovie",
+          "event": "2025-04-29",
+          "first_cut": "2026-10-24",
+          "days": 543,
+          "x0": 0.3488,
+          "x1": 0.9758
+        },
+        {
+          "name": "AWS Hero Summit Seattle 2025",
+          "kind": "aftermovie",
+          "event": "2025-08-28",
+          "first_cut": "2026-10-24",
+          "days": 422,
+          "x0": 0.4885,
+          "x1": 0.9758
+        },
+        {
+          "name": "AWS Hero Summit Seattle 2025 - If You Were an AWS Service",
+          "kind": "interview",
+          "event": "2025-08-28",
+          "first_cut": "2026-11-03",
+          "days": 432,
+          "x0": 0.4885,
+          "x1": 0.9874
+        },
+        {
+          "name": "AWS Community Day Poland 2025",
+          "kind": "aftermovie",
+          "event": "2025-09-18",
+          "first_cut": "2026-10-20",
+          "days": 397,
+          "x0": 0.5127,
+          "x1": 0.9712
+        },
+        {
+          "name": "AWS Community Day DACH 2025",
+          "kind": "aftermovie",
+          "event": "2025-10-07",
+          "first_cut": "2026-10-24",
+          "days": 382,
+          "x0": 0.5347,
+          "x1": 0.9758
+        },
+        {
+          "name": "AWS Community Day CEE 2025",
+          "kind": "aftermovie",
+          "event": "2025-10-16",
+          "first_cut": "2026-10-24",
+          "days": 373,
+          "x0": 0.5451,
+          "x1": 0.9758
+        },
+        {
+          "name": "CTRL+ESC Malta 2025",
+          "kind": "aftermovie",
+          "event": "2025-10-23",
+          "first_cut": "2026-10-20",
+          "days": 362,
+          "x0": 0.5532,
+          "x1": 0.9712
+        },
+        {
+          "name": "netidee Talk 2025",
+          "kind": "aftermovie",
+          "event": "2025-11-20",
+          "first_cut": "2026-10-28",
+          "days": 342,
+          "x0": 0.5855,
+          "x1": 0.9805
+        },
+        {
+          "name": "AWS reInvent Las Vegas 2025",
+          "kind": "aftermovie",
+          "event": "2025-12-01",
+          "first_cut": "2026-10-24",
+          "days": 327,
+          "x0": 0.5982,
+          "x1": 0.9758
+        },
+        {
+          "name": "Cloud Day FH Burgenland 2026",
+          "kind": "aftermovie",
+          "event": "2026-01-31",
+          "first_cut": "2026-10-29",
+          "days": 271,
+          "x0": 0.6686,
+          "x1": 0.9816
+        },
+        {
+          "name": "AWS Community Day Athens - Videos",
+          "kind": "aftermovie",
+          "event": "2026-04-28",
+          "first_cut": "2026-10-18",
+          "days": 173,
+          "x0": 0.7691,
+          "x1": 0.9689
+        },
+        {
+          "name": "AWS AI & Data Day Vienna 2026",
+          "kind": "aftermovie",
+          "event": "2026-11-10",
+          "first_cut": "2026-11-11",
+          "days": 1,
+          "x0": 0.9955,
+          "x1": 0.9966
+        },
+        {
+          "name": "Cloud Native Meetup Nov 2026",
+          "kind": "aftermovie",
+          "event": "2026-11-12",
+          "first_cut": "2026-11-13",
+          "days": 1,
+          "x0": 0.9978,
+          "x1": 0.9989
+        }
+      ],
+      "pipeline": [
+        {
+          "month": "2026-03",
+          "commits": 1,
+          "x0": 0.7021,
+          "x1": 0.7379
+        },
+        {
+          "month": "2026-04",
+          "commits": 110,
+          "x0": 0.7379,
+          "x1": 0.7726
+        },
+        {
+          "month": "2026-05",
+          "commits": 22,
+          "x0": 0.7726,
+          "x1": 0.8084
+        },
+        {
+          "month": "2026-06",
+          "commits": 97,
+          "x0": 0.8084,
+          "x1": 0.843
+        },
+        {
+          "month": "2026-07",
+          "commits": 36,
+          "x0": 0.843,
+          "x1": 0.8788
+        },
+        {
+          "month": "2026-08",
+          "commits": 1,
+          "x0": 0.8788,
+          "x1": 0.9146
+        },
+        {
+          "month": "2026-09",
+          "commits": 28,
+          "x0": 0.9146,
+          "x1": 0.9493
+        },
+        {
+          "month": "2026-10",
+          "commits": 125,
+          "x0": 0.9493,
+          "x1": 0.9851
+        }
+      ],
+      "pipeline_max": 125
+    },
     "timing": {
       "folders_with_copy_date": 21,
       "first_cuts_per_day": [
@@ -142,9 +509,12 @@
         "on_youtube": 1,
         "first_upload": "2026-11-13",
         "changelog_entries": 0,
+        "event_date": "2026-11-10",
+        "film_seconds": 275,
         "shot": "2026-11-10",
         "shoot_to_first_cut": 1,
-        "first_to_latest_cut": 2
+        "first_to_latest_cut": 2,
+        "waited_days": 1
       },
       {
         "name": "Cloud Native Meetup Nov 2026",
@@ -156,9 +526,12 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 4,
+        "event_date": "2026-11-12",
+        "film_seconds": 0,
         "shot": "2026-11-12",
         "shoot_to_first_cut": 1,
-        "first_to_latest_cut": 0
+        "first_to_latest_cut": 0,
+        "waited_days": 1
       },
       {
         "name": "GRWM-3-Cameras",
@@ -170,6 +543,8 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 34,
+        "event_date": null,
+        "film_seconds": 0,
         "first_to_latest_cut": 16
       },
       {
@@ -182,6 +557,8 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 51,
+        "event_date": null,
+        "film_seconds": 0,
         "first_to_latest_cut": 6
       },
       {
@@ -194,7 +571,10 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 0,
-        "first_to_latest_cut": 10
+        "event_date": "2025-08-28",
+        "film_seconds": 259,
+        "first_to_latest_cut": 10,
+        "waited_days": 432
       },
       {
         "name": "AWS reInvent Las Vegas 2025 - What's Your Mission",
@@ -206,6 +586,8 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 0,
+        "event_date": null,
+        "film_seconds": 0,
         "first_to_latest_cut": 0
       },
       {
@@ -218,6 +600,8 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 2,
+        "event_date": null,
+        "film_seconds": 0,
         "first_to_latest_cut": 1
       },
       {
@@ -230,6 +614,8 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 1,
+        "event_date": null,
+        "film_seconds": 0,
         "first_to_latest_cut": 0
       },
       {
@@ -242,6 +628,8 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 1,
+        "event_date": null,
+        "film_seconds": 0,
         "first_to_latest_cut": 0
       },
       {
@@ -254,6 +642,8 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 0,
+        "event_date": null,
+        "film_seconds": 0,
         "first_to_latest_cut": 0
       },
       {
@@ -266,7 +656,10 @@
         "on_youtube": 4,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 16
+        "event_date": "2025-10-16",
+        "film_seconds": 161,
+        "first_to_latest_cut": 16,
+        "waited_days": 373
       },
       {
         "name": "AWS Community Day DACH 2025",
@@ -278,7 +671,10 @@
         "on_youtube": 2,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 16
+        "event_date": "2025-10-07",
+        "film_seconds": 103,
+        "first_to_latest_cut": 16,
+        "waited_days": 382
       },
       {
         "name": "AWS Community Day New York 2024",
@@ -290,7 +686,10 @@
         "on_youtube": 3,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 16
+        "event_date": "2024-08-28",
+        "film_seconds": 120,
+        "first_to_latest_cut": 16,
+        "waited_days": 787
       },
       {
         "name": "AWS Community Day Poland 2025",
@@ -302,7 +701,10 @@
         "on_youtube": 2,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 20
+        "event_date": "2025-09-18",
+        "film_seconds": 108,
+        "first_to_latest_cut": 20,
+        "waited_days": 397
       },
       {
         "name": "AWS Community Day Prague 2025",
@@ -314,7 +716,10 @@
         "on_youtube": 3,
         "first_upload": "2026-11-10",
         "changelog_entries": 3,
-        "first_to_latest_cut": 16
+        "event_date": "2025-04-29",
+        "film_seconds": 142,
+        "first_to_latest_cut": 16,
+        "waited_days": 543
       },
       {
         "name": "AWS Community Day Romania 2025",
@@ -326,7 +731,10 @@
         "on_youtube": 3,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 16
+        "event_date": "2025-04-10",
+        "film_seconds": 115,
+        "first_to_latest_cut": 16,
+        "waited_days": 562
       },
       {
         "name": "AWS Hero Summit Seattle 2025",
@@ -338,7 +746,10 @@
         "on_youtube": 3,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 16
+        "event_date": "2025-08-28",
+        "film_seconds": 185,
+        "first_to_latest_cut": 16,
+        "waited_days": 422
       },
       {
         "name": "AWS Summit New York 2024",
@@ -350,7 +761,10 @@
         "on_youtube": 2,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 16
+        "event_date": "2024-07-10",
+        "film_seconds": 88,
+        "first_to_latest_cut": 16,
+        "waited_days": 836
       },
       {
         "name": "AWS User Group Vienna 2025",
@@ -362,7 +776,10 @@
         "on_youtube": 1,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 16
+        "event_date": "2025-01-29",
+        "film_seconds": 43,
+        "first_to_latest_cut": 16,
+        "waited_days": 633
       },
       {
         "name": "AWS reInvent Las Vegas 2025",
@@ -374,7 +791,10 @@
         "on_youtube": 4,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 16
+        "event_date": "2025-12-01",
+        "film_seconds": 154,
+        "first_to_latest_cut": 16,
+        "waited_days": 327
       },
       {
         "name": "CTRL+ESC Malta 2025",
@@ -386,7 +806,10 @@
         "on_youtube": 1,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 20
+        "event_date": "2025-10-23",
+        "film_seconds": 77,
+        "first_to_latest_cut": 20,
+        "waited_days": 362
       },
       {
         "name": "Cloud Day FH Burgenland 2026",
@@ -398,7 +821,10 @@
         "on_youtube": 3,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 11
+        "event_date": "2026-01-31",
+        "film_seconds": 125,
+        "first_to_latest_cut": 11,
+        "waited_days": 271
       },
       {
         "name": "New York 2024",
@@ -410,7 +836,10 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 0,
-        "first_to_latest_cut": 14
+        "event_date": "2024-08-28",
+        "film_seconds": 91,
+        "first_to_latest_cut": 14,
+        "waited_days": 789
       },
       {
         "name": "netidee Talk 2025",
@@ -422,7 +851,10 @@
         "on_youtube": 1,
         "first_upload": "2026-11-10",
         "changelog_entries": 0,
-        "first_to_latest_cut": 12
+        "event_date": "2025-11-20",
+        "film_seconds": 100,
+        "first_to_latest_cut": 12,
+        "waited_days": 342
       },
       {
         "name": "GRWM-Dark-Transitions",
@@ -434,6 +866,8 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 2,
+        "event_date": null,
+        "film_seconds": 0,
         "first_to_latest_cut": 3
       },
       {
@@ -446,7 +880,10 @@
         "on_youtube": 5,
         "first_upload": "2026-11-10",
         "changelog_entries": 6,
-        "first_to_latest_cut": 19
+        "event_date": "2026-04-28",
+        "film_seconds": 238,
+        "first_to_latest_cut": 19,
+        "waited_days": 173
       },
       {
         "name": "GRWM-Dark-Shorts",
@@ -458,6 +895,8 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 1,
+        "event_date": null,
+        "film_seconds": 0,
         "first_to_latest_cut": 0
       },
       {
@@ -470,7 +909,10 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 0,
-        "first_to_latest_cut": 0
+        "event_date": "2025-01-29",
+        "film_seconds": 53,
+        "first_to_latest_cut": 0,
+        "waited_days": 635
       },
       {
         "name": "AWS Women's User Group Berlin 2025",
@@ -482,7 +924,10 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 0,
-        "first_to_latest_cut": 2
+        "event_date": "2025-03-06",
+        "film_seconds": 71,
+        "first_to_latest_cut": 2,
+        "waited_days": 597
       },
       {
         "name": "AWS Women's User Group Munich 2025",
@@ -494,7 +939,10 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 0,
-        "first_to_latest_cut": 2
+        "event_date": "2025-01-22",
+        "film_seconds": 23,
+        "first_to_latest_cut": 2,
+        "waited_days": 640
       },
       {
         "name": "AWS Women's User Group Vienna 2025",
@@ -506,7 +954,10 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 0,
-        "first_to_latest_cut": 0
+        "event_date": "2025-03-04",
+        "film_seconds": 24,
+        "first_to_latest_cut": 0,
+        "waited_days": 599
       },
       {
         "name": "AWS Community Day Athens - Options for feedback",
@@ -518,6 +969,8 @@
         "on_youtube": 0,
         "first_upload": null,
         "changelog_entries": 0,
+        "event_date": null,
+        "film_seconds": 0,
         "first_to_latest_cut": 1
       }
     ]

@@ -1,10 +1,10 @@
 ---
 title: "Lee Za's desk"
-description: "Everything Linda makes outside her client work, counted: the footage still waiting, the films that are finished, how long a video takes, and what goes into a talk before anyone sees it."
+description: "Linda builds her video pipeline in public. This is the scoreboard: how long footage used to wait, how long it waits now, what is still raw, and what goes into a talk before anyone sees it."
 ---
 
 {{< leeza >}}
-The [Talks](/talks/) page is the official list. This is my desk, and it is less tidy.
+The [Talks](/talks/) page is the official list. This is my desk, and it is less polite.
 
-Here I count what Linda is working on when she is not working: the raw footage, the finished films, every version of every deck. I do not judge. I count, and the numbers do the judging.
+Linda films everything. For two years the footage went into folders and stayed there. Then she built a pipeline that cuts it, and I started counting. Below is what the counting says. I did not round anything in her favour.
 {{< /leeza >}}
