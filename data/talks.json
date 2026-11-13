@@ -1,5 +1,5 @@
 {
-  "about": "Lee Za's list of Linda's talks. This year in full, earlier years as a list. Source: https://www.lindamohamed.com/talks, read on 2026-11-13. A null means missing, and the Talks page and the weekly check say so. tools/check-talks.mjs reads this file.",
+  "about": "Lee Za's list of Linda's talks. The rule: every talk has four things, a landing page (page), a blog post (blog), the slides for download (slides) and a video (video). A null means missing, and the Talks page and the weekly check say so. The only way out is an entry in \"except\", for example {\"video\": \"not recorded\"}, and only Linda adds those. blog_broken is a blog link that the landing page carries but that does not answer. Read from https://www.lindamohamed.com/talks, each talk's landing page and the blog on 2026-11-13. tools/check-talks.mjs reads this file.",
   "year": 2026,
   "checked": "2026-11-13",
   "links": {
@@ -14,8 +14,11 @@
       "city": "Vienna",
       "title": "Your Agent Is the New Layer 8: Prompted, Tricked, and Overprivileged",
       "page": "https://www.lindamohamed.com/cloud-native-meetup-vienna",
+      "blog": null,
       "slides": "https://drive.google.com/file/d/1oaSqvYKXc37YMTRpj8Iwa7GX7d7laK69/view",
-      "recap": null
+      "video": null,
+      "except": {},
+      "blog_broken": "https://www.lindamohamed.com/blog/cloud-native-vienna-agent-layer-8-2026"
     },
     {
       "date": "2026-10-22",
@@ -23,8 +26,10 @@
       "city": "Ljubljana",
       "title": null,
       "page": null,
+      "blog": null,
       "slides": null,
-      "recap": null
+      "video": null,
+      "except": {}
     },
     {
       "date": null,
@@ -32,8 +37,10 @@
       "city": "Vienna",
       "title": "Generiert, verzerrt, unterrichtet",
       "page": "https://www.lindamohamed.com/treffpunkt-bildung",
+      "blog": "https://www.lindamohamed.com/blog/treffpunkt-bildung-11-vienna-2026",
       "slides": null,
-      "recap": null
+      "video": null,
+      "except": {}
     },
     {
       "date": null,
@@ -41,8 +48,10 @@
       "city": "Vienna",
       "title": "Correct on Average, Wrong by Design: How data taught AI that tech is male",
       "page": "https://www.lindamohamed.com/cloud-native-days-austria",
+      "blog": null,
       "slides": null,
-      "recap": null
+      "video": null,
+      "except": {}
     },
     {
       "date": null,
@@ -50,8 +59,10 @@
       "city": "Vienna",
       "title": "Breakout: Welche Innovationsbedingungen brauchen Unternehmen?",
       "page": "https://www.lindamohamed.com/internet-summit-austria",
+      "blog": "https://www.lindamohamed.com/blog/internet-summit-austria-vienna-2026",
       "slides": null,
-      "recap": null
+      "video": null,
+      "except": {}
     },
     {
       "date": null,
@@ -59,8 +70,10 @@
       "city": "St. Pölten",
       "title": "Hybrid AI Architecture",
       "page": "https://www.lindamohamed.com/aws-student-builder-group-st-poelten",
+      "blog": null,
       "slides": "https://drive.google.com/file/d/11DFmGg-6DV9Zw_YkIPhSRBejTj79gpQp/view",
-      "recap": null
+      "video": null,
+      "except": {}
     },
     {
       "date": null,
@@ -68,8 +81,10 @@
       "city": "St. Pölten",
       "title": "OTTO: demo and presentation",
       "page": "https://www.lindamohamed.com/aws-student-builder-group-st-poelten",
+      "blog": null,
       "slides": "https://drive.google.com/file/d/1GsmZFeeHxM1WE7x5zLk66nRyZ62ESbs0/view",
-      "recap": null
+      "video": null,
+      "except": {}
     },
     {
       "date": null,
@@ -77,8 +92,10 @@
       "city": "Budapest",
       "title": "Event film and intro video",
       "page": "https://www.lindamohamed.com/aws-community-day-cee",
+      "blog": null,
       "slides": null,
-      "recap": null
+      "video": null,
+      "except": {}
     },
     {
       "date": null,
@@ -86,8 +103,10 @@
       "city": "Istanbul",
       "title": "Your Agent Is the New Layer 8: Prompted, Tricked, and Overprivileged",
       "page": "https://www.lindamohamed.com/aws-community-day-turkiye",
+      "blog": null,
       "slides": "https://drive.google.com/file/d/1cKRqo4UCX9LBur00SkMRboRyS4HqnJ19/view",
-      "recap": null
+      "video": null,
+      "except": {}
     },
     {
       "date": null,
@@ -95,8 +114,10 @@
       "city": "Athens",
       "title": "From Raw Footage to Publish-Ready: Building a Serverless AI Video Pipeline on AWS",
       "page": "https://www.lindamohamed.com/aws-community-day-greece",
+      "blog": null,
       "slides": "https://drive.google.com/file/d/1qwHksHYKqiimgfh8hpbgdmJ5hxLcHWbQ/view",
-      "recap": null
+      "video": null,
+      "except": {}
     },
     {
       "date": null,
@@ -104,8 +125,10 @@
       "city": "Pinkafeld",
       "title": "The 3-5-7 rule: a career as a git graph",
       "page": "https://www.lindamohamed.com/htl-pinkafeld",
+      "blog": "https://www.lindamohamed.com/blog/htl-pinkafeld-girls-day-2026",
       "slides": null,
-      "recap": null
+      "video": null,
+      "except": {}
     },
     {
       "date": null,
@@ -113,9 +136,10 @@
       "city": "Pinkafeld",
       "title": "Jury member, Entrepreneurship Week pitches",
       "page": "https://www.lindamohamed.com/htl-pinkafeld",
+      "blog": "https://www.lindamohamed.com/blog/htl-pinkafeld-girls-day-2026",
       "slides": null,
-      "recap": null,
-      "note": "jury"
+      "video": null,
+      "except": {}
     },
     {
       "date": null,
@@ -123,8 +147,10 @@
       "city": "Eisenstadt",
       "title": "Multi-Agent Systems on AWS: From Prototype to Production",
       "page": "https://www.lindamohamed.com/cloud-day-fh-burgenland",
+      "blog": "https://www.lindamohamed.com/blog/cloud-day-fh-burgenland-2026",
       "slides": "https://drive.google.com/file/d/17CYmFtwZ8zB_2JmwJ25xgHJFie74s8zo/view",
-      "recap": null
+      "video": null,
+      "except": {}
     }
   ],
   "earlier": [
@@ -254,5 +280,11 @@
       "title": "Small Data Machine Learning",
       "page": "https://www.lindamohamed.com/aws-summit-berlin"
     }
+  ],
+  "rule": [
+    "page",
+    "blog",
+    "slides",
+    "video"
   ]
 }

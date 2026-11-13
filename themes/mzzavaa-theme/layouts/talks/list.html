@@ -1,14 +1,29 @@
 {{ define "main" }}
-{{/* The Talks page, kept by Lee Za. Everything comes from data/talks.json:
-     this year in full, earlier years as a list. What is missing (dates, slides, recaps)
-     goes to Linda in the weekly check, tools/check-talks.mjs, not onto the page. */}}
+{{/* The Talks page, kept by Lee Za. Everything comes from data/talks.json.
+     The rule: every talk of this year has four things, a landing page, a blog post,
+     the slides and a video. What is missing is said on the page. An entry in a talk's
+     "except" map is the only way out. Earlier years are a plain list. */}}
 {{ $t := hugo.Data.talks }}
 {{ $lee := index hugo.Data.voices "leeza" }}
+{{ $labels := dict "page" "Landing page" "blog" "Blog post" "slides" "Slides" "video" "Video" }}
+{{ $plural := dict "page" "Landing pages" "blog" "Blog posts" "slides" "Slides" "video" "Videos" }}
 {{ $today := now.Format "2006-01-02" }}
 {{ $upcoming := slice }}{{ $past := slice }}
 {{ range $t.this_year }}
   {{ if and .date (ge .date $today) }}{{ $upcoming = $upcoming | append . }}{{ else }}{{ $past = $past | append . }}{{ end }}
 {{ end }}
+
+{{/* The count: per kind, how many are there and how many are owed */}}
+{{ $have := 0 }}{{ $owed := 0 }}{{ $perKind := dict }}
+{{ range $kind := $t.rule }}
+  {{ $h := 0 }}{{ $o := 0 }}
+  {{ range $t.this_year }}
+    {{ if not (index .except $kind) }}{{ $o = add $o 1 }}{{ if index . $kind }}{{ $h = add $h 1 }}{{ end }}{{ end }}
+  {{ end }}
+  {{ $perKind = merge $perKind (dict $kind (dict "have" $h "owed" $o)) }}
+  {{ $have = add $have $h }}{{ $owed = add $owed $o }}
+{{ end }}
+
 <header class="page-head wrap">
     <img class="page-head-avatar leeza" src="{{ $lee.avatar | relURL }}" alt="" width="88" height="88">
     <h1>{{ .Title }}</h1>
@@ -17,18 +32,34 @@
 <div class="wrap talks">
     {{ with .Content }}<div class="prose section-intro">{{ . }}</div>{{ end }}
 
+    <aside class="voice-note leeza tally">
+        <p class="voice-note-name">
+            <img class="voice-note-avatar" src="{{ $lee.avatar | relURL }}" alt="" width="40" height="40" loading="lazy">
+            <span class="memo">Lee Za · the count, checked {{ time.Format "2 January 2006" $t.checked }}</span>
+        </p>
+        <div class="voice-note-body">
+            <p class="tally-total"><strong>{{ $have }} of {{ $owed }}</strong> things are where they should be.</p>
+            <ul class="tally-list">
+                {{ range $kind := $t.rule }}{{ $k := index $perKind $kind }}
+                <li><span class="tally-num">{{ $k.have }}/{{ $k.owed }}</span> {{ index $plural $kind }}{{ if eq $k.have 0 }} <em>None. Not one. I counted twice.</em>{{ else if eq $k.have $k.owed }} <em>All there. Suspicious, but fine.</em>{{ end }}</li>
+                {{ end }}
+            </ul>
+            {{ if lt $have $owed }}<p>{{ sub $owed $have }} to go. I am not angry. I am keeping a list.</p>{{ else }}<p>Everything is there. I will check again next week anyway.</p>{{ end }}
+        </div>
+    </aside>
+
     <h2 class="sub-head">Coming up</h2>
     {{ with $upcoming }}
-    <ol class="log">{{ range sort . "date" }}{{ template "talk-row" . }}{{ end }}</ol>
+    <ol class="log">{{ range sort . "date" }}{{ template "talk-row" (dict "t" . "rule" $t.rule "labels" $labels "year" $t.year) }}{{ end }}</ol>
     {{ else }}
     <p class="block-note">Nothing with a fixed date on my list right now. Want Linda in your room? <a href="{{ $t.links.booking }}">Talks and moderation</a> is the place to ask.</p>
     {{ end }}
 
     <h2 class="sub-head">{{ $t.year }} so far</h2>
-    <ol class="log">{{ range $past }}{{ template "talk-row" . }}{{ end }}</ol>
+    <ol class="log">{{ range $past }}{{ template "talk-row" (dict "t" . "rule" $t.rule "labels" $labels "year" $t.year) }}{{ end }}</ol>
 
     <h2 class="sub-head">Earlier years</h2>
-    <p class="block-note">The short version. Every talk with its slides is on <a href="{{ $t.links.all_talks }}">lindamohamed.com/talks</a>, and the speaker profile is on <a href="{{ $t.links.sessionize }}">Sessionize</a>.</p>
+    <p class="block-note">I only keep count for this year. Every earlier talk with its slides is on <a href="{{ $t.links.all_talks }}">lindamohamed.com/talks</a>, and the speaker profile is on <a href="{{ $t.links.sessionize }}">Sessionize</a>.</p>
     {{ $years := slice }}{{ range $t.earlier }}{{ $years = $years | append .year }}{{ end }}
     {{ range sort (uniq $years) "value" "desc" }}
     {{ $y := . }}
@@ -43,15 +74,29 @@
 {{ end }}
 
 {{ define "talk-row" }}
+{{ $t := .t }}
+{{ $have := 0 }}{{ $owed := 0 }}
+{{ range $kind := .rule }}{{ if not (index $t.except $kind) }}{{ $owed = add $owed 1 }}{{ if index $t $kind }}{{ $have = add $have 1 }}{{ end }}{{ end }}{{ end }}
 <li class="log-row talk-row">
-    {{ with .date }}<time datetime="{{ . }}">{{ time.Format "2 Jan 2006" . }}</time>{{ else }}<time>{{ hugo.Data.talks.year }}</time>{{ end }}
+    {{ with $t.date }}<time datetime="{{ . }}">{{ time.Format "2 Jan 2006" . }}</time>{{ else }}<time>{{ $.year }}</time>{{ end }}
     <div class="log-main">
-        <p class="talk-event">{{ with .page }}<a class="log-title" href="{{ . }}">{{ $.event }}</a>{{ else }}<span class="log-title">{{ .event }}</span>{{ end }} <span class="talk-city">{{ .city }}</span></p>
-        {{ with .title }}<p class="log-desc">{{ . }}</p>{{ end }}
-        <p class="talk-links">
-            {{ with .slides }}<a href="{{ . }}">Slides</a>{{ else }}<span class="talk-pending">slides not public yet</span>{{ end }}
-            {{ with .recap }}<a href="{{ . | relURL }}">How the slides were made</a>{{ end }}
-        </p>
+        <p class="talk-event">{{ with $t.page }}<a class="log-title" href="{{ . }}">{{ $t.event }}</a>{{ else }}<span class="log-title">{{ $t.event }}</span>{{ end }} <span class="talk-city">{{ $t.city }}</span></p>
+        {{ with $t.title }}<p class="log-desc">{{ . }}</p>{{ end }}
+        <ul class="talk-things">
+            {{ range $kind := $.rule }}
+            {{ $label := index $.labels $kind }}
+            {{ with index $t $kind }}<li class="thing is-there"><a href="{{ . }}">{{ $label }}</a></li>
+            {{ else }}{{ with index $t.except $kind }}<li class="thing is-excused">{{ $label }}: {{ . }}</li>
+            {{ else }}{{ if and (eq $kind "blog") $t.blog_broken }}<li class="thing is-missing" title="The landing page links to a blog post that does not answer">{{ $label }}: link is broken</li>
+            {{ else }}<li class="thing is-missing">{{ $label }}: missing</li>{{ end }}{{ end }}{{ end }}
+            {{ end }}
+        </ul>
+        <p class="talk-verdict"><span class="talk-score">{{ $have }}/{{ $owed }}</span>
+            {{- if eq $have $owed }} Complete. I have nothing to add, which is rare.
+            {{- else if eq (sub $owed $have) 1 }} One thing short. So close.
+            {{- else if eq $have 0 }} A date and a city. That is a rumour, not a talk.
+            {{- else if eq $have 1 }} One out of {{ $owed }}. A landing page on its own is a business card.
+            {{- else }} Half done is not done.{{ end }}</p>
     </div>
 </li>
 {{ end }}

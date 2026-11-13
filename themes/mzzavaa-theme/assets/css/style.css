@@ -416,6 +416,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.15;
 /* Lee Za: a memo with a dashed edge, the list keeper's note */
 .voice-note.leeza { background-color: var(--leeza-paper); border: 1.5px dashed var(--leeza); border-radius: 4px; }
 .voice-note.leeza .voice-note-avatar { border: 2px solid var(--leeza); }
+.voice-note-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: top; flex: none; }
 .memo { font-family: var(--mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--leeza); }
 
 /* Persona cards: the personas who do not write here, introduced on About */
@@ -438,8 +439,20 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.15;
 .talk-row { grid-template-columns: 6.6rem 1fr; }
 .talk-event { margin: 0; }
 .talk-city { font-family: var(--mono); font-size: 0.78rem; color: var(--ink-3); margin-left: 0.4rem; }
-.talk-links { margin: 0.45rem 0 0; display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-family: var(--mono); font-size: 0.8rem; }
-.talk-pending { color: var(--ink-3); }
+.talk-things { list-style: none; margin: 0.55rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.35rem 0.4rem; font-family: var(--mono); font-size: 0.78rem; }
+.thing { padding: 0.12rem 0.55rem; border-radius: 999px; border: 1px solid var(--rule); }
+.thing.is-there { border-color: var(--senior); background: var(--senior-paper); }
+.thing.is-there a { color: var(--senior); text-decoration: none; }
+.thing.is-there a:hover { text-decoration: underline; }
+.thing.is-missing { border: 1px dashed var(--leeza); color: var(--leeza); }
+.thing.is-excused { color: var(--ink-3); }
+.talk-verdict { margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--ink-2); font-style: italic; }
+.talk-score { font-family: var(--mono); font-style: normal; font-size: 0.8rem; color: var(--leeza); margin-right: 0.3rem; }
+.voice-note.tally { margin: 0 0 0.6rem; padding: 1rem 1.2rem 1.1rem; max-width: var(--measure); }
+.tally-total { font-family: var(--serif); font-size: 1.35rem; }
+.tally-list { list-style: none; margin: 0.6rem 0; padding: 0; }
+.tally-list li + li { margin-top: 0.25rem; }
+.tally-num { display: inline-block; min-width: 3.2rem; font-family: var(--mono); font-size: 0.85rem; color: var(--leeza); }
 .talk-year { font-family: var(--mono); font-size: 0.9rem; font-weight: 500; color: var(--ink-3); margin: 1.6rem 0 0.4rem; }
 .talk-list { margin: 0; padding-left: 1.1rem; max-width: var(--measure); }
 .talk-list li + li { margin-top: 0.3rem; }
