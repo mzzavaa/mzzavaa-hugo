@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{/* The Talks page, kept by Lee Za. Everything comes from data/talks.json:
-     this year in full, with what is missing said out loud, earlier years as a list. */}}
+     this year in full, earlier years as a list. What is missing (dates, slides, recaps)
+     goes to Linda in the weekly check, tools/check-talks.mjs, not onto the page. */}}
 {{ $t := hugo.Data.talks }}
 {{ $lee := index hugo.Data.voices "leeza" }}
 {{ $today := now.Format "2006-01-02" }}
@@ -26,28 +27,6 @@
     <h2 class="sub-head">{{ $t.year }} so far</h2>
     <ol class="log">{{ range $past }}{{ template "talk-row" . }}{{ end }}</ol>
 
-    {{/* What is missing, counted from the same data */}}
-    {{ $noDate := where $t.this_year "date" nil }}
-    {{ $noPage := where $t.this_year "page" nil }}
-    {{ $noSlides := where $t.this_year "slides" nil }}
-    {{ $noRecap := where $t.this_year "recap" nil }}
-    <h2 class="sub-head">Still missing</h2>
-    <aside class="voice-note leeza missing">
-        <p class="voice-note-name">
-            <img class="voice-note-avatar" src="{{ $lee.avatar | relURL }}" alt="" width="40" height="40" loading="lazy">
-            <span class="memo">Lee Za · checked {{ time.Format "2 January 2006" $t.checked }}</span>
-        </p>
-        <div class="voice-note-body">
-            <p>{{ len $t.this_year }} entries for {{ $t.year }}. Here is what I could not find.</p>
-            <ul>
-                <li><strong>{{ len $noSlides }} without public slides.</strong>{{ with $noSlides }} {{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ .event }}{{ with .title }} ({{ . | truncate 40 }}){{ end }}{{ end }}.{{ end }}</li>
-                <li><strong>{{ len $noDate }} without an exact date.</strong> The talk list only gives the year, so I cannot put them on a calendar yet.</li>
-                <li><strong>{{ len $noRecap }} without a recap</strong> of how the slides were made. None is written yet.</li>
-                {{ with $noPage }}<li><strong>{{ len . }} without a talk page.</strong> {{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ .event }}{{ end }}: mentioned on this site, not on the talk list.</li>{{ end }}
-            </ul>
-        </div>
-    </aside>
-
     <h2 class="sub-head">Earlier years</h2>
     <p class="block-note">The short version. Every talk with its slides is on <a href="{{ $t.links.all_talks }}">lindamohamed.com/talks</a>, and the speaker profile is on <a href="{{ $t.links.sessionize }}">Sessionize</a>.</p>
     {{ $years := slice }}{{ range $t.earlier }}{{ $years = $years | append .year }}{{ end }}
@@ -65,14 +44,13 @@
 
 {{ define "talk-row" }}
 <li class="log-row talk-row">
-    {{ with .date }}<time datetime="{{ . }}">{{ time.Format "2 Jan 2006" . }}</time>{{ else }}<time class="is-missing" title="No exact date on the talk list">date missing</time>{{ end }}
+    {{ with .date }}<time datetime="{{ . }}">{{ time.Format "2 Jan 2006" . }}</time>{{ else }}<time>{{ hugo.Data.talks.year }}</time>{{ end }}
     <div class="log-main">
         <p class="talk-event">{{ with .page }}<a class="log-title" href="{{ . }}">{{ $.event }}</a>{{ else }}<span class="log-title">{{ .event }}</span>{{ end }} <span class="talk-city">{{ .city }}</span></p>
-        {{ with .title }}<p class="log-desc">{{ . }}</p>{{ else }}<p class="log-desc is-missing">Talk title missing</p>{{ end }}
+        {{ with .title }}<p class="log-desc">{{ . }}</p>{{ end }}
         <p class="talk-links">
-            {{ with .slides }}<a href="{{ . }}">Slides</a>{{ else }}<span class="is-missing">slides missing</span>{{ end }}
-            {{ with .recap }}<a href="{{ . | relURL }}">How the slides were made</a>{{ else }}<span class="is-missing">recap missing</span>{{ end }}
-            {{ if not .page }}<span class="is-missing">talk page missing</span>{{ end }}
+            {{ with .slides }}<a href="{{ . }}">Slides</a>{{ else }}<span class="talk-pending">slides not public yet</span>{{ end }}
+            {{ with .recap }}<a href="{{ . | relURL }}">How the slides were made</a>{{ end }}
         </p>
     </div>
 </li>

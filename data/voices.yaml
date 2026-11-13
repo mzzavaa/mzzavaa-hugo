@@ -10,10 +10,10 @@ senior:
   role: "The reviewer"
   tagline: "Checks whether it actually worked, runs the retro, asks the hard question kindly."
   avatar: "images/personas/zavaa-senior.jpg"
-# Not a third writing voice: Lee Za keeps the Talks page and says what is missing.
+# Not a third writing voice: Lee Za keeps the Talks page.
 leeza:
   name: "Lee Za"
   short: "Lee Za"
   role: "The memory"
-  tagline: "Keeps the talks calendar, links every talk to its slides, and says out loud what is still missing."
+  tagline: "Keeps the talks calendar and links every talk to its slides, so nothing gets lost."
   avatar: "images/personas/lee-za.png"
