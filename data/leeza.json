@@ -1,0 +1,550 @@
+{
+  "generated": "2026-11-13",
+  "videos": {
+    "raws": {
+      "folders": 37,
+      "clips": 1934,
+      "event_folders": 29,
+      "grwm_shoots": 8,
+      "biggest": [
+        {
+          "name": "Las Vegas EVERYTHING",
+          "clips": 768
+        },
+        {
+          "name": "AWS CD Switzerland 2024",
+          "clips": 132
+        },
+        {
+          "name": "AWS CD Athens 2026",
+          "clips": 108
+        },
+        {
+          "name": "New York additional from phone",
+          "clips": 94
+        },
+        {
+          "name": "AWS CD CEE 2025",
+          "clips": 82
+        }
+      ]
+    },
+    "finished": {
+      "aftermovie": {
+        "projects": 22,
+        "films": 95,
+        "versions": 205,
+        "on_youtube": 38
+      },
+      "grwm": {
+        "projects": 8,
+        "films": 49,
+        "versions": 261,
+        "on_youtube": 0
+      },
+      "interview": {
+        "projects": 2,
+        "films": 12,
+        "versions": 38,
+        "on_youtube": 0
+      }
+    },
+    "totals": {
+      "projects": 32,
+      "films": 156,
+      "versions": 504,
+      "on_youtube": 38,
+      "changelog_entries": 105
+    },
+    "timing": {
+      "folders_with_copy_date": 21,
+      "first_cuts_per_day": [
+        {
+          "date": "2026-10-24",
+          "projects": 12
+        },
+        {
+          "date": "2026-11-10",
+          "projects": 4
+        },
+        {
+          "date": "2026-10-18",
+          "projects": 2
+        }
+      ],
+      "first_to_latest_cut_longest": [
+        {
+          "name": "AWS Community Day Poland 2025",
+          "days": 20,
+          "versions": 10
+        },
+        {
+          "name": "CTRL+ESC Malta 2025",
+          "days": 20,
+          "versions": 3
+        },
+        {
+          "name": "AWS Community Day Athens - Videos",
+          "days": 19,
+          "versions": 27
+        }
+      ],
+      "most_versions": [
+        {
+          "name": "GRWM-3-Cameras",
+          "films": 12,
+          "versions": 169
+        },
+        {
+          "name": "GRWM-Dark",
+          "films": 12,
+          "versions": 63
+        },
+        {
+          "name": "AWS Hero Summit Seattle 2025 - If You Were an AWS Service",
+          "films": 11,
+          "versions": 36
+        }
+      ],
+      "measured": 2,
+      "shoot_to_first_cut_median_days": 1,
+      "shoot_to_first_cut_fastest": [
+        {
+          "name": "AWS AI & Data Day Vienna 2026",
+          "days": 1
+        },
+        {
+          "name": "Cloud Native Meetup Nov 2026",
+          "days": 1
+        }
+      ],
+      "shoot_to_first_cut_slowest": [
+        {
+          "name": "AWS AI & Data Day Vienna 2026",
+          "days": 1
+        },
+        {
+          "name": "Cloud Native Meetup Nov 2026",
+          "days": 1
+        }
+      ],
+      "first_to_latest_cut_median_days": 11,
+      "versions_per_film_median": 2
+    },
+    "projects": [
+      {
+        "name": "AWS AI & Data Day Vienna 2026",
+        "kind": "aftermovie",
+        "films": 5,
+        "versions": 25,
+        "first_cut": "2026-11-11",
+        "latest_cut": "2026-11-13",
+        "on_youtube": 1,
+        "first_upload": "2026-11-13",
+        "changelog_entries": 0,
+        "shot": "2026-11-10",
+        "shoot_to_first_cut": 1,
+        "first_to_latest_cut": 2
+      },
+      {
+        "name": "Cloud Native Meetup Nov 2026",
+        "kind": "aftermovie",
+        "films": 2,
+        "versions": 2,
+        "first_cut": "2026-11-13",
+        "latest_cut": "2026-11-13",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 4,
+        "shot": "2026-11-12",
+        "shoot_to_first_cut": 1,
+        "first_to_latest_cut": 0
+      },
+      {
+        "name": "GRWM-3-Cameras",
+        "kind": "grwm",
+        "films": 12,
+        "versions": 169,
+        "first_cut": "2026-10-28",
+        "latest_cut": "2026-11-13",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 34,
+        "first_to_latest_cut": 16
+      },
+      {
+        "name": "GRWM-Dark",
+        "kind": "grwm",
+        "films": 12,
+        "versions": 63,
+        "first_cut": "2026-11-07",
+        "latest_cut": "2026-11-13",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 51,
+        "first_to_latest_cut": 6
+      },
+      {
+        "name": "AWS Hero Summit Seattle 2025 - If You Were an AWS Service",
+        "kind": "interview",
+        "films": 11,
+        "versions": 36,
+        "first_cut": "2026-11-03",
+        "latest_cut": "2026-11-13",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 0,
+        "first_to_latest_cut": 10
+      },
+      {
+        "name": "AWS reInvent Las Vegas 2025 - What's Your Mission",
+        "kind": "interview",
+        "films": 1,
+        "versions": 2,
+        "first_cut": "2026-11-12",
+        "latest_cut": "2026-11-12",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 0,
+        "first_to_latest_cut": 0
+      },
+      {
+        "name": "GRWM-Bus-to-Pinkafeld",
+        "kind": "grwm",
+        "films": 1,
+        "versions": 2,
+        "first_cut": "2026-11-10",
+        "latest_cut": "2026-11-11",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 2,
+        "first_to_latest_cut": 1
+      },
+      {
+        "name": "GRWM-Hair-Routine",
+        "kind": "grwm",
+        "films": 8,
+        "versions": 8,
+        "first_cut": "2026-11-10",
+        "latest_cut": "2026-11-10",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 1,
+        "first_to_latest_cut": 0
+      },
+      {
+        "name": "GRWM-Keynote-Day",
+        "kind": "grwm",
+        "films": 1,
+        "versions": 1,
+        "first_cut": "2026-11-10",
+        "latest_cut": "2026-11-10",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 1,
+        "first_to_latest_cut": 0
+      },
+      {
+        "name": "GRWM-Keynote-Day-ASMR",
+        "kind": "grwm",
+        "films": 1,
+        "versions": 1,
+        "first_cut": "2026-11-10",
+        "latest_cut": "2026-11-10",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 0,
+        "first_to_latest_cut": 0
+      },
+      {
+        "name": "AWS Community Day CEE 2025",
+        "kind": "aftermovie",
+        "films": 6,
+        "versions": 8,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 4,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 16
+      },
+      {
+        "name": "AWS Community Day DACH 2025",
+        "kind": "aftermovie",
+        "films": 3,
+        "versions": 5,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 2,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 16
+      },
+      {
+        "name": "AWS Community Day New York 2024",
+        "kind": "aftermovie",
+        "films": 4,
+        "versions": 12,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 3,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 16
+      },
+      {
+        "name": "AWS Community Day Poland 2025",
+        "kind": "aftermovie",
+        "films": 5,
+        "versions": 10,
+        "first_cut": "2026-10-20",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 2,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 20
+      },
+      {
+        "name": "AWS Community Day Prague 2025",
+        "kind": "aftermovie",
+        "films": 5,
+        "versions": 11,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 3,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 3,
+        "first_to_latest_cut": 16
+      },
+      {
+        "name": "AWS Community Day Romania 2025",
+        "kind": "aftermovie",
+        "films": 5,
+        "versions": 10,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 3,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 16
+      },
+      {
+        "name": "AWS Hero Summit Seattle 2025",
+        "kind": "aftermovie",
+        "films": 5,
+        "versions": 8,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 3,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 16
+      },
+      {
+        "name": "AWS Summit New York 2024",
+        "kind": "aftermovie",
+        "films": 3,
+        "versions": 7,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 2,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 16
+      },
+      {
+        "name": "AWS User Group Vienna 2025",
+        "kind": "aftermovie",
+        "films": 2,
+        "versions": 5,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 1,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 16
+      },
+      {
+        "name": "AWS reInvent Las Vegas 2025",
+        "kind": "aftermovie",
+        "films": 5,
+        "versions": 11,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 4,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 16
+      },
+      {
+        "name": "CTRL+ESC Malta 2025",
+        "kind": "aftermovie",
+        "films": 2,
+        "versions": 3,
+        "first_cut": "2026-10-20",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 1,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 20
+      },
+      {
+        "name": "Cloud Day FH Burgenland 2026",
+        "kind": "aftermovie",
+        "films": 4,
+        "versions": 10,
+        "first_cut": "2026-10-29",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 3,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 11
+      },
+      {
+        "name": "New York 2024",
+        "kind": "aftermovie",
+        "films": 2,
+        "versions": 3,
+        "first_cut": "2026-10-26",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 0,
+        "first_to_latest_cut": 14
+      },
+      {
+        "name": "netidee Talk 2025",
+        "kind": "aftermovie",
+        "films": 3,
+        "versions": 16,
+        "first_cut": "2026-10-28",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 1,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 0,
+        "first_to_latest_cut": 12
+      },
+      {
+        "name": "GRWM-Dark-Transitions",
+        "kind": "grwm",
+        "films": 9,
+        "versions": 12,
+        "first_cut": "2026-11-06",
+        "latest_cut": "2026-11-09",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 2,
+        "first_to_latest_cut": 3
+      },
+      {
+        "name": "AWS Community Day Athens - Videos",
+        "kind": "aftermovie",
+        "films": 22,
+        "versions": 27,
+        "first_cut": "2026-10-18",
+        "latest_cut": "2026-11-06",
+        "on_youtube": 5,
+        "first_upload": "2026-11-10",
+        "changelog_entries": 6,
+        "first_to_latest_cut": 19
+      },
+      {
+        "name": "GRWM-Dark-Shorts",
+        "kind": "grwm",
+        "films": 5,
+        "versions": 5,
+        "first_cut": "2026-11-06",
+        "latest_cut": "2026-11-06",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 1,
+        "first_to_latest_cut": 0
+      },
+      {
+        "name": "AWS User Groups Vienna 2025",
+        "kind": "aftermovie",
+        "films": 1,
+        "versions": 1,
+        "first_cut": "2026-10-26",
+        "latest_cut": "2026-10-26",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 0,
+        "first_to_latest_cut": 0
+      },
+      {
+        "name": "AWS Women's User Group Berlin 2025",
+        "kind": "aftermovie",
+        "films": 1,
+        "versions": 3,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-10-26",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 0,
+        "first_to_latest_cut": 2
+      },
+      {
+        "name": "AWS Women's User Group Munich 2025",
+        "kind": "aftermovie",
+        "films": 1,
+        "versions": 2,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-10-26",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 0,
+        "first_to_latest_cut": 2
+      },
+      {
+        "name": "AWS Women's User Group Vienna 2025",
+        "kind": "aftermovie",
+        "films": 1,
+        "versions": 2,
+        "first_cut": "2026-10-24",
+        "latest_cut": "2026-10-24",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 0,
+        "first_to_latest_cut": 0
+      },
+      {
+        "name": "AWS Community Day Athens - Options for feedback",
+        "kind": "aftermovie",
+        "films": 8,
+        "versions": 24,
+        "first_cut": "2026-10-18",
+        "latest_cut": "2026-10-19",
+        "on_youtube": 0,
+        "first_upload": null,
+        "changelog_entries": 0,
+        "first_to_latest_cut": 1
+      }
+    ]
+  },
+  "talks": {
+    "folders": 2,
+    "list": [
+      {
+        "name": "2026 Cloud Native Days Austria",
+        "deck_versions_kept": 1,
+        "highest_version": 36,
+        "highest_old_build": 191,
+        "changelog_entries": 12,
+        "demos": 0,
+        "has_runsheet": false,
+        "has_rehearsal_video": true
+      },
+      {
+        "name": "2026 Cloud Native Meetup Vienna",
+        "deck_versions_kept": 9,
+        "highest_version": 5.2,
+        "highest_old_build": null,
+        "changelog_entries": 13,
+        "demos": 6,
+        "has_runsheet": true,
+        "has_rehearsal_video": false
+      }
+    ]
+  }
+}

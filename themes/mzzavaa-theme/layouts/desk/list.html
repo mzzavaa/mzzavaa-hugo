@@ -1,0 +1,107 @@
+{{ define "main" }}
+{{/* Lee Za's desk. The numbers come from data/leeza.json, written by tools/leeza-scan.mjs on
+     Linda's own machine (footage and talk folders are not online), and from data/talks.json. */}}
+{{ $d := hugo.Data.leeza }}
+{{ $v := $d.videos }}
+{{ $talks := hugo.Data.talks }}
+{{ $lee := index hugo.Data.voices "leeza" }}
+{{ $n := "%d" }}
+<header class="page-head wrap">
+    <img class="page-head-avatar leeza" src="{{ $lee.avatar | relURL }}" alt="" width="88" height="88">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+</header>
+<div class="wrap desk">
+    {{ with .Content }}<div class="prose section-intro">{{ . }}</div>{{ end }}
+    <p class="kicker">Counted on {{ time.Format "2 January 2006" $d.generated }}</p>
+
+    {{ with $v }}
+    <h2 class="sub-head">Still raw</h2>
+    <p class="block-note">Footage that has been shot and not yet turned into anything. This is what she is working on right now.</p>
+    <div class="stats">
+        <div class="stat"><span class="stat-num">{{ lang.FormatNumber 0 .raws.clips }}</span><span class="stat-label">raw clips</span></div>
+        <div class="stat"><span class="stat-num">{{ .raws.event_folders }}</span><span class="stat-label">event folders</span></div>
+        <div class="stat"><span class="stat-num">{{ .raws.grwm_shoots }}</span><span class="stat-label">GRWM shoots</span></div>
+    </div>
+    <p class="desk-line">The biggest piles: {{ range $i, $r := .raws.biggest }}{{ if $i }}, {{ end }}{{ $r.name }} ({{ $r.clips }}){{ end }}.</p>
+
+    <h2 class="sub-head">Finished</h2>
+    <p class="block-note">A film counts when it has a version number. Every re-export counts as a version, because every one of them was a decision.</p>
+    <div class="stats stats-wide">
+        {{ range $kind, $label := dict "aftermovie" "Event aftermovies" "grwm" "Get ready with me" "interview" "Interviews" }}
+        {{ with index $v.finished $kind }}
+        <div class="stat stat-card">
+            <span class="stat-title">{{ $label }}</span>
+            <span class="stat-num">{{ .films }}</span><span class="stat-label">films in {{ .projects }} projects</span>
+            <span class="stat-sub">{{ .versions }} versions{{ if .on_youtube }} · {{ .on_youtube }} on YouTube{{ end }}</span>
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+    <p class="desk-line">In total: <strong>{{ .totals.films }} films, {{ .totals.versions }} versions</strong>, {{ .totals.on_youtube }} uploaded to YouTube so far.</p>
+
+    <h2 class="sub-head">How long a video takes</h2>
+    <aside class="voice-note leeza tally">
+        <p class="voice-note-name">
+            <img class="voice-note-avatar" src="{{ $lee.avatar | relURL }}" alt="" width="40" height="40" loading="lazy">
+            <span class="memo">Lee Za · read from the file dates and the changelogs</span>
+        </p>
+        <div class="voice-note-body">
+            {{ with .timing }}
+            <ul class="tally-list findings">
+                <li><strong>{{ .shoot_to_first_cut_median_days }} {{ if eq (int .shoot_to_first_cut_median_days) 1 }}day{{ else }}days{{ end }} from the shoot to the first cut</strong>, for the events I can time: {{ range $i, $e := .shoot_to_first_cut_fastest }}{{ if $i }} and {{ end }}{{ $e.name }}{{ end }}. Fast. I checked the dates twice.</li>
+                <li><strong>{{ .first_to_latest_cut_median_days }} days from the first cut to the latest one</strong>, in the middle of all projects. So the cutting is quick and the deciding is not.</li>
+                <li><strong>{{ .versions_per_film_median }} versions per film</strong> is normal. {{ with index .most_versions 0 }}{{ .name }} has {{ .versions }} versions across {{ .films }} films. I am not saying anything. I am only saying the number.{{ end }}</li>
+                {{ with index .first_cuts_per_day 0 }}<li><strong>{{ .projects }} projects got their first cut on one day</strong>, {{ time.Format "2 January 2006" .date }}. That was not a normal day.</li>{{ end }}
+                <li><strong>{{ .folders_with_copy_date }} folders I cannot time.</strong> Their clips carry the day they were copied, not the day they were shot, so any number I gave you would be made up. I do not do made up.</li>
+            </ul>
+            {{ end }}
+        </div>
+    </aside>
+    {{ end }}
+
+    {{ with $d.talks }}
+    <h2 class="sub-head">What goes into a talk</h2>
+    <p class="block-note">The audience sees one deck. I see the folder. Only talks with a preparation folder are here; the full list is on <a href="{{ "/talks/" | relURL }}">Talks</a>.</p>
+    <ol class="log">
+        {{ range .list }}
+        <li class="log-row talk-row">
+            <time>{{ substr .name 0 4 }}</time>
+            <div class="log-main">
+                <p class="talk-event"><span class="log-title">{{ substr .name 5 }}</span></p>
+                <ul class="talk-things">
+                    {{ with .highest_version }}<li class="thing">deck at v{{ . }}</li>{{ end }}
+                    {{ if gt .deck_versions_kept 1 }}<li class="thing">{{ .deck_versions_kept }} deck versions kept</li>{{ end }}
+                    {{ with .highest_old_build }}<li class="thing">{{ . }} builds before that</li>{{ end }}
+                    {{ with .changelog_entries }}<li class="thing">{{ . }} changelog entries</li>{{ end }}
+                    {{ with .demos }}<li class="thing">{{ . }} demos built</li>{{ end }}
+                    {{ if .has_runsheet }}<li class="thing">run sheet</li>{{ end }}
+                    {{ if .has_rehearsal_video }}<li class="thing">timed rehearsal video</li>{{ end }}
+                </ul>
+            </div>
+        </li>
+        {{ end }}
+    </ol>
+    {{ end }}
+
+    <h2 class="sub-head">Outside the client work, in one list</h2>
+    {{ $repos := where site.RegularPages "Section" "repos" }}
+    {{ $slides := 0 }}{{ range $talks.this_year }}{{ if .slides }}{{ $slides = add $slides 1 }}{{ end }}{{ end }}
+    <aside class="voice-note leeza tally">
+        <p class="voice-note-name">
+            <img class="voice-note-avatar" src="{{ $lee.avatar | relURL }}" alt="" width="40" height="40" loading="lazy">
+            <span class="memo">Lee Za · the summary</span>
+        </p>
+        <div class="voice-note-body">
+            <ul class="tally-list">
+                <li><span class="tally-num">{{ len $talks.this_year }}</span> talks in {{ $talks.year }}, {{ $slides }} with slides to download. <a href="{{ "/talks/" | relURL }}">The list</a></li>
+                {{ with $v }}<li><span class="tally-num">{{ .totals.films }}</span> finished films, and {{ lang.FormatNumber 0 .raws.clips }} raw clips that want to become more</li>
+                <li><span class="tally-num">{{ .totals.on_youtube }}</span> videos uploaded to YouTube from the pipeline</li>{{ end }}
+                {{ with $d.talks }}{{ $demos := 0 }}{{ range .list }}{{ $demos = add $demos .demos }}{{ end }}<li><span class="tally-num">{{ $demos }}</span> demos built for the stage</li>{{ end }}
+                <li><span class="tally-num">{{ len $repos }}</span> public repositories with a note. <a href="{{ "/repos/" | relURL }}">The open source notebook</a></li>
+            </ul>
+            <p>She calls this "outside of work". I have seen the numbers. I am keeping a list anyway.</p>
+        </div>
+    </aside>
+</div>
+{{ end }}

@@ -453,6 +453,19 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.15;
 .tally-list { list-style: none; margin: 0.6rem 0; padding: 0; }
 .tally-list li + li { margin-top: 0.25rem; }
 .tally-num { display: inline-block; min-width: 3.2rem; font-family: var(--mono); font-size: 0.85rem; color: var(--leeza); }
+/* Lee Za's desk */
+.stats { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 0.8rem 0; }
+.stat { background: var(--paper); box-shadow: var(--shadow); border-radius: 4px; padding: 0.9rem 1.2rem; min-width: 9.5rem; display: flex; flex-direction: column; border-top: 3px solid var(--leeza); }
+.stat-num { font-family: var(--serif); font-size: 2.3rem; font-weight: 600; line-height: 1.1; }
+.stat-label, .stat-sub, .stat-title { font-family: var(--mono); font-size: 0.78rem; color: var(--ink-2); }
+.stat-title { text-transform: uppercase; letter-spacing: 0.08em; color: var(--leeza); margin-bottom: 0.3rem; }
+.stat-sub { color: var(--ink-3); margin-top: 0.35rem; }
+.stats-wide .stat { flex: 1 1 13rem; }
+.desk-line { color: var(--ink-2); max-width: var(--measure); margin: 0.4rem 0 0; }
+.desk .voice-note.tally { margin-top: 0.8rem; }
+.findings li + li { margin-top: 0.6rem !important; }
+.desk .thing { color: var(--ink-2); }
+.talk-desk-link { font-family: var(--mono); font-size: 0.85rem; margin: 0 0 1rem; }
 .talk-year { font-family: var(--mono); font-size: 0.9rem; font-weight: 500; color: var(--ink-3); margin: 1.6rem 0 0.4rem; }
 .talk-list { margin: 0; padding-left: 1.1rem; max-width: var(--measure); }
 .talk-list li + li { margin-top: 0.3rem; }

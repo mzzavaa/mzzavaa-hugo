@@ -38,7 +38,7 @@ Read the whole story in [Meet the Two Zavaas](/posts/meet-the-two-zavaas/), or p
 Junior and Senior are the two who write here. Two more personas work with me, and each has her own job.
 
 {{< persona "leeza" >}}
-Lee Za is my assistant, and she makes sure nothing gets lost. She keeps the list of my [talks](/talks/). Every talk owes her four things: a landing page, a blog post, the slides and a video. What is missing, she says out loud, on the page and to me every week. She is funny about it. She is also not joking.
+Lee Za is my assistant, and she makes sure nothing gets lost. She keeps the list of my [talks](/talks/). Every talk owes her four things: a landing page, a blog post, the slides and a video. What is missing, she says out loud, on the page and to me every week. She is funny about it. She is also not joking. Everything else she counts is on [her desk](/desk/).
 {{< /persona >}}
 
 {{< persona "mrsleeg" >}}
