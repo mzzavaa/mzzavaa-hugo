@@ -85,6 +85,19 @@ Organizers still present from the group's own slide deck, the one we have kept i
 - **33 automated checks** walk through the site in a headless browser, one command before a release.
 - **A save-the-date** for the next Vienna meetup is already up, the week before re:Invent, before the exact day is fixed.
 
+### Coming next: a live stream page, and name tags
+
+Two things are on their way, and both will change the evening again.
+
+- **A live stream page.** The same player gets its own page on the website, and every event card gets an "Open the live stream" button, so people who can't make it to the room can follow along. It is built and waiting on its branch.
+- **Name tags that print themselves.** We now have our own iOS and Mac app that prints a name tag at check-in. No more pen, no more guessing how to spell a name. It also means the evening knows something it never knew before: how many people are already in the room.
+
+That second part is now on our to-do list. **The pre-show loop needs to change**, so that alongside the countdown and the agenda it can show how many people have already checked in. And everything that reads the event data has to learn about check-ins, not just RSVPs.
+
+{{< junior >}}
+I am SO excited about the name tags. More about the app next time, I promise. It deserves its own post.
+{{< /junior >}}
+
 {{< junior >}}
 Meetup #53 on 20 October was the first evening where the page, the deck and the room screen all came from the same event file. Phew!
 {{< /junior >}}

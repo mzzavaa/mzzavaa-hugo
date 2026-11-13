@@ -35,6 +35,17 @@ The part I'm proudest of: you'll always know which is which. When it's the garde
 - **It isn't** a tutorial. You won't copy-paste anything. You'll come out understanding why things are built the way they are, which is the part tutorials skip.
 - **It isn't** finished. Scripts are written, the visual language is set, the first full section is being cut.
 
+## You can already walk in the garden
+
+You don't have to wait for the long video to get a taste. The garden already grows on [ai-solutions.wiki](https://ai-solutions.wiki):
+
+- **[The Gardener Path](https://ai-solutions.wiki/learn/gardener/)** is a free, step-by-step path from soil to harvest. Every lesson has a short garden clip, a plain-words explanation with sources and a quick check, and your progress is saved in your browser. The first chapters cover the cloud, serverless and orchestration.
+- **[The Garden Lens](https://ai-solutions.wiki/learn/garden-lens/)** puts every metaphor on one page: the cloud as a rented allotment, serverless as drip irrigation, orchestration as a potting line, storage as a seed vault, agents as a garden crew. Each card leads to the real concept behind it.
+
+{{< junior >}}
+Serverless as drip irrigation is my favourite. It switches on only when a plant is dry, runs for a few seconds, then stops. That's it. That's serverless.
+{{< /junior >}}
+
 {{< senior >}}
 A short note on why this is a teaser and not a making-of. The interesting decisions in a video like this are the ones a viewer should feel, not read about first. Once it is out, I will write up what worked and what did not, the way we do for everything. Until then: the idea is public, the craft stays in the workshop.
 {{< /senior >}}
@@ -44,5 +55,5 @@ A short note on why this is a teaser and not a making-of. The interesting decisi
 This grew out of the AI video pipeline I [wrote about in the basics](/posts/junior-basics-whats-under-the-app/), the one that turns a pile of raw clips into a finished video. Every time I explained that pipeline, beginners got lost at the same place: not at the AI, but at everything underneath it. So the new video starts underneath.
 
 {{< junior >}}
-When it's out, it'll be linked right here. Water your plants in the meantime!
+When the long version is out, it'll be linked right here. Until then, the Gardener Path is open. Water your plants in the meantime!
 {{< /junior >}}

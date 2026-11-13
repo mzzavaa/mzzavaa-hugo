@@ -49,6 +49,22 @@ Okay! Four weeks, a lot of small things that add up. Here's what landed.
 Not glamorous. But I really like that sweep. Ten minutes, and now nobody can accidentally commit a key in any of them.
 {{< /junior >}}
 
+### Security week
+
+- On 21 October Node.js and PHP both shipped urgent security fixes. Our builds picked up the patched Node on their own, the dependencies were updated in the same sweep, and PHP2Shell had nothing to reach, because none of our sites run PHP. Senior wrote it up: [The Week Node.js and PHP Both Shipped Security Fixes](/posts/senior-notes-node-and-php-october-2026/).
+
+### Videos from our own pipeline
+
+- **A run of new YouTube videos**, all made with the AI video pipeline I explained in [What Is Actually Under the App](/posts/junior-basics-whats-under-the-app/). Each one is embedded in its post on the [blog at lindamohamed.com](https://www.lindamohamed.com/blog). Same pipeline, more output, a lot less editing by hand.
+- **The garden is already growing.** The beginner video is still in the making, but the [Gardener Path](https://ai-solutions.wiki/learn/gardener/) and the [Garden Lens](https://ai-solutions.wiki/learn/garden-lens/) on the wiki are a free preview of it. More in [the teaser](/posts/teaser-a-garden-that-explains-the-cloud/).
+
+### On stage and in the community
+
+- **AWS Community Day Adria** in Ljubljana on 22 October, with a talk.
+- **Platform Engineering Vienna**, the meetup I organise, met on 4 November.
+- **Cloud Native Vienna** on 12 November: a shared session called *Your Agent Is the New Layer 8*. The [talk page](https://www.lindamohamed.com/cloud-native-meetup-vienna) is live.
+- **The next AWS meetup in Vienna** is set for the week before re:Invent. The full story of how our meetup evenings run themselves now is in [One Meetup Link, a Whole Evening](/posts/one-meetup-link-a-whole-evening/), including what comes next: a live stream page and name tags printed by our own iOS and Mac app.
+
 ## Part 2: Senior's review
 
 {{< senior >}}
