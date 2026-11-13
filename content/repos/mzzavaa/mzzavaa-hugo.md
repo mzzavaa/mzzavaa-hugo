@@ -4,6 +4,7 @@ date: 2026-11-13T12:00:00+01:00
 draft: false
 description: "The Hugo site you are reading: mzzavaa.com, written in two voices, with a notebook of every public repo."
 repo: "mzzavaa/mzzavaa-hugo"
+project: "notebook"
 voices: ["junior", "senior"]
 status: "active"
 started: "2025-04-25"

@@ -4,6 +4,17 @@ description: "My personal GitHub account: where ideas start, and where some of t
 org: "mzzavaa"
 org_url: "https://github.com/mzzavaa"
 role: "owner"
+projects:
+  - key: "notebook"
+    name: "This notebook"
+    description: "The site you are reading."
+    url: "https://mzzavaa.com"
+  - key: "juggling"
+    name: "Juggling"
+    description: "The juggling site, and a contribution to Jack Boyce's Juggling Lab."
+  - key: "sites"
+    name: "Sites for the work"
+    description: "Hugo sites that say what they need to say: the consulting practice, automation for freelancers and SISY."
 ---
 
 This is my playground account. Most of what lives here are experiments and domain placeholders, so this page only lists the projects that are already published and that people actually use. Two of my other public sites, [ai-solutions.wiki](/repos/linda-mhmd/ai-solutions-wiki/) and [freelancer-templates.org](/repos/linda-mhmd/freelancer-templates-org/), already moved to my open source account and have their notes there.

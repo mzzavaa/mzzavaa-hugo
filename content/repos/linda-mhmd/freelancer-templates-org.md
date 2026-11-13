@@ -4,6 +4,7 @@ date: 2026-05-06T12:00:00+02:00
 draft: false
 description: "A library of Remotion video templates for freelancers, with a Hugo showcase site and an embeddable player."
 repo: "linda-mhmd/freelancer-templates.org"
+project: "templates"
 voices: ["junior", "senior"]
 status: "quiet"
 started: "2026-03-24"

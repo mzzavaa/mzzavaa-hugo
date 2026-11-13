@@ -4,6 +4,7 @@ date: 2026-04-04T12:00:00+02:00
 draft: false
 description: "The profile README for the linda-mhmd GitHub account, introducing the GameDay Europe stream repos."
 repo: "linda-mhmd/.github"
+project: "profile"
 voices: ["junior", "senior"]
 status: "finished"
 started: "2026-04-04"

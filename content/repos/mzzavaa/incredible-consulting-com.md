@@ -4,6 +4,7 @@ date: 2026-09-04T12:00:00+01:00
 draft: false
 description: "The Hugo site for an independent AI and cloud consulting practice: workshops, prototypes and delivery, on a shared theme."
 repo: "mzzavaa/incredible-consulting.com"
+project: "sites"
 voices: ["junior", "senior"]
 status: "quiet"
 started: "2026-08-24"

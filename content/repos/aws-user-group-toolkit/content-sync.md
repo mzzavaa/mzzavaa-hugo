@@ -4,6 +4,7 @@ date: 2023-10-22T12:00:00+02:00
 draft: false
 description: "A repository with only an initial commit, a one-line README and an MIT licence."
 repo: "aws-user-group-toolkit/content-sync"
+project: "not-started"
 voices: ["junior", "senior"]
 status: "quiet"
 started: "2023-10-22"

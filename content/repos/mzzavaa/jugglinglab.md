@@ -4,6 +4,7 @@ date: 2026-07-23T12:00:00+02:00
 draft: false
 description: "My fork of Juggling Lab, Jack Boyce's juggling animator, where I added selectable juggler avatars including a female juggler."
 repo: "mzzavaa/jugglinglab"
+project: "juggling"
 voices: ["junior", "senior"]
 status: "finished"
 started: "2026-07-22"

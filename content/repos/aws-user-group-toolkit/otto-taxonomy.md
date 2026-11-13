@@ -4,6 +4,7 @@ date: 2025-05-06T12:00:00+02:00
 draft: false
 description: "An InstructLab taxonomy of Q&A pairs and context documents about AWS User Groups in Austria and how meetups are organised, made for OTTO."
 repo: "aws-user-group-toolkit/otto-taxonomy"
+project: "otto"
 voices: ["junior", "senior"]
 status: "quiet"
 started: "2024-06-30"

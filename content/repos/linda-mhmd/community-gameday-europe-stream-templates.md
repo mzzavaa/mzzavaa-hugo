@@ -4,6 +4,7 @@ date: 2026-04-03T12:00:00+02:00
 draft: false
 description: "Remotion stream visuals and web player for AWS Community GameDay Europe, the reusable engine of a two-repo setup."
 repo: "linda-mhmd/community-gameday-europe-stream-templates"
+project: "gameday"
 voices: ["junior", "senior"]
 status: "finished"
 started: "2026-03-15"

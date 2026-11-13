@@ -4,6 +4,7 @@ date: 2026-04-03T12:00:00+02:00
 draft: false
 description: "Event configuration for AWS Community GameDay Europe 2026: participants, schedule and photos, deployed to GitHub Pages."
 repo: "linda-mhmd/community-gameday-europe-event"
+project: "gameday"
 voices: ["junior", "senior"]
 status: "finished"
 started: "2026-03-15"

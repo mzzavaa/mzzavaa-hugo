@@ -3,6 +3,8 @@
     {{ with $.Params.status }}<span class="stamp stamp-{{ . }}">{{ . }}</span>{{ end }}
     <dl>
         <div class="repo-card-wide"><dt>repo</dt><dd><a href="https://github.com/{{ . }}">github.com/{{ . }}</a></dd></div>
+        {{/* The project this repo belongs to, from the folder's projects list */}}
+        {{ with $.Params.project }}{{ $key := . }}{{ with $.Parent }}{{ $org := . }}{{ range .Params.projects }}{{ if eq .key $key }}<div class="repo-card-wide"><dt>project</dt><dd><a href="{{ $org.RelPermalink }}#{{ .key }}">{{ .name }}</a></dd></div>{{ end }}{{ end }}{{ end }}{{ end }}
         {{ with $.Params.built_by }}<div class="repo-card-wide"><dt>built by</dt><dd>{{ . }}</dd></div>{{ end }}
         {{ with $.Params.started }}<div><dt>first commit</dt><dd>{{ . }}</dd></div>{{ end }}
         {{ with $.Params.last_commit }}<div><dt>last commit</dt><dd>{{ . }}</dd></div>{{ end }}

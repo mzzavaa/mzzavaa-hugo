@@ -4,6 +4,7 @@ date: 2026-05-07T12:00:00+02:00
 draft: false
 description: "The Hugo site behind freelancer-automation.com: automation tips, open source tools and guides for freelancers."
 repo: "mzzavaa/freelancer-automation.org"
+project: "sites"
 voices: ["junior", "senior"]
 status: "quiet"
 started: "2026-05-05"

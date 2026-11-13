@@ -4,6 +4,7 @@ date: 2026-10-19T12:00:00+02:00
 draft: false
 description: "The organisation profile: the Austrian AWS user groups, how to get involved, and what each repository is for."
 repo: "aws-user-groups-austria/.github"
+project: "awscommunity-at"
 voices: ["junior", "senior"]
 status: "active"
 started: "2026-10-19"

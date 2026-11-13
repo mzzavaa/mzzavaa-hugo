@@ -4,6 +4,7 @@ date: 2026-02-08T12:00:00+02:00
 draft: false
 description: "A small MCP server that lets AI agents search Sessionize sessions and speakers by month, packaged as a container."
 repo: "aws-user-group-toolkit/otto-mcp-sessionize"
+project: "otto"
 voices: ["junior", "senior"]
 status: "quiet"
 started: "2026-02-07"

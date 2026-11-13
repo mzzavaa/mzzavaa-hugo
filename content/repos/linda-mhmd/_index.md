@@ -4,6 +4,19 @@ description: "My open source GitHub account: community event tooling, video temp
 org: "linda-mhmd"
 org_url: "https://github.com/linda-mhmd"
 role: "maintainer"
+projects:
+  - key: "gameday"
+    name: "AWS Community GameDay Europe"
+    description: "The stream production for GameDay Europe 2026, split in two: a reusable template repo and the event repo that feeds it."
+  - key: "wikis"
+    name: "Two public wikis"
+    description: "A knowledge base for building and running production AI systems, and a garden wiki for the Austrian climate."
+  - key: "templates"
+    name: "Freelancer Templates"
+    description: "A library of Remotion video templates with a showcase site and an embeddable player."
+  - key: "profile"
+    name: "Profile"
+    description: "The account's front door."
 ---
 
 This is where I publish the things I build in the open. It started with the stream production system for AWS Community GameDay Europe 2026, split into a reusable template repo and an event repo, and grew to include a library of Remotion video templates, the AI Solutions Wiki and a garden wiki for the Austrian climate. There is also a fork, sample-once-upon-agentic-ai, which I keep here but did not write.

@@ -4,6 +4,7 @@ date: 2023-10-28T12:00:00+02:00
 draft: false
 description: "A small Python script in a container that reads the member count from a Meetup group page."
 repo: "aws-user-group-toolkit/meetup-scraper"
+project: "site-data"
 voices: ["junior", "senior"]
 status: "quiet"
 started: "2023-10-28"

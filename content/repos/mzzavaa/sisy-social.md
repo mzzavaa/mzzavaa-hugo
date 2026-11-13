@@ -4,6 +4,7 @@ date: 2026-04-25T12:00:00+02:00
 draft: false
 description: "The Hugo landing site for SISY, visibility infrastructure for female expertise: the platform, the framework and the story behind it."
 repo: "mzzavaa/sisy.social"
+project: "sites"
 voices: ["junior", "senior"]
 status: "quiet"
 started: "2026-03-22"

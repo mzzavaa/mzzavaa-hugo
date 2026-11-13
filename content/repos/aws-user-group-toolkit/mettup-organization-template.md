@@ -4,6 +4,7 @@ date: 2024-07-27T12:00:00+02:00
 draft: false
 description: "An empty repository in the AWS User Group Toolkit organisation with no commits yet."
 repo: "aws-user-group-toolkit/mettup-organization-template"
+project: "not-started"
 voices: ["junior", "senior"]
 status: "empty"
 started: ""

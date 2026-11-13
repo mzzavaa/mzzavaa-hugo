@@ -4,6 +4,7 @@ date: 2026-10-19T12:00:00+02:00
 draft: false
 description: "A Node and TypeScript command line that turns a Meetup event page into the event.json the room screen, deck and website run on."
 repo: "aws-user-groups-austria/meetup-sync"
+project: "meetup-evening"
 voices: ["junior", "senior"]
 status: "active"
 started: "2026-10-19"

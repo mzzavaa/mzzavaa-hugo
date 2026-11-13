@@ -4,6 +4,7 @@ date: 2026-10-19T12:00:00+02:00
 draft: false
 description: "The starting point for the meetup tools: a Makefile, the spec all repos build against, and the guide from a Meetup link to the live site."
 repo: "aws-user-groups-austria/meetup-workspace"
+project: "meetup-evening"
 voices: ["junior", "senior"]
 status: "active"
 started: "2026-10-19"

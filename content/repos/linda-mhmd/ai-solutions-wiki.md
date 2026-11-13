@@ -4,6 +4,7 @@ date: 2026-11-13T12:00:00+01:00
 draft: false
 description: "Source of ai-solutions.wiki, a knowledge base for building and running production AI systems, organised in five layers."
 repo: "linda-mhmd/ai-solutions-wiki"
+project: "wikis"
 voices: ["junior", "senior"]
 status: "active"
 started: "2026-03-24"

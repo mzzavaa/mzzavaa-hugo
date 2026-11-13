@@ -4,6 +4,7 @@ date: 2025-01-14T12:00:00+02:00
 draft: false
 description: "The Jekyll website for the AWS User Group Toolkit, using the Minimal Mistakes theme and pulling blog posts from a Notion database."
 repo: "aws-user-group-toolkit/usergroup-toolkit.com"
+project: "site-data"
 voices: ["junior", "senior"]
 status: "quiet"
 started: "2024-05-11"

@@ -4,6 +4,7 @@ date: 2026-10-25T12:00:00+02:00
 draft: false
 description: "The Astro site behind thejugglingcompany.com: juggling, ideas, talks, videos and a map of places, all as typed content collections."
 repo: "mzzavaa/the-juggling-company"
+project: "juggling"
 voices: ["junior", "senior"]
 status: "active"
 started: "2022-05-01"

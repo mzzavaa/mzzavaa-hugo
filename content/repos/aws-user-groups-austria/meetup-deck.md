@@ -4,6 +4,7 @@ date: 2026-10-25T12:00:00+02:00
 draft: false
 description: "A Python tool that fills in the group's own slide deck for one meetup from its event.json, as .pptx and PDF."
 repo: "aws-user-groups-austria/meetup-deck"
+project: "meetup-evening"
 voices: ["junior", "senior"]
 status: "active"
 started: "2026-10-19"

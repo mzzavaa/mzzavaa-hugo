@@ -4,6 +4,7 @@ date: 2026-10-25T12:00:00+02:00
 draft: false
 description: "One folder per AWS User Group Vienna meetup with its Meetup link, overrides and generated event files, plus shared photos and badges."
 repo: "aws-user-groups-austria/meetup-event-vienna"
+project: "meetup-evening"
 voices: ["junior", "senior"]
 status: "active"
 started: "2026-10-19"

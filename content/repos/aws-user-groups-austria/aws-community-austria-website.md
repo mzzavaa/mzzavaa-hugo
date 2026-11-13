@@ -4,6 +4,7 @@ date: 2026-11-11T12:00:00+01:00
 draft: false
 description: "The source of awscommunity.at: the Austrian AWS user groups, a page per meetup, the speaker prep guide and the room screen."
 repo: "aws-user-groups-austria/aws-community-austria-website"
+project: "awscommunity-at"
 voices: ["junior", "senior"]
 status: "active"
 started: "2026-03-24"
