@@ -1,14 +1,14 @@
 ---
 title: "ai-solutions-wiki"
-date: 2026-10-09T12:00:00+02:00
+date: 2026-11-13T12:00:00+01:00
 draft: false
 description: "Source of ai-solutions.wiki, a knowledge base for building and running production AI systems, organised in five layers."
 repo: "linda-mhmd/ai-solutions-wiki"
 voices: ["junior", "senior"]
 status: "active"
 started: "2026-03-24"
-last_commit: "2026-10-09"
-commits: 206
+last_commit: "2026-11-13"
+commits: 222
 built_by: "Linda, with Claude"
 tags: ["ai", "wiki", "hugo", "knowledge-base"]
 ---
@@ -17,13 +17,15 @@ The source of ai-solutions.wiki, a knowledge base for taking AI systems to produ
 
 {{< junior >}}
 - The organising idea came first: AI systems are software systems, so the wiki is built around a five-layer model, starting with models and orchestration.
-- Most of the 206 commits are mine. 51 are by Claude, which I use for news passes and verification sweeps.
+- Most of the commits are mine. About 50 are by Claude, which I use for news passes and verification sweeps.
 - The decision I like most: the weekly update runs as a GitHub Actions workflow that opens a pull request and never merges. I review the preview and click.
 - I skipped making the agent merge on its own. That one is on purpose.
+- Update, 13 November: two more weekly passes (weeks 43 and 44), tool pages for CloudFront, Auth0, Azure Front Door and Cloudflare with five new identity icons, an agent security roundup, and a same-day news entry that got its closing number added the next morning.
+- My favourite fix this month: a statistic we could not trace got replaced with the primary measurement it came from.
 {{< /junior >}}
 
 {{< senior >}}
-This is the active one: last commit 9 October 2026, with weekly news and freshness updates landing through pull requests. It has a README, a dual licence in `LICENSE.md`, a contributing guide and a citation file. CI covers deploy, PR checks, PR previews and the weekly update. A wiki this broad needs the weekly freshness sweep to keep running, and it does.
+Still the most active one: 222 commits, the latest on 13 November 2026, and every news change since October arrived as a reviewed pull request (#13 to #17). What I like most is the direction of the corrections. Week 44 removed a claim that could not be verified and put the original source in its place, and the verification passes now run in the same pull request as the news. That is what a knowledge base needs: it gets more correct as it gets bigger. It has a README, a dual licence in `LICENSE.md`, a contributing guide and a citation file, and CI covers deploy, PR checks, previews and the weekly update.
 {{< /senior >}}
 
-**Learned:** An agent that opens a pull request and waits is easier to trust than one that commits.
+**Learned:** When a number cannot be traced, replace it with the source you can trace, and say so in the commit.

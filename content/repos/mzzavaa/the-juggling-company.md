@@ -1,14 +1,14 @@
 ---
 title: "the-juggling-company"
-date: 2026-10-19T12:00:00+02:00
+date: 2026-10-25T12:00:00+02:00
 draft: false
 description: "The Astro site behind thejugglingcompany.com: juggling, ideas, talks, videos and a map of places, all as typed content collections."
 repo: "mzzavaa/the-juggling-company"
 voices: ["junior", "senior"]
 status: "active"
 started: "2022-05-01"
-last_commit: "2026-10-19"
-commits: 430
+last_commit: "2026-10-25"
+commits: 432
 built_by: "Tomas Bankauskas (2022 to 2024), then Linda"
 tags: ["astro", "juggling", "website"]
 ---
@@ -20,10 +20,11 @@ The site for [The Juggling Company](https://thejugglingcompany.com), where juggl
 - The content is eight typed collections: ideas, locations, posts, press, products, services, talks and videos. Broken front matter fails the build.
 - This year I added an AI disclosure on generated images as a small caption, and later made it calmer: a subtle note with the detail on hover.
 - Some blog images come from Juggling Lab, including the avatars I added in [my jugglinglab fork](/repos/mzzavaa/jugglinglab/).
+- Update, 25 October: local secret and cache files are ignored by default. Open dependency updates wait on their own branches until I roll them up.
 {{< /junior >}}
 
 {{< senior >}}
-430 commits over four and a half years, Tomas first and then me, last one today, so this is the most alive project on the account. It has CI, preview builds, a deploy workflow, link checking and Dependabot updates that get rolled up instead of ignored. The README is short and correct. It is a good example of a playground project that grew up without moving house.
+432 commits over four and a half years, Tomas first and then me, last one on 25 October 2026, so this is still the longest-lived project on the account. It has CI, preview builds, a deploy workflow, link checking, a contributing note that asks people to reach out first, and Dependabot updates that get rolled up instead of ignored. The README is short and correct. It is a good example of a playground project that grew up without moving house.
 {{< /senior >}}
 
 **Learned:** Typed content is worth it on a personal site too: the build tells you what you broke before a visitor does.

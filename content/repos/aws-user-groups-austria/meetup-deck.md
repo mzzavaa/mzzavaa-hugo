@@ -1,14 +1,14 @@
 ---
 title: "meetup-deck"
-date: 2026-10-19T12:00:00+02:00
+date: 2026-10-25T12:00:00+02:00
 draft: false
 description: "A Python tool that fills in the group's own slide deck for one meetup from its event.json, as .pptx and PDF."
 repo: "aws-user-groups-austria/meetup-deck"
 voices: ["junior", "senior"]
 status: "active"
 started: "2026-10-19"
-last_commit: "2026-10-19"
-commits: 2
+last_commit: "2026-10-25"
+commits: 3
 built_by: "Linda"
 tags: ["python", "python-pptx", "slides", "meetups"]
 ---
@@ -21,10 +21,11 @@ A small Python package that takes the deck the organizers already present from, 
 - New slides are built in the deck's own design, so they stay editable in Google Slides. Only the talks are pictures.
 - The second commit made every agenda row the same height and shortened sponsor names.
 - Skipped: the template itself. It holds organizer contacts and is never committed.
+- Update, 25 October: local secrets, keys and virtual environments are now ignored by default.
 {{< /junior >}}
 
 {{< senior >}}
-Two commits on 19 October 2026, pytest tests in `tests/`, a `uv.lock`, and a README that explains each slide it touches. Because the template is private, a stranger cannot run this end to end, and the README says so honestly. No licence and no CI. The deck is still made on an organizer's laptop, and the PDF comes from PowerPoint, so this step stays manual by design.
+Three commits, the last on 25 October 2026, pytest tests in `tests/`, a `uv.lock`, and a README that explains each slide it touches. The third commit is small but the right instinct: ignore secret and cache files before anyone has a chance to commit one. Because the template is private, a stranger cannot run this end to end, and the README says so honestly. No licence and no CI yet. The PDF still comes from PowerPoint, so that step stays manual by design.
 {{< /senior >}}
 
 **Learned:** Find slides by their content, not their index, when the template belongs to someone else.
