@@ -1,0 +1,17 @@
+{{/* One project as an open folder: its name on the tab, and the repos inside as files.
+     Usage: {{ partial "repo/folder.html" . }} with a project section. */}}
+{{ $files := .RegularPages }}
+<div class="folder folder-open">
+    <span class="folder-tab">{{ len $files }} {{ if eq (len $files) 1 }}repo{{ else }}repos{{ end }}</span>
+    <a class="folder-name" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ with .Description }}<span class="folder-desc">{{ . }}</span>{{ end }}
+    <ul class="files">
+        {{ range $files }}
+        <li class="file">
+            <a href="{{ .RelPermalink }}">{{ partial "icon.html" "file" }}<span class="file-name">{{ .Title }}</span></a>
+            {{ with .Params.status }}<span class="file-status status-{{ . }}">{{ . }}</span>{{ end }}
+        </li>
+        {{ end }}
+    </ul>
+    <a class="folder-open-link" href="{{ .RelPermalink }}">Open the project {{ partial "icon.html" "arrow-right" }}</a>
+</div>

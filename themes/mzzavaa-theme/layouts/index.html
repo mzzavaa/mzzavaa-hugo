@@ -96,11 +96,11 @@
     <p class="block-note">{{ .Description }}</p>
     <div class="folders">
         {{ range .Sections }}
-        {{ $p := .RegularPages }}
+        {{ $p := .RegularPagesRecursive }}
         <a class="folder" href="{{ .RelPermalink }}">
             <span class="folder-tab">{{ .Params.org | default .Title }}</span>
             <span class="folder-name">{{ .Title }}</span>
-            <span class="folder-count">{{ len $p }} repos · {{ len (where $p "Params.status" "active") }} active</span>
+            <span class="folder-count">{{ len .Sections }} projects · {{ len $p }} repos · {{ len (where $p "Params.status" "active") }} active</span>
         </a>
         {{ end }}
     </div>

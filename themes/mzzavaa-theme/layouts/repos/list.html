@@ -1,32 +1,74 @@
 {{ define "main" }}
+{{/* The open source notebook has three levels, all rendered here:
+     the notebook (content/repos), an organisation (content/repos/<org>) and a project
+     (content/repos/<org>/<project>), which is a folder of repo notes that belong together. */}}
+{{ $isRoot := eq .Parent.Kind "home" }}
+{{ $isProject := and (not $isRoot) (ne .Parent.Parent.Kind "home") }}
+{{ $all := .RegularPagesRecursive }}
 <header class="page-head wrap">
-    {{ if .Parent }}{{ if ne .Parent.Kind "home" }}<p class="kicker"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>{{ end }}{{ end }}
+    {{ if $isProject }}<p class="kicker"><a href="{{ .Parent.Parent.RelPermalink }}">{{ .Parent.Parent.Title }}</a> · <a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>
+    {{ else if not $isRoot }}<p class="kicker"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>{{ end }}
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
     {{ with .Params.org_url }}<p class="org-link"><a href="{{ . }}">{{ replace . "https://" "" }}</a>{{ with $.Params.role }} · {{ . }}{{ end }}</p>{{ end }}
+    {{ with .Params.live }}<p class="org-link">live at <a href="{{ . }}">{{ replace . "https://" "" }}</a></p>{{ end }}
 </header>
 <div class="wrap">
     {{ with .Content }}<div class="prose section-intro">{{ . }}</div>{{ end }}
 
-    {{ with .Sections }}
-    <div class="folders folders-large">
-        {{ range . }}
-        {{ $pages := .RegularPages }}
-        <a class="folder" href="{{ .RelPermalink }}">
-            <span class="folder-tab">{{ .Params.org | default .Title }}</span>
-            <span class="folder-name">{{ .Title }}</span>
-            <span class="folder-count">{{ len $pages }} repos · {{ len (where $pages "Params.status" "active") }} active · {{ len (where $pages "Params.status" "quiet") }} quiet · {{ len (where $pages "Params.status" "finished") }} finished{{ with where $pages "Params.status" "empty" }} · {{ len . }} empty{{ end }}</span>
-            {{ with .Description }}<span class="folder-desc">{{ . }}</span>{{ end }}
-        </a>
-        {{ end }}
-    </div>
+    {{ if $isRoot }}
+    {{/* The notebook: every organisation with its project folders, and the repos inside as files */}}
+    {{ $projects := 0 }}{{ range .Sections }}{{ $projects = add $projects (len .Sections) }}{{ end }}
+    <p class="project-jump">{{ len .Sections }} organisations · {{ $projects }} projects · {{ len $all }} repos</p>
+    {{ range .Sections }}
+    {{ $repos := .RegularPagesRecursive }}
+    <section class="drawer">
+        <div class="drawer-head">
+            <h2 class="sub-head"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <p class="drawer-count">{{ .Params.org }} · {{ len .Sections }} projects · {{ len $repos }} repos · {{ len (where $repos "Params.status" "active") }} active</p>
+        </div>
+        <div class="folders folders-open">
+            {{ range .Sections.ByWeight }}{{ partial "repo/folder.html" . }}{{ end }}
+        </div>
+    </section>
     {{ end }}
 
-    {{ with .RegularPages }}
-    <h2 class="sub-head">Repositories, most recently touched first</h2>
+    {{ else if $isProject }}
+    {{/* A project: what it adds up to, then its repos */}}
+    {{ $commits := 0 }}{{ $first := "" }}{{ $last := "" }}
+    {{ range $all }}
+      {{ with .Params.commits }}{{ $commits = add $commits (int .) }}{{ end }}
+      {{ with .Params.started }}{{ if or (eq $first "") (lt . $first) }}{{ $first = . }}{{ end }}{{ end }}
+      {{ with .Params.last_commit }}{{ if gt . $last }}{{ $last = . }}{{ end }}{{ end }}
+    {{ end }}
+    <div class="stats">
+        <div class="stat"><span class="stat-num">{{ len $all }}</span><span class="stat-label">{{ if eq (len $all) 1 }}repo{{ else }}repos{{ end }}</span></div>
+        <div class="stat"><span class="stat-num">{{ len (where $all "Params.status" "active") }}</span><span class="stat-label">active</span></div>
+        <div class="stat"><span class="stat-num">{{ $commits }}</span><span class="stat-label">commits</span></div>
+        {{ with $first }}<div class="stat"><span class="stat-num stat-date">{{ . }}</span><span class="stat-label">first commit</span></div>{{ end }}
+        {{ with $last }}<div class="stat"><span class="stat-num stat-date">{{ . }}</span><span class="stat-label">last commit</span></div>{{ end }}
+    </div>
+    <h2 class="sub-head">The repos in this project</h2>
     <ol class="log">
-        {{ range . }}{{ partial "list/row.html" . }}{{ end }}
+        {{ range $all }}{{ partial "list/row.html" . }}{{ end }}
     </ol>
+    {{ with .Parent.Sections.ByWeight }}{{ if gt (len .) 1 }}
+    <h2 class="sub-head">Other projects in {{ $.Parent.Title }}</h2>
+    <div class="folders folders-open">
+        {{ range . }}{{ if ne . $ }}{{ partial "repo/folder.html" . }}{{ end }}{{ end }}
+    </div>
+    {{ end }}{{ end }}
+
+    {{ else }}
+    {{/* An organisation: its projects as folders */}}
+    <p class="project-jump">{{ len .Sections }} projects · {{ len $all }} repos · {{ len (where $all "Params.status" "active") }} active · {{ len (where $all "Params.status" "quiet") }} quiet · {{ len (where $all "Params.status" "finished") }} finished{{ with where $all "Params.status" "empty" }} · {{ len . }} empty{{ end }}</p>
+    <div class="folders folders-open folders-large">
+        {{ range .Sections.ByWeight }}{{ partial "repo/folder.html" . }}{{ end }}
+    </div>
+    {{ with .RegularPages }}
+    <h2 class="sub-head">Not in a project</h2>
+    <ol class="log">{{ range . }}{{ partial "list/row.html" . }}{{ end }}</ol>
+    {{ end }}
     {{ end }}
 </div>
 {{ end }}

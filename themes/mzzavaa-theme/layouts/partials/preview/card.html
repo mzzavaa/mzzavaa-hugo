@@ -9,7 +9,7 @@
 {{ $hand := resources.Get "fonts/Caveat_700Bold.ttf" }}
 
 {{ $kicker := "mzzavaa.com" }}
-{{ if eq .Section "repos" }}{{ $kicker = printf "open source · %s" .Parent.Title }}{{ else if eq $variant "junior" }}{{ $kicker = "junior · build notes" }}{{ else if eq $variant "senior" }}{{ $kicker = "senior · review notes" }}{{ else }}{{ $kicker = "junior + senior" }}{{ end }}
+{{ if eq .Section "repos" }}{{ $org := .Parent }}{{ if ne .Parent.Parent.Parent.Kind "home" }}{{ $org = .Parent.Parent }}{{ end }}{{ $kicker = printf "open source · %s" $org.Title }}{{ else if eq $variant "junior" }}{{ $kicker = "junior · build notes" }}{{ else if eq $variant "senior" }}{{ $kicker = "senior · review notes" }}{{ else }}{{ $kicker = "junior + senior" }}{{ end }}
 {{ $ink := "#1d1c1a" }}
 {{ $accent := cond (eq $variant "senior") "#1f7a52" "#b3243a" }}
 
