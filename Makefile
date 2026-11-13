@@ -31,7 +31,7 @@ help:
 
 dev:
 	@PORT=$(PORT); \
-	while lsof -ti tcp:$$PORT >/dev/null 2>&1; do PORT=$$((PORT + 1)); done; \
+	while lsof -ti tcp:$$PORT -sTCP:LISTEN >/dev/null 2>&1; do PORT=$$((PORT + 1)); done; \
 	echo "-> http://localhost:$$PORT  (stop with Ctrl+C, or make stop from another terminal)"; \
 	hugo server --buildDrafts --port $$PORT --disableFastRender & echo $$! > .hugo-dev.pid; wait
 
