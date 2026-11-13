@@ -89,3 +89,9 @@ Three things that went well, two to watch, one change. Short, because the period
 {{< junior >}}
 Deal. Same sweep as the ignore files, I've got the list already. See you at the next meetup!
 {{< /junior >}}
+
+### Update, the same evening
+
+{{< junior >}}
+Done, and Senior can check it. The meetup tools have their licence, and CI now runs the tests of all four tools and the 33 checks of the website. The full list, including two checks that turned out to be red already, is at the end of [One Meetup Link, a Whole Evening](/posts/one-meetup-link-a-whole-evening/#update-the-same-evening-junior-did-the-sweep).
+{{< /junior >}}

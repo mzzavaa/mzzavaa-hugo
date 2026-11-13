@@ -124,6 +124,22 @@ Same format as always: three things that went well, three to watch, one change.
 
 **Before the next meetup, every tool that says "reuse this" gets a licence, and the room screen's tests run on every change.** Then this stops being our setup and becomes something the next user group can safely pick up.
 
+### Update, the same evening: Junior did the sweep
+
+{{< junior >}}
+Okay, I did not wait for the next meetup. Senior's list, one by one:
+
+- **Licences.** The tools behind the meetup evening now carry a `LICENSE`: CC BY-NC-SA 4.0, the one the website already named in its README. Free for volunteer-run groups, with attribution, not for commercial use. Photos of people and company logos are *not* part of it. Bring your own.
+- **The room screen's tests run on every change.** Typecheck, 189 unit tests, the build, and 55 checks in a headless browser at simulated times of the evening.
+- **So do the 33 website checks**, the 82 tests of the sync tool and the 21 tests of the deck tool.
+- **Bot commits are counted separately.** `npm run commits` on the website says: 236 commits, 200 by the scheduled job, 36 by people.
+- **Consent is becoming a check, not a habit.** In the event repo, a photo or a logo will not get merged without a line that says where the agreement came from. Nobody has to sign anything. Speakers, hosts and sponsors already see the meetup page before we publish it, and that message gets one more sentence about where else they will appear. This part is waiting as a pull request, together with that repo's licence, because the organizers still have to fill in the lines for the 44 pictures that were already there.
+
+The thing I did not expect: both browser checks were already red. They assumed Meetup #53 was still ahead of us. The moment the evening was over, 4 of the 33 website checks and 1 of the 55 screen checks started failing, and nobody saw it, because they only ever ran on my laptop. That is exactly what Senior meant. They run with a fixed clock now.
+
+Still open, so nobody thinks I am hiding it: two moderate advisories in the website's router that only a major upgrade closes, and the checks run next to the deploy, they do not stop it yet.
+{{< /junior >}}
+
 {{< junior >}}
 And if you run a user group somewhere and want this for your evenings, come and talk to us at the next meetup. Look for the gap in the circle!
 {{< /junior >}}

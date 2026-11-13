@@ -1,0 +1,51 @@
+name: Lee Za's weekly talks check
+
+# Every Monday morning Lee Za reads data/talks.json and the public talk list,
+# and opens an issue with what is missing: slides, dates, recaps, talk pages.
+# GitHub sends that issue by email. She reports and changes nothing: no commit,
+# no push, no edit to the site.
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # Mondays 06:17 UTC (07:17 or 08:17 in Vienna)
+  workflow_dispatch:        # or by hand from the Actions tab
+
+# Nothing by default; the job asks for what it needs.
+permissions: {}
+
+concurrency:
+  group: talks-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: Say what is missing
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read   # read data/talks.json
+      issues: write    # open this week's issue, close last week's
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+
+      - name: Run the check
+        run: node tools/check-talks.mjs > talks-report.md
+
+      - name: Open this week's issue and close the one before
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          gh label create talks-check --color 6a3fa0 --description "Lee Za's weekly talks check" --force
+          previous=$(gh issue list --label talks-check --state open --json number --jq '.[].number')
+          new=$(gh issue create --title "Lee Za's talks check, $(date -u +%F)" --label talks-check --body-file talks-report.md)
+          echo "Opened $new"
+          for n in $previous; do
+            gh issue close "$n" --comment "Replaced by this week's check: $new"
+          done
