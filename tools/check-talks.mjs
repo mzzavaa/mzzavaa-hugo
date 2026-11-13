@@ -10,9 +10,11 @@
  *
  * Web reads, all public: each landing page (does it answer, does it carry
  * slides, a video or a blog link that the list does not have, does it link to
- * a blog post that does not answer), every link already on the list, the blog
- * index (posts of this year that belong to no talk) and the public talk list
- * (talks that are not on hers). No dependencies.
+ * a blog post that does not answer), every link already on the list, the
+ * sitemap (blog posts of this year that belong to no talk, also the ones the
+ * blog index does not link), the public talk list (talks and video buttons
+ * that are not on hers) and the YouTube channel feed (new videos). No
+ * dependencies.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -112,16 +114,22 @@ if (!offline) {
     const r = await get(t.blog);
     for (const u of videoLinks(r.text)) found.push(`- ${name(t)}: its blog post carries a video that is not on my list: ${u}`);
   }
-  // Blog posts of this year that belong to no talk
-  const index = [];
-  for (let n = 1; n <= 20; n++) {
-    const r = await get(`${origin}/blog?page=${n}`);
-    const posts = blogLinks(r.text).filter((u) => !index.includes(u));
-    if (!posts.length) break;
-    index.push(...posts);
-  }
-  const attached = new Set(talks.map((t) => t.blog).filter(Boolean));
-  const loose = index.filter((u) => u.includes(String(data.year)) && !attached.has(u));
+  // Blog posts of this year that belong to no talk. The sitemap lists every post,
+  // also the ones the blog index does not link.
+  const sitemap = await get(data.links.sitemap);
+  const posts = [...sitemap.text.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(/\/$/, "")).filter((u) => u.startsWith(`${origin}/blog/`));
+  const attached = new Set(talks.flatMap((t) => [t.blog, ...(t.blog_also || [])]).filter(Boolean));
+  const words = (x) => x.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split(/[^a-z0-9]+/).filter((w) => w.length > 3 && !["community", "2026", "vienna", "talk"].includes(w));
+  const guess = (url) => {
+    const slug = words(url.split("/blog/")[1]);
+    let best = null, score = 0;
+    for (const t of talks) {
+      const n = words(`${t.event} ${t.city}`).filter((w) => slug.includes(w)).length;
+      if (n > score) { best = t; score = n; }
+    }
+    return best;
+  };
+  const loose = posts.filter((u) => u.includes(String(data.year)) && !attached.has(u));
   // The public talk list
   const list = await get(data.links.all_talks);
   const slugs = new Set([...talks, ...data.earlier].map((t) => t.page).filter(Boolean).map((u) => new URL(u).pathname.replace(/^\/|\/$/g, "")));
@@ -131,11 +139,42 @@ if (!offline) {
   out.push("", "## Found, but not on my list yet");
   out.push("Things that exist in public and that `data/talks.json` does not know about. Add them and the count goes up.");
   const lines = [...new Set(found)];
-  for (const u of loose) lines.push(`- A blog post from ${data.year} that belongs to no talk on my list: ${u}`);
+  if (sitemap.status !== 200) lines.push(`- I could not read ${data.links.sitemap} (${sitemap.status || sitemap.error}), so I could not look for unlinked blog posts.`);
+  for (const u of loose) {
+    const t = guess(u);
+    lines.push(t && !t.blog
+      ? `- A blog post that looks like it belongs to ${t.event}, which has none on my list: ${u}`
+      : `- A blog post from ${data.year} that belongs to no talk on my list: ${u}`);
+  }
+  // Video buttons on the public talk list, per event
+  for (const block of list.text.split(/(?=<h3>\s*<a href=")/).slice(1)) {
+    const page = abs((block.match(/<h3>\s*<a href="([^"#?]+)"/) || [])[1] || "");
+    const vids = [...new Set([...block.matchAll(/href="(https:\/\/(?:www\.)?youtu[^"]+)"/g)].map((m) => m[1]))];
+    const mine = talks.filter((t) => t.page === page);
+    if (!vids.length || !mine.length) continue;
+    const have = new Set(mine.map((t) => t.video).filter(Boolean));
+    if (!have.size) lines.push(`- ${mine[0].event}: the public talk list has a video and mine does not: ${vids[0]}`);
+  }
+  // New on YouTube
+  const feed = await get(data.links.youtube_feed);
+  const listed = talks.map((t) => t.video || "").join(" ");
+  const since = new Date(Date.now() - 21 * 864e5).toISOString().slice(0, 10);
+  const fresh = [...feed.text.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map((m) => ({
+    id: (m[1].match(/<yt:videoId>([^<]+)/) || [])[1],
+    title: (m[1].match(/<title>([^<]+)/) || [])[1],
+    date: ((m[1].match(/<published>([^<]+)/) || [])[1] || "").slice(0, 10),
+  })).filter((v) => v.id && v.date >= since && !listed.includes(v.id));
+  const tube = ["", "## New on YouTube in the last three weeks"];
+  if (feed.status !== 200) tube.push(`- I could not read the channel feed (${feed.status || feed.error}).`);
+  else tube.push(fresh.length
+    ? fresh.map((v) => `- ${v.date}: ${v.title.replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"')} https://www.youtube.com/watch?v=${v.id}`).join("\n") + "\n\nNone of these is the video of a talk on my list. If one should be, put it in that talk's `video`."
+    : "- Nothing new that is not already on a talk.");
+
   for (const u of unlisted) lines.push(`- On the public talk list, not on mine: ${u}`);
   if (list.status !== 200) lines.push(`- I could not read ${data.links.all_talks} (${list.status || list.error}), so I could not compare the talk list.`);
   else if (!heads.length) lines.push("- I found no talk headings on the public talk list. Its layout may have changed.");
   out.push(lines.length ? lines.join("\n") : "- Nothing. My list matches what is out there.");
+  out.push(...tube);
 
   out.push("", "## Broken");
   out.push(broken.length ? [...new Set(broken)].join("\n") : "- Nothing. Every link I know answers.");

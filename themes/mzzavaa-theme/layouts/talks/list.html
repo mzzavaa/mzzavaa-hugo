@@ -87,8 +87,7 @@
             {{ $label := index $.labels $kind }}
             {{ with index $t $kind }}<li class="thing is-there"><a href="{{ . }}">{{ $label }}</a></li>
             {{ else }}{{ with index $t.except $kind }}<li class="thing is-excused">{{ $label }}: {{ . }}</li>
-            {{ else }}{{ if and (eq $kind "blog") $t.blog_broken }}<li class="thing is-missing" title="The landing page links to a blog post that does not answer">{{ $label }}: link is broken</li>
-            {{ else }}<li class="thing is-missing">{{ $label }}: missing</li>{{ end }}{{ end }}{{ end }}
+            {{ else }}<li class="thing is-missing">{{ $label }}: missing</li>{{ end }}{{ end }}
             {{ end }}
         </ul>
         <p class="talk-verdict"><span class="talk-score">{{ $have }}/{{ $owed }}</span>
