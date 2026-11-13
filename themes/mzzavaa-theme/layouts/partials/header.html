@@ -10,6 +10,6 @@
             <a href="{{ .URL | relURL }}"{{ if $current }} aria-current="page"{{ end }}>{{ .Name }}</a>
             {{ end }}
         </nav>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch light or dark mode">light / dark</button>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch light or dark mode" title="Switch light or dark mode"><span class="to-dark">{{ partial "icon.html" "moon" }}</span><span class="to-light">{{ partial "icon.html" "sun" }}</span></button>
     </div>
 </header>

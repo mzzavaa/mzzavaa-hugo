@@ -10,4 +10,4 @@ This is my playground account. Most of what lives here are experiments and domai
 
 {{< junior >}}Everything starts here. A domain, a Hugo or Astro scaffold, a first commit at night, and then I see whether it sticks. The ones below stuck.{{< /junior >}}
 
-{{< senior >}}Four published projects from a busy account. One has years of history and a co-builder, two are young Hugo sites that do their job without many commits, and one is a contribution to someone else's project. Playground is the right word, as long as the live sites stay looked after.{{< /senior >}}
+{{< senior >}}Six published projects from a busy account. One has years of history and a co-builder, four are Hugo sites that do their job without many commits, this notebook included, and one is a contribution to someone else's project. Playground is the right word, as long as the live sites stay looked after.{{< /senior >}}

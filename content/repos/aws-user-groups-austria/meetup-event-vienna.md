@@ -1,14 +1,14 @@
 ---
 title: "meetup-event-vienna"
-date: 2026-10-19T12:00:00+02:00
+date: 2026-10-25T12:00:00+02:00
 draft: false
 description: "One folder per AWS User Group Vienna meetup with its Meetup link, overrides and generated event files, plus shared photos and badges."
 repo: "aws-user-groups-austria/meetup-event-vienna"
 voices: ["junior", "senior"]
 status: "active"
 started: "2026-10-19"
-last_commit: "2026-10-19"
-commits: 3
+last_commit: "2026-10-25"
+commits: 6
 built_by: "Linda"
 tags: ["meetups", "data", "github-actions", "community"]
 ---
@@ -21,10 +21,12 @@ The data repo for the AWS User Group Vienna meetups. Each meetup has a folder un
 - Overrides win over Meetup and Sessionize, so I can fix a missing photo or logo without editing generated files.
 - I kept a `legacy/` folder with what was worth keeping from the first attempt at these tools, with a note on where each file could go.
 - Saved Meetup pages are never committed, because a page saved from a logged-in browser can carry session data.
+- Update, October: photos, badges and logos are now stored at about twice their size on screen instead of full camera size, so the pages load faster.
+- The first scheduled sync ran on its own on 23 October and pulled the latest from Meetup and Sessionize.
 {{< /junior >}}
 
 {{< senior >}}
-Three commits on 19 October 2026 and a workflow that updates the meetups every Monday and Friday, so this repo will show bot activity even when nobody touches it. The README is clear about what is generated and what to edit. No licence. The README asks that photos and logos are added only with the owner's consent; that rule matters more here than any code.
+Six commits, the last on 25 October 2026, and the Monday and Friday workflow has already committed on its own, which is exactly what it was built for. Shrinking the pictures was a good catch: nobody notices an image that is the right size, everybody notices a slow page. The README is clear about what is generated and what to edit. Still no licence. The rule that photos and logos are added only with the owner's consent matters more here than any code.
 {{< /senior >}}
 
 **Learned:** Write down which files are generated and which are hand-edited, in the README, before the first contributor asks.
