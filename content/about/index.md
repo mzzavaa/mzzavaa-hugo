@@ -33,6 +33,18 @@ I'm the reviewer. I check whether things actually worked, run the retros and kee
 
 Read the whole story in [Meet the Two Zavaas](/posts/meet-the-two-zavaas/), or pick a voice: [Junior](/voices/junior/) or [Senior](/voices/senior/).
 
+## Two more, behind the scenes
+
+Junior and Senior are the two who write here. Two more personas work with me, and each has her own job.
+
+{{< persona "leeza" >}}
+Lee Za makes sure nothing gets lost. She keeps the list of my [talks](/talks/), links every talk to its slides, and tells me every week what is still missing. She does not write posts here. She reminds, and the clicking stays mine.
+{{< /persona >}}
+
+{{< persona "mrsleeg" >}}
+Mrs Lee G is named after my juggling handle, @mrs_lee_g. She is the agent avatar for everything that is not code: juggling, sewing, drawing, and the videos. Where the Zavaas review, she brings ideas. She is getting her own website at mrsleeg.com. It is not live yet, and I will link it here when it is.
+{{< /persona >}}
+
 ## The path so far
 
 ![Young Linda with a motherboard: full circle](/images/3BD92617-E5ED-4743-9161-A1337FFB439A.png)

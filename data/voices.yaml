@@ -17,3 +17,10 @@ leeza:
   role: "The memory"
   tagline: "Keeps the talks calendar and links every talk to its slides, so nothing gets lost."
   avatar: "images/personas/lee-za.png"
+# Not a writing voice either: Mrs Lee G gets her own website.
+mrsleeg:
+  name: "Mrs Lee G"
+  short: "Mrs Lee G"
+  role: "The colourful one"
+  tagline: "Juggling, sewing, drawing and videos. Brings the ideas, and is getting a website of her own."
+  avatar: "images/personas/mrs-lee-g.png"

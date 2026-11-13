@@ -34,6 +34,7 @@
   --sticky: #fff3b8;
 
   --leeza: #6a3fa0;
+  --mrsleeg: #c2187a;
   --leeza-paper: #f3eef8;
   --senior: #1f7a52;
   --senior-paper: #eef4f0;
@@ -55,7 +56,7 @@
     --ink: #ece7de; --ink-2: #b7b0a4; --ink-3: #868075; --rule: #3a3731; --dot: rgba(236, 231, 222, 0.06);
     --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.35);
     --junior: #f07080; --junior-paper: #2a1c1d; --junior-dot: rgba(240, 112, 128, 0.18); --tape: rgba(20, 163, 160, 0.4); --sticky: #4a4220;
-    --leeza: #b99ae8; --leeza-paper: #221b2b; --senior: #62c897; --senior-paper: #18241e; --senior-rule: rgba(98, 200, 151, 0.14); --margin-red: rgba(240, 112, 128, 0.35);
+    --leeza: #b99ae8; --leeza-paper: #221b2b; --mrsleeg: #f27bb8; --senior: #62c897; --senior-paper: #18241e; --senior-rule: rgba(98, 200, 151, 0.14); --margin-red: rgba(240, 112, 128, 0.35);
   }
 }
 :root[data-theme="dark"] {
@@ -63,7 +64,7 @@
   --ink: #ece7de; --ink-2: #b7b0a4; --ink-3: #868075; --rule: #3a3731; --dot: rgba(236, 231, 222, 0.06);
   --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.35);
   --junior: #f07080; --junior-paper: #2a1c1d; --junior-dot: rgba(240, 112, 128, 0.18); --tape: rgba(20, 163, 160, 0.4); --sticky: #4a4220;
-  --leeza: #b99ae8; --leeza-paper: #221b2b; --senior: #62c897; --senior-paper: #18241e; --senior-rule: rgba(98, 200, 151, 0.14); --margin-red: rgba(240, 112, 128, 0.35);
+  --leeza: #b99ae8; --leeza-paper: #221b2b; --mrsleeg: #f27bb8; --senior: #62c897; --senior-paper: #18241e; --senior-rule: rgba(98, 200, 151, 0.14); --margin-red: rgba(240, 112, 128, 0.35);
 }
 
 /* Base */
@@ -416,6 +417,21 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.15;
 .voice-note.leeza { background-color: var(--leeza-paper); border: 1.5px dashed var(--leeza); border-radius: 4px; }
 .voice-note.leeza .voice-note-avatar { border: 2px solid var(--leeza); }
 .memo { font-family: var(--mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--leeza); }
+
+/* Persona cards: the personas who do not write here, introduced on About */
+.prose .persona-card { display: flex; gap: 1.1rem; align-items: flex-start; margin: 1.4rem 0; padding: 1rem 1.2rem; background: var(--paper-2); border-left: 4px solid var(--ink-3); border-radius: 4px; }
+.prose .persona-card-avatar { width: 96px; height: 96px; margin: 0; border-radius: 50%; object-fit: cover; object-position: top; border: 3px solid var(--ink-3); flex: none; max-height: none; }
+.persona-card-body > * { margin: 0; }
+.persona-card-body > * + * { margin-top: 0.5rem; }
+.persona-card-name { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; line-height: 1.2; }
+.persona-card-role { font-family: var(--mono); font-size: 0.78rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.08em; margin-left: 0.4rem; }
+.persona-card.leeza { border-left-color: var(--leeza); }
+.persona-card.leeza .persona-card-avatar { border-color: var(--leeza); }
+.persona-card.leeza .persona-card-role { color: var(--leeza); }
+.persona-card.mrsleeg { border-left-color: var(--mrsleeg); }
+.persona-card.mrsleeg .persona-card-avatar { border-color: var(--mrsleeg); }
+.persona-card.mrsleeg .persona-card-role { color: var(--mrsleeg); }
+@media (max-width: 520px) { .prose .persona-card { flex-direction: column; } .persona-card-role { display: block; margin: 0.2rem 0 0; } }
 
 /* Talks page */
 .main-nav a[href*="/talks/"]:hover, .main-nav a[href*="/talks/"][aria-current="page"] { color: var(--leeza); border-bottom-color: var(--leeza); }
