@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="article wrap">
     <header class="article-head">
-        {{ if eq .Section "repos" }}<p class="kicker"><a href="{{ .Parent.RelPermalink }}">open source · {{ .Parent.Title }}</a></p>{{ end }}
+        {{ if eq .Section "repos" }}{{ $org := .Parent }}{{ if ne .Parent.Parent.Kind "home" }}{{ if ne .Parent.Parent.Parent.Kind "home" }}{{ $org = .Parent.Parent }}{{ end }}{{ end }}<p class="kicker"><a href="{{ $org.RelPermalink }}">open source · {{ $org.Title }}</a>{{ if ne $org .Parent }} · <a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>{{ end }}</p>{{ end }}
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
         {{ if not .Date.IsZero }}

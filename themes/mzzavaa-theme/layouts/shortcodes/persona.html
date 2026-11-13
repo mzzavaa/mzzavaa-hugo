@@ -1,0 +1,12 @@
+{{/* A card that introduces one persona from data/voices.yaml: avatar, name, role, and the text inside.
+     Usage: {{< persona "leeza" >}}Two or three sentences.{{< /persona >}} */}}
+{{ $key := .Get 0 }}
+{{ with index hugo.Data.voices $key }}
+<div class="persona-card {{ $key }}">
+    <img class="persona-card-avatar" src="{{ .avatar | relURL }}" alt="" width="96" height="96" loading="lazy">
+    <div class="persona-card-body">
+        <p class="persona-card-name">{{ .name }} <span class="persona-card-role">{{ .role }}</span></p>
+        {{ $.Inner | $.Page.RenderString (dict "display" "block") }}
+    </div>
+</div>
+{{ else }}{{ errorf "persona shortcode: no %q in data/voices.yaml (%s)" $key $.Position }}{{ end }}

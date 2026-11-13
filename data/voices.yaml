@@ -10,3 +10,17 @@ senior:
   role: "The reviewer"
   tagline: "Checks whether it actually worked, runs the retro, asks the hard question kindly."
   avatar: "images/personas/zavaa-senior.jpg"
+# Not a third writing voice: Lee Za keeps the Talks page.
+leeza:
+  name: "Lee Za"
+  short: "Lee Za"
+  role: "The memory"
+  tagline: "Linda's assistant. Every talk owes her a landing page, a blog post, the slides and a video, and she keeps count."
+  avatar: "images/personas/lee-za.png"
+# Not a writing voice either: Mrs Lee G gets her own website.
+mrsleeg:
+  name: "Mrs Lee G"
+  short: "Mrs Lee G"
+  role: "The colourful one"
+  tagline: "Juggling, sewing, drawing and videos. Brings the ideas, and is getting a website of her own."
+  avatar: "images/personas/mrs-lee-g.png"

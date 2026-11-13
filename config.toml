@@ -52,6 +52,11 @@ ignoreLogs = ['warning-goldmark-raw-html']
     url = "/repos/"
     weight = 5
   [[menu.main]]
+    identifier = "talks"
+    name = "Talks"
+    url = "/talks/"
+    weight = 5
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"

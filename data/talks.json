@@ -1,0 +1,295 @@
+{
+  "about": "Lee Za's list of Linda's talks. The rule: every talk has four things, a landing page (page), a blog post (blog), the slides for download (slides) and a video (video). A null means missing, and the Talks page and the weekly check say so. The only way out is an entry in \"except\", for example {\"video\": \"not recorded\"}, and only Linda adds those. blog_also lists further posts for the same talk, for example the German version. Read on 2026-11-13 from the public talk list, each talk's landing page, the site's sitemap (blog posts that the blog index does not link) and the YouTube channel feed. tools/check-talks.mjs reads this file.",
+  "year": 2026,
+  "checked": "2026-11-13",
+  "links": {
+    "all_talks": "https://www.lindamohamed.com/talks",
+    "sessionize": "https://sessionize.com/linda-mohamed/",
+    "booking": "https://www.lindamohamed.com/talks-and-moderation",
+    "sitemap": "https://www.lindamohamed.com/sitemap.xml",
+    "youtube": "https://www.youtube.com/@mrs_lee_g",
+    "youtube_feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnpv9Wve9y2ALg9UfdbNriA"
+  },
+  "this_year": [
+    {
+      "date": "2026-11-12",
+      "event": "Cloud Native Meetup Vienna",
+      "city": "Vienna",
+      "title": "Your Agent Is the New Layer 8: Prompted, Tricked, and Overprivileged",
+      "page": "https://www.lindamohamed.com/cloud-native-meetup-vienna",
+      "blog": "https://www.lindamohamed.com/blog/cloud-native-vienna-november-2026",
+      "slides": "https://drive.google.com/file/d/1oaSqvYKXc37YMTRpj8Iwa7GX7d7laK69/view",
+      "video": null,
+      "except": {},
+      "blog_also": [
+        "https://www.lindamohamed.com/blog/cloud-native-vienna-november-2026-rueckblick"
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "event": "AWS Community Day Adria",
+      "city": "Ljubljana",
+      "title": "Automating the chaos",
+      "page": null,
+      "blog": "https://www.lindamohamed.com/blog/aws-community-day-adria-ljubljana-2026",
+      "slides": "https://drive.google.com/file/d/1wM5ocAmLYnlj194YoAR_BNUg-LboXZmM/view",
+      "video": null,
+      "except": {}
+    },
+    {
+      "date": null,
+      "event": "treffpunkt.BILDUNG",
+      "city": "Vienna",
+      "title": "Generiert, verzerrt, unterrichtet",
+      "page": "https://www.lindamohamed.com/treffpunkt-bildung",
+      "blog": "https://www.lindamohamed.com/blog/treffpunkt-bildung-11-vienna-2026",
+      "slides": null,
+      "video": null,
+      "except": {}
+    },
+    {
+      "date": null,
+      "event": "Cloud Native Days Austria",
+      "city": "Vienna",
+      "title": "Correct on Average, Wrong by Design: How data taught AI that tech is male",
+      "page": "https://www.lindamohamed.com/cloud-native-days-austria",
+      "blog": null,
+      "slides": null,
+      "video": null,
+      "except": {}
+    },
+    {
+      "date": null,
+      "event": "Internet Summit Austria",
+      "city": "Vienna",
+      "title": "Breakout: Welche Innovationsbedingungen brauchen Unternehmen?",
+      "page": "https://www.lindamohamed.com/internet-summit-austria",
+      "blog": "https://www.lindamohamed.com/blog/internet-summit-austria-vienna-2026",
+      "slides": null,
+      "video": null,
+      "except": {}
+    },
+    {
+      "date": null,
+      "event": "AWS Student Builder Group St. Pölten",
+      "city": "St. Pölten",
+      "title": "Hybrid AI Architecture",
+      "page": "https://www.lindamohamed.com/aws-student-builder-group-st-poelten",
+      "blog": null,
+      "slides": "https://drive.google.com/file/d/11DFmGg-6DV9Zw_YkIPhSRBejTj79gpQp/view",
+      "video": null,
+      "except": {}
+    },
+    {
+      "date": null,
+      "event": "AWS Student Builder Group St. Pölten",
+      "city": "St. Pölten",
+      "title": "OTTO: demo and presentation",
+      "page": "https://www.lindamohamed.com/aws-student-builder-group-st-poelten",
+      "blog": null,
+      "slides": "https://drive.google.com/file/d/1GsmZFeeHxM1WE7x5zLk66nRyZ62ESbs0/view",
+      "video": null,
+      "except": {}
+    },
+    {
+      "date": null,
+      "event": "AWS Community Day CEE",
+      "city": "Budapest",
+      "title": "Event film and intro video",
+      "page": "https://www.lindamohamed.com/aws-community-day-cee",
+      "blog": "https://www.lindamohamed.com/blog/aws-community-day-cee-budapest-2026",
+      "slides": null,
+      "video": "https://www.youtube.com/shorts/ilWh0ryx6So",
+      "except": {}
+    },
+    {
+      "date": null,
+      "event": "AWS Community Day Türkiye",
+      "city": "Istanbul",
+      "title": "Your Agent Is the New Layer 8: Prompted, Tricked, and Overprivileged",
+      "page": "https://www.lindamohamed.com/aws-community-day-turkiye",
+      "blog": "https://www.lindamohamed.com/blog/aws-community-day-turkiye-istanbul-2026",
+      "slides": "https://drive.google.com/file/d/1cKRqo4UCX9LBur00SkMRboRyS4HqnJ19/view",
+      "video": null,
+      "except": {}
+    },
+    {
+      "date": null,
+      "event": "AWS Community Day Greece",
+      "city": "Athens",
+      "title": "From Raw Footage to Publish-Ready: Building a Serverless AI Video Pipeline on AWS",
+      "page": "https://www.lindamohamed.com/aws-community-day-greece",
+      "blog": "https://www.lindamohamed.com/blog/aws-community-day-greece-athens-2026",
+      "slides": "https://drive.google.com/file/d/1qwHksHYKqiimgfh8hpbgdmJ5hxLcHWbQ/view",
+      "video": "https://www.youtube.com/shorts/gDTGd89meWw",
+      "except": {}
+    },
+    {
+      "date": null,
+      "event": "HTL Pinkafeld",
+      "city": "Pinkafeld",
+      "title": "The 3-5-7 rule: a career as a git graph",
+      "page": "https://www.lindamohamed.com/htl-pinkafeld",
+      "blog": "https://www.lindamohamed.com/blog/htl-pinkafeld-girls-day-2026",
+      "slides": null,
+      "video": null,
+      "except": {}
+    },
+    {
+      "date": null,
+      "event": "HTL Pinkafeld",
+      "city": "Pinkafeld",
+      "title": "Jury member, Entrepreneurship Week pitches",
+      "page": "https://www.lindamohamed.com/htl-pinkafeld",
+      "blog": "https://www.lindamohamed.com/blog/htl-pinkafeld-entrepreneur-week-2026",
+      "slides": null,
+      "video": null,
+      "except": {}
+    },
+    {
+      "date": null,
+      "event": "Cloud Day FH Burgenland",
+      "city": "Eisenstadt",
+      "title": "Multi-Agent Systems on AWS: From Prototype to Production",
+      "page": "https://www.lindamohamed.com/cloud-day-fh-burgenland",
+      "blog": "https://www.lindamohamed.com/blog/cloud-day-fh-burgenland-2026",
+      "slides": "https://drive.google.com/file/d/17CYmFtwZ8zB_2JmwJ25xgHJFie74s8zo/view",
+      "video": "https://www.youtube.com/shorts/Du7gHgOm6qk",
+      "except": {}
+    }
+  ],
+  "earlier": [
+    {
+      "year": 2025,
+      "event": "AWS re:Invent",
+      "city": "Las Vegas",
+      "title": "OTTO at the Open Source Learning Corner",
+      "page": "https://www.lindamohamed.com/aws-reinvent"
+    },
+    {
+      "year": 2025,
+      "event": "AWS Community Day CEE",
+      "city": "Budapest",
+      "title": "Workshop: Women in Cloud",
+      "page": "https://www.lindamohamed.com/aws-community-day-cee"
+    },
+    {
+      "year": 2025,
+      "event": "AWS Community Day DACH",
+      "city": "Munich",
+      "title": "From MacBook to Bedrock",
+      "page": "https://www.lindamohamed.com/aws-community-day-dach"
+    },
+    {
+      "year": 2025,
+      "event": "AWS Community Day Poland",
+      "city": "Warsaw",
+      "title": "From MacBook to Bedrock: Lessons from Building an AI Assistant",
+      "page": "https://www.lindamohamed.com/aws-community-day-poland"
+    },
+    {
+      "year": 2025,
+      "event": "CTRL+ESC Malta",
+      "city": "Qawra",
+      "title": "Two expert-track sessions",
+      "page": "https://www.lindamohamed.com/ctrl-esc-malta"
+    },
+    {
+      "year": 2025,
+      "event": "AWS Community Day Czech Republic",
+      "city": "Prague",
+      "title": "From MacBook to Bedrock: Lessons from Building an AI Assistant",
+      "page": "https://www.lindamohamed.com/aws-community-day-czech-republic"
+    },
+    {
+      "year": 2025,
+      "event": "AWS Community Day Romania",
+      "city": "Timișoara",
+      "title": "From MacBook to Bedrock: Lessons from Building an AI Assistant",
+      "page": "https://www.lindamohamed.com/aws-community-day-romania"
+    },
+    {
+      "year": 2025,
+      "event": "AWS Community Day Italy",
+      "city": "Milan",
+      "title": "From MacBook to Bedrock: Lessons from Building an AI Assistant",
+      "page": "https://www.lindamohamed.com/aws-community-day-italy"
+    },
+    {
+      "year": 2025,
+      "event": "AWS Community Day Italy",
+      "city": "Milan",
+      "title": "Women of Cloud workshop",
+      "page": "https://www.lindamohamed.com/aws-community-day-italy"
+    },
+    {
+      "year": 2025,
+      "event": "AWS Community Day Slovakia",
+      "city": "Košice",
+      "title": "From MacBook to Bedrock: Lessons from Building an AI Assistant",
+      "page": "https://www.lindamohamed.com/aws-community-day-slovakia"
+    },
+    {
+      "year": 2024,
+      "event": "AWS re:Invent",
+      "city": "Las Vegas",
+      "title": "Build Amazon Q apps to scale and drive community engagement",
+      "page": "https://www.lindamohamed.com/aws-reinvent"
+    },
+    {
+      "year": 2024,
+      "event": "AWS Community Day DACH",
+      "city": "Munich",
+      "title": "Workshop: Women in Cloud",
+      "page": "https://www.lindamohamed.com/aws-community-day-dach"
+    },
+    {
+      "year": 2024,
+      "event": "AWS Community Day New York",
+      "city": "New York",
+      "title": "Automating AWS Account Setup with Backstage: A Practical Approach to Integrated Cloud Services",
+      "page": "https://www.lindamohamed.com/aws-community-day-new-york"
+    },
+    {
+      "year": 2024,
+      "event": "AWS Community Day Switzerland",
+      "city": "Zürich",
+      "title": "Plug-and-Play AI: Leveraging Amazon Q Business for Enterprise Solutions",
+      "page": "https://www.lindamohamed.com/aws-community-day-switzerland"
+    },
+    {
+      "year": 2024,
+      "event": "AWS User Group Košice",
+      "city": "Košice",
+      "title": "Plug-and-Play AI: Leveraging Amazon Q Business for Enterprise Solutions",
+      "page": "https://www.lindamohamed.com/aws-user-group-kosice"
+    },
+    {
+      "year": 2023,
+      "event": "AWS User Group Vienna",
+      "city": "Vienna",
+      "title": "Optimizing Cloud Infrastructure Costs: The Power of Infrastructure as Code",
+      "page": "https://www.lindamohamed.com/aws-meetup-vienna"
+    },
+    {
+      "year": 2022,
+      "event": "AWS User Group Vienna",
+      "city": "Vienna",
+      "title": "AI based process optimization in Re-Commerce",
+      "page": "https://www.lindamohamed.com/aws-meetup-vienna"
+    },
+    {
+      "year": 2022,
+      "event": "AWS Summit Berlin",
+      "city": "Berlin",
+      "title": "Small Data Machine Learning",
+      "page": "https://www.lindamohamed.com/aws-summit-berlin"
+    }
+  ],
+  "rule": [
+    "page",
+    "blog",
+    "slides",
+    "video"
+  ]
+}
